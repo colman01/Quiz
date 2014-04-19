@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     [self createUrls];
+    [self createImageArray];
     // Do any additional setup after loading the view.
 }
 
@@ -58,6 +59,10 @@
 - (IBAction)downloadClip:(id)sender {
     UIButton *btn = (UIButton *) sender;
     [self createConnection:[requests objectAtIndex:btn.tag]];
+    UIButton *imgBtn = [images objectAtIndex:btn.tag];
+    UIImage *img = [UIImage imageNamed:@"clipready.png"];
+    imgBtn.imageView.image = img;
+
 }
 
 
@@ -79,6 +84,7 @@
 }
 
 - (void) createImageArray {
+    images = [[NSMutableArray alloc] init];
     [images addObject:clip1Image];
     [images addObject:clip2Image];
     [images addObject:clip3Image];

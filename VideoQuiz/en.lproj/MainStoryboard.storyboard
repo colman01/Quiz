@@ -206,7 +206,7 @@
                                     <action selector="downloadClip:" destination="M7D-KV-k9e" eventType="touchUpInside" id="utf-1R-pvM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnp-Fh-nzL">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnp-Fh-nzL">
                                 <rect key="frame" x="73" y="249" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="2. Clip">
@@ -216,7 +216,7 @@
                                     <action selector="downloadClip:" destination="M7D-KV-k9e" eventType="touchUpInside" id="4L9-6n-xSJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LU-dI-g1p">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LU-dI-g1p">
                                 <rect key="frame" x="73" y="287" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="3. Clip">
@@ -226,7 +226,7 @@
                                     <action selector="downloadClip:" destination="M7D-KV-k9e" eventType="touchUpInside" id="Osh-If-IWA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-4P-s4O">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-4P-s4O">
                                 <rect key="frame" x="73" y="325" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="4. Clip">
@@ -236,7 +236,7 @@
                                     <action selector="downloadClip:" destination="M7D-KV-k9e" eventType="touchUpInside" id="j2c-Ix-FRQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySA-MV-lzH">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySA-MV-lzH">
                                 <rect key="frame" x="73" y="363" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="5. Clip">
@@ -302,10 +302,15 @@
                     <navigationItem key="navigationItem" id="nXk-ZB-Nd1"/>
                     <connections>
                         <outlet property="clip1" destination="DIm-88-4OK" id="ANt-8Y-PUH"/>
+                        <outlet property="clip1Image" destination="DIm-88-4OK" id="h0Q-9n-B94"/>
                         <outlet property="clip2" destination="3t3-LO-R5i" id="pMe-q4-keE"/>
+                        <outlet property="clip2Image" destination="3t3-LO-R5i" id="RFQ-KD-jwP"/>
                         <outlet property="clip3" destination="Ixx-Ez-ef2" id="mnT-t5-e13"/>
+                        <outlet property="clip3Image" destination="Ixx-Ez-ef2" id="5vI-YE-Pp2"/>
                         <outlet property="clip4" destination="Vu6-e8-KEn" id="V3C-AJ-Sc0"/>
+                        <outlet property="clip4Image" destination="Vu6-e8-KEn" id="DaQ-K4-MV9"/>
                         <outlet property="clip5" destination="0wO-tO-oJw" id="aAF-Ir-fGX"/>
+                        <outlet property="clip5Image" destination="0wO-tO-oJw" id="wmI-Zm-bxy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upi-eD-lEh" userLabel="First Responder" sceneMemberID="firstResponder"/>

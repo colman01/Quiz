@@ -10,6 +10,8 @@
 		F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F334CACB1902792D00CCF8CF /* downloadArrow.png */; };
 		F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F334CACF19028EEA00CCF8CF /* DownloadViewController.m */; };
 		F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F334CAD21902907E00CCF8CF /* ClipDownloader.m */; };
+		F36163A01902CB120002D22E /* clipready.png in Resources */ = {isa = PBXBuildFile; fileRef = F361639F1902CB120002D22E /* clipready.png */; };
+		F36163A21902CCB30002D22E /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = F36163A11902CCB30002D22E /* heart.png */; };
 		F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10A819026C4900D03CE7 /* UIKit.framework */; };
 		F37B10AB19026C4900D03CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AA19026C4900D03CE7 /* Foundation.framework */; };
 		F37B10AD19026C4900D03CE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AC19026C4900D03CE7 /* CoreGraphics.framework */; };
@@ -44,6 +46,8 @@
 		F334CACF19028EEA00CCF8CF /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
 		F334CAD11902907E00CCF8CF /* ClipDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipDownloader.h; sourceTree = "<group>"; };
 		F334CAD21902907E00CCF8CF /* ClipDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipDownloader.m; sourceTree = "<group>"; };
+		F361639F1902CB120002D22E /* clipready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipready.png; sourceTree = "<group>"; };
+		F36163A11902CCB30002D22E /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		F37B10A519026C4900D03CE7 /* VideoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B10A819026C4900D03CE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F37B10AA19026C4900D03CE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -103,6 +107,8 @@
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
+				F36163A11902CCB30002D22E /* heart.png */,
+				F361639F1902CB120002D22E /* clipready.png */,
 				F334CACD19028EAF00CCF8CF /* images */,
 				F37B10AE19026C4900D03CE7 /* VideoQuiz */,
 				F37B10D219026C4900D03CE7 /* VideoQuizTests */,
@@ -256,6 +262,8 @@
 				F37B10BB19026C4900D03CE7 /* Default.png in Resources */,
 				F37B10BD19026C4900D03CE7 /* Default@2x.png in Resources */,
 				F37B10BF19026C4900D03CE7 /* Default-568h@2x.png in Resources */,
+				F36163A21902CCB30002D22E /* heart.png in Resources */,
+				F36163A01902CB120002D22E /* clipready.png in Resources */,
 				F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */,
 				F37B10C219026C4900D03CE7 /* MainStoryboard.storyboard in Resources */,
 			);
