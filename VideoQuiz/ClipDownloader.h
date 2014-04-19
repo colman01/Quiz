@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSMutableData *_responseData;
 
+@property (strong, nonatomic) UIButton *button;
+
 @end

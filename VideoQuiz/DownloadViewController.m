@@ -57,12 +57,61 @@
 
 
 - (IBAction)downloadClip:(id)sender {
-    UIButton *btn = (UIButton *) sender;
-    [self createConnection:[requests objectAtIndex:btn.tag]];
-    UIButton *imgBtn = [images objectAtIndex:btn.tag];
-    UIImage *img = [UIImage imageNamed:@"clipready.png"];
-    imgBtn.imageView.image = img;
+    [self someMethod:sender];
+    [self someMethod:sender];
 
+
+}
+
+- (void) someMethod:(id)sender {
+    UIButton *btn = (UIButton *) sender;
+    //    [self createConnection:[requests objectAtIndex:btn.tag]];
+    NSURLRequest *request = [requests objectAtIndex:btn.tag];
+    UIButton *imgBtn = [images objectAtIndex:btn.tag];
+    //    UIImage *img = [UIImage imageNamed:@"clipready.png"];
+    //    imgBtn.imageView.image = img;
+    
+    switch (btn.tag) {
+        case 0:
+            clipDownloader1 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader1];
+            clipDownloader1.button = [[UIButton alloc] init];
+            clipDownloader1.button = imgBtn;
+            [clipDownloader1 start];
+            
+            break;
+        case 1:
+            clipDownloader2 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader2];
+            clipDownloader2.button = [[UIButton alloc] init];
+            clipDownloader2.button = imgBtn;
+            [clipDownloader2 start];
+            break;
+        case 2:
+            clipDownloader3 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader3];
+            
+            clipDownloader3.button = [[UIButton alloc] init];
+            clipDownloader3.button = imgBtn;
+            [clipDownloader3 start];
+            break;
+        case 3:
+            clipDownloader4 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader4];
+            
+            clipDownloader4.button = [[UIButton alloc] init];
+            clipDownloader4.button = imgBtn;
+            [clipDownloader4 start];
+            break;
+        case 4:
+            clipDownloader5 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader5];
+            clipDownloader5.button = [[UIButton alloc] init];
+            clipDownloader5.button = imgBtn;
+            [clipDownloader5 start];
+            
+            break;
+            
+            break;
+            
+        default:
+            break;
+    }
 }
 
 
