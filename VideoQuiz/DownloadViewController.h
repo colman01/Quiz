@@ -17,6 +17,12 @@
 @property (strong, nonatomic) IBOutlet UIButton * clip4;
 @property (strong, nonatomic) IBOutlet UIButton * clip5;
 
+@property (strong, nonatomic) IBOutlet UIButton * clip1Image;
+@property (strong, nonatomic) IBOutlet UIButton * clip2Image;
+@property (strong, nonatomic) IBOutlet UIButton * clip3Image;
+@property (strong, nonatomic) IBOutlet UIButton * clip4Image;
+@property (strong, nonatomic) IBOutlet UIButton * clip5Image;
+
 @property (strong, nonatomic) ClipDownloader *clipDownloader1;
 @property (strong, nonatomic) ClipDownloader *clipDownloader2;
 @property (strong, nonatomic) ClipDownloader *clipDownloader3;
@@ -25,6 +31,7 @@
 
 
 @property (strong, nonatomic) NSMutableArray *requests;
+@property (strong, nonatomic) NSMutableArray *images;
 
 
 @end
