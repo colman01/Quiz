@@ -10,4 +10,6 @@
 
 @interface ClipDownloader : NSURLConnection
 
+@property (strong, nonatomic) NSMutableData *_responseData;
+
 @end

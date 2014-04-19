@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F334CACB1902792D00CCF8CF /* downloadArrow.png */; };
+		F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F334CACF19028EEA00CCF8CF /* DownloadViewController.m */; };
+		F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F334CAD21902907E00CCF8CF /* ClipDownloader.m */; };
 		F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10A819026C4900D03CE7 /* UIKit.framework */; };
 		F37B10AB19026C4900D03CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AA19026C4900D03CE7 /* Foundation.framework */; };
 		F37B10AD19026C4900D03CE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AC19026C4900D03CE7 /* CoreGraphics.framework */; };
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F334CACB1902792D00CCF8CF /* downloadArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downloadArrow.png; sourceTree = "<group>"; };
+		F334CACE19028EEA00CCF8CF /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		F334CACF19028EEA00CCF8CF /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		F334CAD11902907E00CCF8CF /* ClipDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipDownloader.h; sourceTree = "<group>"; };
+		F334CAD21902907E00CCF8CF /* ClipDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipDownloader.m; sourceTree = "<group>"; };
 		F37B10A519026C4900D03CE7 /* VideoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B10A819026C4900D03CE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F37B10AA19026C4900D03CE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,9 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F334CACD19028EAF00CCF8CF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F334CACB1902792D00CCF8CF /* downloadArrow.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
+				F334CACD19028EAF00CCF8CF /* images */,
 				F37B10AE19026C4900D03CE7 /* VideoQuiz */,
 				F37B10D219026C4900D03CE7 /* VideoQuizTests */,
 				F37B10A719026C4900D03CE7 /* Frameworks */,
@@ -123,6 +140,10 @@
 				F37B10C319026C4900D03CE7 /* ViewController.h */,
 				F37B10C419026C4900D03CE7 /* ViewController.m */,
 				F37B10AF19026C4900D03CE7 /* Supporting Files */,
+				F334CACE19028EEA00CCF8CF /* DownloadViewController.h */,
+				F334CACF19028EEA00CCF8CF /* DownloadViewController.m */,
+				F334CAD11902907E00CCF8CF /* ClipDownloader.h */,
+				F334CAD21902907E00CCF8CF /* ClipDownloader.m */,
 			);
 			path = VideoQuiz;
 			sourceTree = "<group>";
@@ -235,6 +256,7 @@
 				F37B10BB19026C4900D03CE7 /* Default.png in Resources */,
 				F37B10BD19026C4900D03CE7 /* Default@2x.png in Resources */,
 				F37B10BF19026C4900D03CE7 /* Default-568h@2x.png in Resources */,
+				F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */,
 				F37B10C219026C4900D03CE7 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +294,8 @@
 			files = (
 				F37B10B519026C4900D03CE7 /* main.m in Sources */,
 				F37B10B919026C4900D03CE7 /* AppDelegate.m in Sources */,
+				F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */,
+				F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */,
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +477,7 @@
 				F37B10DF19026C4900D03CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F37B10E019026C4900D03CE7 /* Build configuration list for PBXNativeTarget "VideoQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +486,7 @@
 				F37B10E219026C4900D03CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

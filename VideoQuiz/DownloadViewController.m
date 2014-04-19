@@ -14,6 +14,10 @@
 
 @implementation DownloadViewController
 
+@synthesize clip1, clip2, clip3, clip4, clip5;
+@synthesize clipDownloader1, clipDownloader2,clipDownloader3,clipDownloader4,clipDownloader5;
+@synthesize requests;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,5 +49,35 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+- (IBAction)downloadClip:(id)sender {
+    UIButton *btn = (UIButton *) sender;
+    NSURLRequest *req = (NSURLRequest *)[requests objectAtIndex:btn.tag];
+    [self createConnection:[requests objectAtIndex:btn.tag]];
+}
+
+
+
+- (void) createConnection:(NSURLRequest *) request {
+    clipDownloader1 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader1];
+}
+
+
+- (void) createUrls {
+    
+    if (!requests) {
+        requests = [[NSMutableArray alloc] init];
+        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]]];
+        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.rte.ie"]]];
+        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnn.com"]]];
+        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.wikipedia.com"]]];
+        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.ie"]]];
+    }
+
+}
+
+
 
 @end
