@@ -444,7 +444,7 @@
         <!--Navigation Controller-->
         <scene sceneID="EgG-mT-Ljb">
             <objects>
-                <navigationController id="ka5-ja-cus" sceneMemberID="viewController">
+                <navigationController id="ka5-ja-cus" customClass="NavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Yk-GE-zVs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

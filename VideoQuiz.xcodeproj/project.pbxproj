@@ -17,6 +17,7 @@
 		F36163AB1902E7E70002D22E /* flake.mov in Resources */ = {isa = PBXBuildFile; fileRef = F36163AA1902E7E70002D22E /* flake.mov */; };
 		F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F36163AD1902E8160002D22E /* PlayerViewController.m */; };
 		F36163B01902F2AB0002D22E /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = F36163AF1902F2AB0002D22E /* video.png */; };
+		F36163B31903D9D90002D22E /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F36163B21903D9D90002D22E /* NavigationController.m */; };
 		F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10A819026C4900D03CE7 /* UIKit.framework */; };
 		F37B10AB19026C4900D03CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AA19026C4900D03CE7 /* Foundation.framework */; };
 		F37B10AD19026C4900D03CE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AC19026C4900D03CE7 /* CoreGraphics.framework */; };
@@ -59,6 +60,8 @@
 		F36163AC1902E8160002D22E /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		F36163AD1902E8160002D22E /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		F36163AF1902F2AB0002D22E /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
+		F36163B11903D9D90002D22E /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		F36163B21903D9D90002D22E /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		F37B10A519026C4900D03CE7 /* VideoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B10A819026C4900D03CE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F37B10AA19026C4900D03CE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,6 +171,8 @@
 				F334CAD21902907E00CCF8CF /* ClipDownloader.m */,
 				F36163AC1902E8160002D22E /* PlayerViewController.h */,
 				F36163AD1902E8160002D22E /* PlayerViewController.m */,
+				F36163B11903D9D90002D22E /* NavigationController.h */,
+				F36163B21903D9D90002D22E /* NavigationController.m */,
 			);
 			path = VideoQuiz;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */,
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
+				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

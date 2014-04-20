@@ -57,10 +57,6 @@
     
 }
 
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
 
 /*
 #pragma mark - Navigation
