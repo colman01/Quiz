@@ -48,10 +48,13 @@
 
 
 - (BOOL) shouldAutorotate {
-    id currentCon = [self presentedViewController];
+//    id currentCon = [self presentedViewController];
+    id currentCon =self.childViewControllers[0];
     
     UIViewController *vc = (UIViewController *) currentCon;
+    NSNumber *number = [[NSNumber alloc] initWithInteger:[vc.view subviews].count ];
     
+    NSLog(@"%@", [number stringValue]);
     for (UIView *view in [vc.view subviews]) {
         if ([view isKindOfClass:[PlayerViewController class]] ) {
             return YES;
