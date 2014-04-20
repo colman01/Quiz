@@ -410,7 +410,7 @@
                         <viewControllerLayoutGuide type="top" id="IN3-Te-j9b"/>
                         <viewControllerLayoutGuide type="bottom" id="s9k-aq-Vvn"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I7Y-x0-Y0o">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="I7Y-x0-Y0o">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
