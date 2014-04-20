@@ -87,4 +87,12 @@
 
 }
 
+- (NSUInteger)supportedInterfaceOrientations {
+    if ([self.topViewController isMemberOfClass:[DownloadViewController class]]){
+        return UIInterfaceOrientationMaskPortrait;
+    }else{
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }
+}
+
 @end
