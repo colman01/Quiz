@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F31C166919041CB4004E92DD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166819041CB4004E92DD /* LoginViewController.m */; };
+		F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166B1904209C004E92DD /* CockPitViewController.m */; };
+		F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166E1904213A004E92DD /* SettingsViewController.m */; };
 		F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F334CACB1902792D00CCF8CF /* downloadArrow.png */; };
 		F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F334CACF19028EEA00CCF8CF /* DownloadViewController.m */; };
 		F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F334CAD21902907E00CCF8CF /* ClipDownloader.m */; };
@@ -18,7 +21,6 @@
 		F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F36163AD1902E8160002D22E /* PlayerViewController.m */; };
 		F36163B01902F2AB0002D22E /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = F36163AF1902F2AB0002D22E /* video.png */; };
 		F36163B31903D9D90002D22E /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F36163B21903D9D90002D22E /* NavigationController.m */; };
-		F36163B91903E4F00002D22E /* NewModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = F36163B81903E4F00002D22E /* NewModel.xcdatamodeld */; };
 		F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10A819026C4900D03CE7 /* UIKit.framework */; };
 		F37B10AB19026C4900D03CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AA19026C4900D03CE7 /* Foundation.framework */; };
 		F37B10AD19026C4900D03CE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AC19026C4900D03CE7 /* CoreGraphics.framework */; };
@@ -48,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F31C166719041CB4004E92DD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F31C166819041CB4004E92DD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F31C166A1904209C004E92DD /* CockPitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CockPitViewController.h; sourceTree = "<group>"; };
+		F31C166B1904209C004E92DD /* CockPitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CockPitViewController.m; sourceTree = "<group>"; };
+		F31C166D1904213A004E92DD /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		F31C166E1904213A004E92DD /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		F334CACB1902792D00CCF8CF /* downloadArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downloadArrow.png; sourceTree = "<group>"; };
 		F334CACE19028EEA00CCF8CF /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
 		F334CACF19028EEA00CCF8CF /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
@@ -63,7 +71,6 @@
 		F36163AF1902F2AB0002D22E /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		F36163B11903D9D90002D22E /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		F36163B21903D9D90002D22E /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
-		F36163B81903E4F00002D22E /* NewModel.xcdatamodeld */ = {isa = PBXFileReference; explicitFileType = wrapper.xcmappingmodel; name = NewModel.xcdatamodeld; path = VideoQuiz/NewModel.xcdatamodeld; sourceTree = SOURCE_ROOT; };
 		F37B10A519026C4900D03CE7 /* VideoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B10A819026C4900D03CE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F37B10AA19026C4900D03CE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +131,8 @@
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
+				F31C166719041CB4004E92DD /* LoginViewController.h */,
+				F31C166819041CB4004E92DD /* LoginViewController.m */,
 				F36163AF1902F2AB0002D22E /* video.png */,
 				F36163A31902E4720002D22E /* videoQuiz.mov */,
 				F36163AA1902E7E70002D22E /* flake.mov */,
@@ -175,7 +184,10 @@
 				F36163AD1902E8160002D22E /* PlayerViewController.m */,
 				F36163B11903D9D90002D22E /* NavigationController.h */,
 				F36163B21903D9D90002D22E /* NavigationController.m */,
-				F36163B81903E4F00002D22E /* NewModel.xcdatamodeld */,
+				F31C166A1904209C004E92DD /* CockPitViewController.h */,
+				F31C166B1904209C004E92DD /* CockPitViewController.m */,
+				F31C166D1904213A004E92DD /* SettingsViewController.h */,
+				F31C166E1904213A004E92DD /* SettingsViewController.m */,
 			);
 			path = VideoQuiz;
 			sourceTree = "<group>";
@@ -284,7 +296,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36163B91903E4F00002D22E /* NewModel.xcdatamodeld in Resources */,
 				F36163A41902E4720002D22E /* videoQuiz.mov in Resources */,
 				F37B10B319026C4900D03CE7 /* InfoPlist.strings in Resources */,
 				F37B10BB19026C4900D03CE7 /* Default.png in Resources */,
@@ -330,11 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31C166919041CB4004E92DD /* LoginViewController.m in Sources */,
+				F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */,
 				F37B10B519026C4900D03CE7 /* main.m in Sources */,
 				F37B10B919026C4900D03CE7 /* AppDelegate.m in Sources */,
 				F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */,
 				F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */,
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
+				F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */,
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
 				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
 			);

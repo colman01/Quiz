@@ -34,6 +34,9 @@
 @property (strong, nonatomic) NSMutableArray *requests;
 @property (strong, nonatomic) NSMutableArray *images;
 
+@property (strong, nonatomic) IBOutlet UILabel *usernameBadge;
+@property (strong, nonatomic) NSString *usernameBadgeText;
+
 
 
 @end

@@ -19,7 +19,8 @@
 @synthesize requests;
 @synthesize clip1Image, clip2Image, clip3Image, clip4Image, clip5Image;
 @synthesize images;
-
+@synthesize usernameBadge;
+@synthesize usernameBadgeText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +37,11 @@
     [self createUrls];
     [self createImageArray];
     // Do any additional setup after loading the view.
+}
+
+- (void) viewDidAppear:(BOOL)animated  {
+    [usernameBadge setText:usernameBadgeText];
+    [usernameBadge sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning

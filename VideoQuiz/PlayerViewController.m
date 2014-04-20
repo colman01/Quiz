@@ -40,20 +40,34 @@
     
     NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"flake.mov" ofType:nil];
     NSURL *url = [NSURL fileURLWithPath:urlStr];
-    ////
     videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-//    videoPlayer.view.frame = CGRectMake(0, 0,568, 320  );
-    videoPlayer.view.frame = CGRectMake(0, -20,320, 568  );
-    
 
-//    videoPlayer.view.frame = self.view.frame;
-    [videoPlayer setFullscreen:YES];
-    videoPlayer.controlStyle = MPMovieControlStyleFullscreen;
-    videoPlayer.repeatMode = MPMovieRepeatModeOne;
+    videoPlayer.view.frame = CGRectMake(0, -20,320, 568  );
+//    videoPlayer.controlStyle = MPMovieControlStyleFullscreen;
+//    videoPlayer.repeatMode = MPMovieRepeatModeOne;
+    videoPlayer.controlStyle = MPMovieControlStyleNone;
     videoPlayer.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth  |    UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight);
     [videoPlayer play];
     [self.view addSubview:videoPlayer.view];
-//    sub = vide    oPlayer.view;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:videoPlayer];
+    self.navigationController.navigationBar.hidden = YES;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+//    self.navigationController.view.hidden = YES;
+    
+}
+
+- (void) moviePlayBackDidFinish:(NSNotification*)notification {
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    self.navigationController.navigationBar.hidden = NO;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0];
     
 }
 
@@ -68,5 +82,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
