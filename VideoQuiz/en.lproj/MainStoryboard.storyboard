@@ -323,7 +323,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zvi-od-2l8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zvi-od-2l8">
                                 <rect key="frame" x="96" y="86" width="94" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -445,10 +445,12 @@
                             <constraint firstItem="gsh-C4-uAk" firstAttribute="leading" secondItem="1By-Zj-hji" secondAttribute="leading" constant="73" id="5TH-zO-4FQ"/>
                             <constraint firstAttribute="trailing" secondItem="qKY-1x-EZG" secondAttribute="trailing" constant="6" id="6qe-9p-CVJ"/>
                             <constraint firstItem="qKY-1x-EZG" firstAttribute="top" secondItem="lo7-1q-qTV" secondAttribute="bottom" constant="9" id="8Pv-qw-X11"/>
+                            <constraint firstItem="Zvi-od-2l8" firstAttribute="leading" secondItem="1By-Zj-hji" secondAttribute="leading" constant="96" id="8bA-Up-iwX"/>
                             <constraint firstAttribute="trailing" secondItem="nBp-Pi-qAc" secondAttribute="trailing" id="F4c-Sh-lJn"/>
                             <constraint firstItem="gsh-C4-uAk" firstAttribute="top" secondItem="lo7-1q-qTV" secondAttribute="bottom" constant="135" id="Hkt-Wz-oqn"/>
                             <constraint firstItem="S21-A8-NuY" firstAttribute="top" secondItem="nBp-Pi-qAc" secondAttribute="bottom" id="lWh-tM-ebX"/>
                             <constraint firstItem="nBp-Pi-qAc" firstAttribute="leading" secondItem="1By-Zj-hji" secondAttribute="leading" id="rlv-Tn-sWw"/>
+                            <constraint firstItem="Zvi-od-2l8" firstAttribute="top" secondItem="lo7-1q-qTV" secondAttribute="bottom" constant="22" id="zOr-Vb-Tb3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nXk-ZB-Nd1"/>

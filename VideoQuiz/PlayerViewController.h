@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MPMoviePlayerController.h>
 
-@interface PlayerViewController : UIViewController <MPMediaPlayback>
+@interface PlayerViewController : UIViewController 
 
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 
