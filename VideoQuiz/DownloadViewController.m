@@ -39,6 +39,26 @@
     // Do any additional setup after loading the view.
 }
 
+
+- (void)viewWillAppear:(BOOL)animated{
+//    UIInterfaceOrientation o;
+//    switch ([UIDevice currentDevice].orientation) {
+//        case UIDeviceOrientationPortrait:
+//            o = UIInterfaceOrientationPortrait;
+//            break;
+//        case UIDeviceOrientationLandscapeLeft:
+//            o = UIInterfaceOrientationLandscapeLeft;
+//            break;
+//        case UIDeviceOrientationLandscapeRight:
+//            o = UIInterfaceOrientationLandscapeRight;
+//            break;
+//        default:
+//            break;
+//    }
+    
+    [self.navigationController shouldAutorotate];
+}
+
 - (void) viewDidAppear:(BOOL)animated  {
     [usernameBadge setText:usernameBadgeText];
     [usernameBadge sizeToFit];
@@ -176,7 +196,11 @@
 
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+    if (toInterfaceOrientation == (UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight)) {
+        return NO;
+    }
+//    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+        return YES;
 }
 //- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 //{

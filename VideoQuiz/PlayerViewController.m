@@ -66,7 +66,7 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     self.navigationController.navigationBar.hidden = NO;
     
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
     [self.navigationController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0];
     
 }

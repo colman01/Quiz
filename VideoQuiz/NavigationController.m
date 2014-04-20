@@ -51,7 +51,40 @@
     UIViewController *vc = self.topViewController;
     if ([vc isKindOfClass:[PlayerViewController class]])
         return YES;
+    if ([vc isKindOfClass:[DownloadViewController class]]) {
+        
+            if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+                return YES;
+            }
+            else {
+                return NO;
+            }
+        
+        return YES;
+    }
     return NO;
+}
+
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    UIViewController *vc = self.topViewController;
+    if ([vc isKindOfClass:[PlayerViewController class]])
+        return YES;
+    
+    if ([vc isKindOfClass:[DownloadViewController class]]) {
+        if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
+                return NO;
+        } else {
+            return YES;
+        }
+    }
+    if (toInterfaceOrientation != UIInterfaceOrientationPortrait) {
+        return NO;
+    }
+    
+    
+    return NO;
+//    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+
 }
 
 @end
