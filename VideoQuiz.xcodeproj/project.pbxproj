@@ -12,6 +12,11 @@
 		F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F334CAD21902907E00CCF8CF /* ClipDownloader.m */; };
 		F36163A01902CB120002D22E /* clipready.png in Resources */ = {isa = PBXBuildFile; fileRef = F361639F1902CB120002D22E /* clipready.png */; };
 		F36163A21902CCB30002D22E /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = F36163A11902CCB30002D22E /* heart.png */; };
+		F36163A41902E4720002D22E /* videoQuiz.mov in Resources */ = {isa = PBXBuildFile; fileRef = F36163A31902E4720002D22E /* videoQuiz.mov */; };
+		F36163A91902E7290002D22E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F36163A81902E7290002D22E /* MediaPlayer.framework */; };
+		F36163AB1902E7E70002D22E /* flake.mov in Resources */ = {isa = PBXBuildFile; fileRef = F36163AA1902E7E70002D22E /* flake.mov */; };
+		F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F36163AD1902E8160002D22E /* PlayerViewController.m */; };
+		F36163B01902F2AB0002D22E /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = F36163AF1902F2AB0002D22E /* video.png */; };
 		F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10A819026C4900D03CE7 /* UIKit.framework */; };
 		F37B10AB19026C4900D03CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AA19026C4900D03CE7 /* Foundation.framework */; };
 		F37B10AD19026C4900D03CE7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AC19026C4900D03CE7 /* CoreGraphics.framework */; };
@@ -48,6 +53,12 @@
 		F334CAD21902907E00CCF8CF /* ClipDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipDownloader.m; sourceTree = "<group>"; };
 		F361639F1902CB120002D22E /* clipready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipready.png; sourceTree = "<group>"; };
 		F36163A11902CCB30002D22E /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		F36163A31902E4720002D22E /* videoQuiz.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = videoQuiz.mov; sourceTree = "<group>"; };
+		F36163A81902E7290002D22E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F36163AA1902E7E70002D22E /* flake.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = flake.mov; sourceTree = "<group>"; };
+		F36163AC1902E8160002D22E /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		F36163AD1902E8160002D22E /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		F36163AF1902F2AB0002D22E /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		F37B10A519026C4900D03CE7 /* VideoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B10A819026C4900D03CE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F37B10AA19026C4900D03CE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36163A91902E7290002D22E /* MediaPlayer.framework in Frameworks */,
 				F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */,
 				F37B10AB19026C4900D03CE7 /* Foundation.framework in Frameworks */,
 				F37B10AD19026C4900D03CE7 /* CoreGraphics.framework in Frameworks */,
@@ -107,6 +119,9 @@
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
+				F36163AF1902F2AB0002D22E /* video.png */,
+				F36163A31902E4720002D22E /* videoQuiz.mov */,
+				F36163AA1902E7E70002D22E /* flake.mov */,
 				F36163A11902CCB30002D22E /* heart.png */,
 				F361639F1902CB120002D22E /* clipready.png */,
 				F334CACD19028EAF00CCF8CF /* images */,
@@ -129,6 +144,7 @@
 		F37B10A719026C4900D03CE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F36163A81902E7290002D22E /* MediaPlayer.framework */,
 				F37B10A819026C4900D03CE7 /* UIKit.framework */,
 				F37B10AA19026C4900D03CE7 /* Foundation.framework */,
 				F37B10AC19026C4900D03CE7 /* CoreGraphics.framework */,
@@ -150,6 +166,8 @@
 				F334CACF19028EEA00CCF8CF /* DownloadViewController.m */,
 				F334CAD11902907E00CCF8CF /* ClipDownloader.h */,
 				F334CAD21902907E00CCF8CF /* ClipDownloader.m */,
+				F36163AC1902E8160002D22E /* PlayerViewController.h */,
+				F36163AD1902E8160002D22E /* PlayerViewController.m */,
 			);
 			path = VideoQuiz;
 			sourceTree = "<group>";
@@ -258,11 +276,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36163A41902E4720002D22E /* videoQuiz.mov in Resources */,
 				F37B10B319026C4900D03CE7 /* InfoPlist.strings in Resources */,
 				F37B10BB19026C4900D03CE7 /* Default.png in Resources */,
 				F37B10BD19026C4900D03CE7 /* Default@2x.png in Resources */,
+				F36163AB1902E7E70002D22E /* flake.mov in Resources */,
 				F37B10BF19026C4900D03CE7 /* Default-568h@2x.png in Resources */,
 				F36163A21902CCB30002D22E /* heart.png in Resources */,
+				F36163B01902F2AB0002D22E /* video.png in Resources */,
 				F36163A01902CB120002D22E /* clipready.png in Resources */,
 				F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */,
 				F37B10C219026C4900D03CE7 /* MainStoryboard.storyboard in Resources */,
@@ -305,6 +326,7 @@
 				F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */,
 				F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */,
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
+				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

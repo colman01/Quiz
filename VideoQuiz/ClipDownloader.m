@@ -20,8 +20,8 @@
     // Furthermore, this method is called each time there is a redirect so reinitializing it
     // also serves to clear it
     NSLog(@"did response");
-    UIImage *img = [UIImage imageNamed:@"clipready.png"];
-    button.imageView.image = img;
+//    UIImage *img = [UIImage imageNamed:@"clipready.png"];
+//    button.imageView.image = img;
     _responseData = [[NSMutableData alloc] init];
 }
 
@@ -43,7 +43,7 @@
     // The request is complete and data has been received
     // You can parse the stuff in your instance variable now
     NSLog(@"finished loading");
-    UIImage *img = [UIImage imageNamed:@"heart.png"];
+    UIImage *img = [UIImage imageNamed:@"clipready.png"];
     button.imageView.image = img;
     
     NSLog(@"%@" , [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding]);

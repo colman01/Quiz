@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ClipDownloader.h"
 
+
 @interface DownloadViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton * clip1;
@@ -32,6 +33,7 @@
 
 @property (strong, nonatomic) NSMutableArray *requests;
 @property (strong, nonatomic) NSMutableArray *images;
+
 
 
 @end

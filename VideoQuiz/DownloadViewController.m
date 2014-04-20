@@ -20,6 +20,7 @@
 @synthesize clip1Image, clip2Image, clip3Image, clip4Image, clip5Image;
 @synthesize images;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,6 +43,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
 
 /*
 #pragma mark - Navigation
@@ -142,5 +147,44 @@
 }
 
 
+//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender  {
+//    
+//}
+
+- (IBAction)showVideo:(id)sender {
+    [self performSegueWithIdentifier:@"player" sender:nil];
+}
+
+
+
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    UIInterfaceOrientationMask orientationMask = UIInterfaceOrientationMaskPortrait;
+    return orientationMask;
+}
+
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+}
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    
+//    return NO;
+//}
+//
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskPortrait;
+//}
+//
+//- (BOOL) shouldAutorotate {
+//    return NO;
+//}
 
 @end
