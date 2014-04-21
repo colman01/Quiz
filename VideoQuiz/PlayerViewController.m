@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning 
+- (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -43,8 +43,6 @@
     videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
 
     videoPlayer.view.frame = CGRectMake(0, -20,320, 568  );
-//    videoPlayer.controlStyle = MPMovieControlStyleFullscreen;
-//    videoPlayer.repeatMode = MPMovieRepeatModeOne;
     videoPlayer.controlStyle = MPMovieControlStyleNone;
     videoPlayer.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth  |    UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight);
     [videoPlayer play];
@@ -56,8 +54,6 @@
                                                object:videoPlayer];
     self.navigationController.navigationBar.hidden = YES;
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    
-//    self.navigationController.view.hidden = YES;
     
 }
 

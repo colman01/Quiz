@@ -41,6 +41,7 @@
 		F3FA2FE6190577220001841D /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FE5190577220001841D /* Question.m */; };
 		F3FA2FE9190577230001841D /* DmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FE8190577230001841D /* DmUser.m */; };
 		F3FA2FEC190577230001841D /* DmVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FEB190577230001841D /* DmVideo.m */; };
+		F3FA2FEE190586840001841D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA2FED190586840001841D /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		F3FA2FE8190577230001841D /* DmUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmUser.m; sourceTree = "<group>"; };
 		F3FA2FEA190577230001841D /* DmVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmVideo.h; sourceTree = "<group>"; };
 		F3FA2FEB190577230001841D /* DmVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmVideo.m; sourceTree = "<group>"; };
+		F3FA2FED190586840001841D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3FA2FEE190586840001841D /* CoreData.framework in Frameworks */,
 				F36163A91902E7290002D22E /* MediaPlayer.framework in Frameworks */,
 				F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */,
 				F37B10AB19026C4900D03CE7 /* Foundation.framework in Frameworks */,
@@ -168,6 +171,7 @@
 		F37B10A719026C4900D03CE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA2FED190586840001841D /* CoreData.framework */,
 				F36163A81902E7290002D22E /* MediaPlayer.framework */,
 				F37B10A819026C4900D03CE7 /* UIKit.framework */,
 				F37B10AA19026C4900D03CE7 /* Foundation.framework */,
