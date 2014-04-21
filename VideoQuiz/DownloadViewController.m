@@ -61,8 +61,6 @@
 }
 */
 
-
-
 - (IBAction)downloadClip:(id)sender {
     [self someMethod:sender];
     [self someMethod:sender];
@@ -147,10 +145,6 @@
 }
 
 
-//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender  {
-//    
-//}
-
 - (IBAction)showVideo:(id)sender {
     [self performSegueWithIdentifier:@"player" sender:nil];
 }
@@ -173,22 +167,8 @@
     if (toInterfaceOrientation == (UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight)) {
         return NO;
     }
-//    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
-        return YES;
+    return YES;
 }
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-//{
-//    
-//    return NO;
-//}
-//
-//- (NSUInteger)supportedInterfaceOrientations
-//{
-//    return UIInterfaceOrientationMaskPortrait;
-//}
-//
-//- (BOOL) shouldAutorotate {
-//    return NO;
-//}
+
 
 @end

@@ -70,7 +70,6 @@
     
     if ([[segue identifier] isEqualToString:@"Settings"]) {
         SettingsViewController *settingsVC = (SettingsViewController *) dest;
-//        [settingsVC.usernameBadge setText:usernameBadge.text];
         settingsVC.usernameBadgeText = self.usernameBadgeText;
     }
     

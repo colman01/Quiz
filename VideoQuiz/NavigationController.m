@@ -80,10 +80,7 @@
     if (toInterfaceOrientation != UIInterfaceOrientationPortrait) {
         return NO;
     }
-    
-    
     return NO;
-//    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
 
 }
 
