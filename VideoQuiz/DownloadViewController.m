@@ -39,26 +39,6 @@
     // Do any additional setup after loading the view.
 }
 
-
-- (void)viewWillAppear:(BOOL)animated{
-//    UIInterfaceOrientation o;
-//    switch ([UIDevice currentDevice].orientation) {
-//        case UIDeviceOrientationPortrait:
-//            o = UIInterfaceOrientationPortrait;
-//            break;
-//        case UIDeviceOrientationLandscapeLeft:
-//            o = UIInterfaceOrientationLandscapeLeft;
-//            break;
-//        case UIDeviceOrientationLandscapeRight:
-//            o = UIInterfaceOrientationLandscapeRight;
-//            break;
-//        default:
-//            break;
-//    }
-    
-    [self.navigationController shouldAutorotate];
-}
-
 - (void) viewDidAppear:(BOOL)animated  {
     [usernameBadge setText:usernameBadgeText];
     [usernameBadge sizeToFit];
@@ -69,10 +49,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
-
 
 /*
 #pragma mark - Navigation
@@ -90,8 +66,6 @@
 - (IBAction)downloadClip:(id)sender {
     [self someMethod:sender];
     [self someMethod:sender];
-
-
 }
 
 - (void) someMethod:(id)sender {
