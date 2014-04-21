@@ -37,6 +37,9 @@
 		F37B10CF19026C4900D03CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AA19026C4900D03CE7 /* Foundation.framework */; };
 		F37B10D719026C4900D03CE7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B10D519026C4900D03CE7 /* InfoPlist.strings */; };
 		F37B10DA19026C4900D03CE7 /* VideoQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B10D919026C4900D03CE7 /* VideoQuizTests.m */; };
+		F3C7943119056551001A1847 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = F3C7943019056551001A1847 /* Model.xcdatamodeld */; };
+		F3C79441190568A5001A1847 /* DmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C79440190568A5001A1847 /* DmUser.m */; };
+		F3C79444190568A6001A1847 /* DmVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C79443190568A6001A1847 /* DmVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,11 @@
 		F37B10D619026C4900D03CE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F37B10D819026C4900D03CE7 /* VideoQuizTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoQuizTests.h; sourceTree = "<group>"; };
 		F37B10D919026C4900D03CE7 /* VideoQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoQuizTests.m; sourceTree = "<group>"; };
+		F3C7943019056551001A1847 /* Model.xcdatamodeld */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Model.xcdatamodeld; sourceTree = "<group>"; };
+		F3C7943F190568A5001A1847 /* DmUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmUser.h; sourceTree = "<group>"; };
+		F3C79440190568A5001A1847 /* DmUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmUser.m; sourceTree = "<group>"; };
+		F3C79442190568A6001A1847 /* DmVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmVideo.h; sourceTree = "<group>"; };
+		F3C79443190568A6001A1847 /* DmVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmVideo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,8 @@
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
+				F3C794381905682D001A1847 /* DataModel */,
+				F3C7943019056551001A1847 /* Model.xcdatamodeld */,
 				F31C166719041CB4004E92DD /* LoginViewController.h */,
 				F31C166819041CB4004E92DD /* LoginViewController.m */,
 				F36163AF1902F2AB0002D22E /* video.png */,
@@ -225,6 +235,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F3C794381905682D001A1847 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3C79442190568A6001A1847 /* DmVideo.h */,
+				F3C79443190568A6001A1847 /* DmVideo.m */,
+				F3C7943F190568A5001A1847 /* DmUser.h */,
+				F3C79440190568A5001A1847 /* DmUser.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +328,7 @@
 				F36163A01902CB120002D22E /* clipready.png in Resources */,
 				F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */,
 				F37B10C219026C4900D03CE7 /* MainStoryboard.storyboard in Resources */,
+				F3C7943119056551001A1847 /* Model.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +370,8 @@
 				F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */,
 				F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */,
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
+				F3C79441190568A5001A1847 /* DmUser.m in Sources */,
+				F3C79444190568A6001A1847 /* DmVideo.m in Sources */,
 				F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */,
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
 				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
