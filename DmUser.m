@@ -8,12 +8,14 @@
 
 #import "DmUser.h"
 #import "DmVideo.h"
+#import "Question.h"
 
 
 @implementation DmUser
 
-@dynamic username;
 @dynamic password;
+@dynamic username;
 @dynamic video;
+@dynamic question;
 
 @end

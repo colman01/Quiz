@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Question" syncable="YES">
+        <attribute name="answer1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="answer2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="answer3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="answer4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isCorrectlyAnsered" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="question" inverseEntity="User" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName="DmUser" syncable="YES">
-        <attribute name="password" optional="YES" syncable="YES"/>
-        <attribute name="username" optional="YES" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="question" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="user" inverseEntity="Question" syncable="YES"/>
         <relationship name="video" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Video" inverseName="user" inverseEntity="Video" syncable="YES"/>
     </entity>
     <entity name="Video" representedClassName="DmVideo" syncable="YES">
-        <attribute name="data" optional="YES" syncable="YES"/>
-        <attribute name="isViewed" optional="YES" syncable="YES"/>
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="isViewed" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="video" inverseEntity="User" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="User" positionX="43" positionY="-117" width="128" height="103"/>
         <element name="Video" positionX="-72" positionY="243" width="128" height="88"/>
+        <element name="Question" positionX="475" positionY="0" width="128" height="148"/>
     </elements>
 </model>

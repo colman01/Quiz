@@ -38,8 +38,9 @@
 		F37B10D719026C4900D03CE7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B10D519026C4900D03CE7 /* InfoPlist.strings */; };
 		F37B10DA19026C4900D03CE7 /* VideoQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B10D919026C4900D03CE7 /* VideoQuizTests.m */; };
 		F3C7943119056551001A1847 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = F3C7943019056551001A1847 /* Model.xcdatamodeld */; };
-		F3C79441190568A5001A1847 /* DmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C79440190568A5001A1847 /* DmUser.m */; };
-		F3C79444190568A6001A1847 /* DmVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C79443190568A6001A1847 /* DmVideo.m */; };
+		F3FA2FE6190577220001841D /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FE5190577220001841D /* Question.m */; };
+		F3FA2FE9190577230001841D /* DmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FE8190577230001841D /* DmUser.m */; };
+		F3FA2FEC190577230001841D /* DmVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FEB190577230001841D /* DmVideo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,10 +98,12 @@
 		F37B10D819026C4900D03CE7 /* VideoQuizTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoQuizTests.h; sourceTree = "<group>"; };
 		F37B10D919026C4900D03CE7 /* VideoQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoQuizTests.m; sourceTree = "<group>"; };
 		F3C7943019056551001A1847 /* Model.xcdatamodeld */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Model.xcdatamodeld; sourceTree = "<group>"; };
-		F3C7943F190568A5001A1847 /* DmUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmUser.h; sourceTree = "<group>"; };
-		F3C79440190568A5001A1847 /* DmUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmUser.m; sourceTree = "<group>"; };
-		F3C79442190568A6001A1847 /* DmVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmVideo.h; sourceTree = "<group>"; };
-		F3C79443190568A6001A1847 /* DmVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmVideo.m; sourceTree = "<group>"; };
+		F3FA2FE4190577220001841D /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		F3FA2FE5190577220001841D /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		F3FA2FE7190577230001841D /* DmUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmUser.h; sourceTree = "<group>"; };
+		F3FA2FE8190577230001841D /* DmUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmUser.m; sourceTree = "<group>"; };
+		F3FA2FEA190577230001841D /* DmVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmVideo.h; sourceTree = "<group>"; };
+		F3FA2FEB190577230001841D /* DmVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmVideo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 		F37B10AE19026C4900D03CE7 /* VideoQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA2FE3190569DC0001841D /* Navigation */,
 				F3FA2FE2190569A70001841D /* ViewControllers */,
 				F3FA2FE1190569790001841D /* Services */,
 				F3FA2FE01905696B0001841D /* Login */,
@@ -184,8 +188,6 @@
 				F37B10B819026C4900D03CE7 /* AppDelegate.m */,
 				F37B10C019026C4900D03CE7 /* MainStoryboard.storyboard */,
 				F37B10AF19026C4900D03CE7 /* Supporting Files */,
-				F36163B11903D9D90002D22E /* NavigationController.h */,
-				F36163B21903D9D90002D22E /* NavigationController.m */,
 			);
 			path = VideoQuiz;
 			sourceTree = "<group>";
@@ -226,11 +228,13 @@
 		F3C794381905682D001A1847 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA2FEA190577230001841D /* DmVideo.h */,
+				F3FA2FEB190577230001841D /* DmVideo.m */,
+				F3FA2FE7190577230001841D /* DmUser.h */,
+				F3FA2FE8190577230001841D /* DmUser.m */,
+				F3FA2FE4190577220001841D /* Question.h */,
+				F3FA2FE5190577220001841D /* Question.m */,
 				F3C7943019056551001A1847 /* Model.xcdatamodeld */,
-				F3C79442190568A6001A1847 /* DmVideo.h */,
-				F3C79443190568A6001A1847 /* DmVideo.m */,
-				F3C7943F190568A5001A1847 /* DmUser.h */,
-				F3C79440190568A5001A1847 /* DmUser.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -268,6 +272,15 @@
 				F31C166E1904213A004E92DD /* SettingsViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F3FA2FE3190569DC0001841D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F36163B11903D9D90002D22E /* NavigationController.h */,
+				F36163B21903D9D90002D22E /* NavigationController.m */,
+			);
+			name = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,11 +407,12 @@
 				F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */,
 				F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */,
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
-				F3C79441190568A5001A1847 /* DmUser.m in Sources */,
-				F3C79444190568A6001A1847 /* DmVideo.m in Sources */,
+				F3FA2FE9190577230001841D /* DmUser.m in Sources */,
 				F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */,
+				F3FA2FE6190577220001841D /* Question.m in Sources */,
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
 				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
+				F3FA2FEC190577230001841D /* DmVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

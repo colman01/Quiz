@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class DmVideo;
+@class DmVideo, Question;
 
 @interface DmUser : NSManagedObject
 
-@property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSString * password;
+@property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSSet *video;
+@property (nonatomic, retain) NSSet *question;
 @end
 
 @interface DmUser (CoreDataGeneratedAccessors)
@@ -24,5 +25,10 @@
 - (void)removeVideoObject:(DmVideo *)value;
 - (void)addVideo:(NSSet *)values;
 - (void)removeVideo:(NSSet *)values;
+
+- (void)addQuestionObject:(Question *)value;
+- (void)removeQuestionObject:(Question *)value;
+- (void)addQuestion:(NSSet *)values;
+- (void)removeQuestion:(NSSet *)values;
 
 @end
