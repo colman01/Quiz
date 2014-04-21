@@ -42,6 +42,9 @@
 		F3FA2FE9190577230001841D /* DmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FE8190577230001841D /* DmUser.m */; };
 		F3FA2FEC190577230001841D /* DmVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FEB190577230001841D /* DmVideo.m */; };
 		F3FA2FEE190586840001841D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA2FED190586840001841D /* CoreData.framework */; };
+		F3FA2FF519058C3D0001841D /* ad bud.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF219058C3D0001841D /* ad bud.mov */; };
+		F3FA2FF619058C3D0001841D /* guinness.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF319058C3D0001841D /* guinness.mov */; };
+		F3FA2FF719058C3D0001841D /* milkTray.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF419058C3D0001841D /* milkTray.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,9 @@
 		F3FA2FEA190577230001841D /* DmVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmVideo.h; sourceTree = "<group>"; };
 		F3FA2FEB190577230001841D /* DmVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmVideo.m; sourceTree = "<group>"; };
 		F3FA2FED190586840001841D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F3FA2FF219058C3D0001841D /* ad bud.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ad bud.mov"; sourceTree = "<group>"; };
+		F3FA2FF319058C3D0001841D /* guinness.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = guinness.mov; sourceTree = "<group>"; };
+		F3FA2FF419058C3D0001841D /* milkTray.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = milkTray.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				F36163AF1902F2AB0002D22E /* video.png */,
-				F36163A31902E4720002D22E /* videoQuiz.mov */,
-				F36163AA1902E7E70002D22E /* flake.mov */,
 				F36163A11902CCB30002D22E /* heart.png */,
 				F361639F1902CB120002D22E /* clipready.png */,
 				F334CACB1902792D00CCF8CF /* downloadArrow.png */,
@@ -150,6 +154,7 @@
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
+				F3FA2FEF190589CA0001841D /* Videos */,
 				F3C794381905682D001A1847 /* DataModel */,
 				F334CACD19028EAF00CCF8CF /* images */,
 				F37B10AE19026C4900D03CE7 /* VideoQuiz */,
@@ -287,6 +292,18 @@
 			name = Navigation;
 			sourceTree = "<group>";
 		};
+		F3FA2FEF190589CA0001841D /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				F36163A31902E4720002D22E /* videoQuiz.mov */,
+				F36163AA1902E7E70002D22E /* flake.mov */,
+				F3FA2FF219058C3D0001841D /* ad bud.mov */,
+				F3FA2FF319058C3D0001841D /* guinness.mov */,
+				F3FA2FF419058C3D0001841D /* milkTray.mov */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -361,12 +378,15 @@
 				F36163A41902E4720002D22E /* videoQuiz.mov in Resources */,
 				F37B10B319026C4900D03CE7 /* InfoPlist.strings in Resources */,
 				F37B10BB19026C4900D03CE7 /* Default.png in Resources */,
+				F3FA2FF519058C3D0001841D /* ad bud.mov in Resources */,
 				F37B10BD19026C4900D03CE7 /* Default@2x.png in Resources */,
+				F3FA2FF719058C3D0001841D /* milkTray.mov in Resources */,
 				F36163AB1902E7E70002D22E /* flake.mov in Resources */,
 				F37B10BF19026C4900D03CE7 /* Default-568h@2x.png in Resources */,
 				F36163A21902CCB30002D22E /* heart.png in Resources */,
 				F36163B01902F2AB0002D22E /* video.png in Resources */,
 				F36163A01902CB120002D22E /* clipready.png in Resources */,
+				F3FA2FF619058C3D0001841D /* guinness.mov in Resources */,
 				F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */,
 				F37B10C219026C4900D03CE7 /* MainStoryboard.storyboard in Resources */,
 				F3C7943119056551001A1847 /* Model.xcdatamodeld in Resources */,

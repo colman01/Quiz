@@ -38,7 +38,7 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     
-    NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"flake.mov" ofType:nil];
+    NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"guinness.mov" ofType:nil];
     NSURL *url = [NSURL fileURLWithPath:urlStr];
     videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
 
