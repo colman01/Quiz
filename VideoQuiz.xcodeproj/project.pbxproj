@@ -45,6 +45,14 @@
 		F3FA2FF519058C3D0001841D /* ad bud.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF219058C3D0001841D /* ad bud.mov */; };
 		F3FA2FF619058C3D0001841D /* guinness.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF319058C3D0001841D /* guinness.mov */; };
 		F3FA2FF719058C3D0001841D /* milkTray.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF419058C3D0001841D /* milkTray.mov */; };
+		F3FA2FFA190650950001841D /* WsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FF9190650950001841D /* WsBase.m */; };
+		F3FA2FFD190650A60001841D /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FFC190650A60001841D /* SessionData.m */; };
+		F3FA30021906513A0001841D /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA30011906513A0001841D /* Objection-iOS.framework */; };
+		F3FA3009190652AD0001841D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA3008190652AD0001841D /* Security.framework */; };
+		F3FA300B190652FB0001841D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA300A190652FB0001841D /* CoreText.framework */; };
+		F3FA300D190654FD0001841D /* PersistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA300C190654FD0001841D /* PersistManager.m */; };
+		F3FA3010190657550001841D /* QuizWs.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA300F190657550001841D /* QuizWs.m */; };
+		F3FA3013190659B30001841D /* QuizDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA3012190659B30001841D /* QuizDao.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +120,20 @@
 		F3FA2FF219058C3D0001841D /* ad bud.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ad bud.mov"; sourceTree = "<group>"; };
 		F3FA2FF319058C3D0001841D /* guinness.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = guinness.mov; sourceTree = "<group>"; };
 		F3FA2FF419058C3D0001841D /* milkTray.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = milkTray.mov; sourceTree = "<group>"; };
+		F3FA2FF8190650950001841D /* WsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WsBase.h; sourceTree = "<group>"; };
+		F3FA2FF9190650950001841D /* WsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WsBase.m; sourceTree = "<group>"; };
+		F3FA2FFB190650A60001841D /* SessionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionData.h; sourceTree = "<group>"; };
+		F3FA2FFC190650A60001841D /* SessionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionData.m; sourceTree = "<group>"; };
+		F3FA30011906513A0001841D /* Objection-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Objection-iOS.framework"; path = "../../Desktop/workspace/ios-immo-inspect/Frameworks/Objection-iOS.framework"; sourceTree = "<group>"; };
+		F3FA3006190651DD0001841D /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		F3FA30071906524C0001841D /* PersistManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersistManager.h; sourceTree = "<group>"; };
+		F3FA3008190652AD0001841D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F3FA300A190652FB0001841D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		F3FA300C190654FD0001841D /* PersistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistManager.m; sourceTree = "<group>"; };
+		F3FA300E190657550001841D /* QuizWs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizWs.h; sourceTree = "<group>"; };
+		F3FA300F190657550001841D /* QuizWs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizWs.m; sourceTree = "<group>"; };
+		F3FA3011190659B30001841D /* QuizDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizDao.h; sourceTree = "<group>"; };
+		F3FA3012190659B30001841D /* QuizDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizDao.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +141,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3FA3009190652AD0001841D /* Security.framework in Frameworks */,
+				F3FA300B190652FB0001841D /* CoreText.framework in Frameworks */,
+				F3FA30021906513A0001841D /* Objection-iOS.framework in Frameworks */,
 				F3FA2FEE190586840001841D /* CoreData.framework in Frameworks */,
 				F36163A91902E7290002D22E /* MediaPlayer.framework in Frameworks */,
 				F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */,
@@ -176,6 +201,9 @@
 		F37B10A719026C4900D03CE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA300A190652FB0001841D /* CoreText.framework */,
+				F3FA3008190652AD0001841D /* Security.framework */,
+				F3FA30011906513A0001841D /* Objection-iOS.framework */,
 				F3FA2FED190586840001841D /* CoreData.framework */,
 				F36163A81902E7290002D22E /* MediaPlayer.framework */,
 				F37B10A819026C4900D03CE7 /* UIKit.framework */,
@@ -244,6 +272,7 @@
 				F3FA2FE4190577220001841D /* Question.h */,
 				F3FA2FE5190577220001841D /* Question.m */,
 				F3C7943019056551001A1847 /* Model.xcdatamodeld */,
+				F3FA3006190651DD0001841D /* Data.h */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -260,8 +289,18 @@
 		F3FA2FE1190569790001841D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA300C190654FD0001841D /* PersistManager.m */,
+				F3FA30071906524C0001841D /* PersistManager.h */,
+				F3FA2FFB190650A60001841D /* SessionData.h */,
+				F3FA2FFC190650A60001841D /* SessionData.m */,
+				F3FA2FF8190650950001841D /* WsBase.h */,
+				F3FA2FF9190650950001841D /* WsBase.m */,
 				F334CAD11902907E00CCF8CF /* ClipDownloader.h */,
 				F334CAD21902907E00CCF8CF /* ClipDownloader.m */,
+				F3FA300E190657550001841D /* QuizWs.h */,
+				F3FA300F190657550001841D /* QuizWs.m */,
+				F3FA3011190659B30001841D /* QuizDao.h */,
+				F3FA3012190659B30001841D /* QuizDao.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -425,7 +464,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F31C166919041CB4004E92DD /* LoginViewController.m in Sources */,
+				F3FA3013190659B30001841D /* QuizDao.m in Sources */,
 				F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */,
+				F3FA2FFA190650950001841D /* WsBase.m in Sources */,
 				F37B10B519026C4900D03CE7 /* main.m in Sources */,
 				F37B10B919026C4900D03CE7 /* AppDelegate.m in Sources */,
 				F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */,
@@ -434,8 +475,11 @@
 				F3FA2FE9190577230001841D /* DmUser.m in Sources */,
 				F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */,
 				F3FA2FE6190577220001841D /* Question.m in Sources */,
+				F3FA2FFD190650A60001841D /* SessionData.m in Sources */,
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
+				F3FA3010190657550001841D /* QuizWs.m in Sources */,
 				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
+				F3FA300D190654FD0001841D /* PersistManager.m in Sources */,
 				F3FA2FEC190577230001841D /* DmVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +589,10 @@
 		F37B10DE19026C4900D03CE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/colman/Desktop/workspace/ios-immo-inspect/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoQuiz/VideoQuiz-Prefix.pch";
 				INFOPLIST_FILE = "VideoQuiz/VideoQuiz-Info.plist";
@@ -556,6 +604,10 @@
 		F37B10DF19026C4900D03CE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/colman/Desktop/workspace/ios-immo-inspect/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoQuiz/VideoQuiz-Prefix.pch";
 				INFOPLIST_FILE = "VideoQuiz/VideoQuiz-Info.plist";
