@@ -48,11 +48,12 @@
 		F3FA2FFA190650950001841D /* WsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FF9190650950001841D /* WsBase.m */; };
 		F3FA2FFD190650A60001841D /* SessionData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FFC190650A60001841D /* SessionData.m */; };
 		F3FA30021906513A0001841D /* Objection-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA30011906513A0001841D /* Objection-iOS.framework */; };
-		F3FA3009190652AD0001841D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA3008190652AD0001841D /* Security.framework */; };
 		F3FA300B190652FB0001841D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA300A190652FB0001841D /* CoreText.framework */; };
 		F3FA300D190654FD0001841D /* PersistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA300C190654FD0001841D /* PersistManager.m */; };
 		F3FA3010190657550001841D /* QuizWs.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA300F190657550001841D /* QuizWs.m */; };
 		F3FA3013190659B30001841D /* QuizDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA3012190659B30001841D /* QuizDao.m */; };
+		F3FA301A190669BC0001841D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA3008190652AD0001841D /* Security.framework */; };
+		F3FA301E19066A6F0001841D /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA301D19066A6F0001841D /* KeychainItemWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,8 @@
 		F3FA300F190657550001841D /* QuizWs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizWs.m; sourceTree = "<group>"; };
 		F3FA3011190659B30001841D /* QuizDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizDao.h; sourceTree = "<group>"; };
 		F3FA3012190659B30001841D /* QuizDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizDao.m; sourceTree = "<group>"; };
+		F3FA301C19066A6F0001841D /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		F3FA301D19066A6F0001841D /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3FA3009190652AD0001841D /* Security.framework in Frameworks */,
+				F3FA301A190669BC0001841D /* Security.framework in Frameworks */,
 				F3FA300B190652FB0001841D /* CoreText.framework in Frameworks */,
 				F3FA30021906513A0001841D /* Objection-iOS.framework in Frameworks */,
 				F3FA2FEE190586840001841D /* CoreData.framework in Frameworks */,
@@ -217,6 +220,7 @@
 		F37B10AE19026C4900D03CE7 /* VideoQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA301B19066A650001841D /* Security */,
 				F3FA2FE3190569DC0001841D /* Navigation */,
 				F3FA2FE2190569A70001841D /* ViewControllers */,
 				F3FA2FE1190569790001841D /* Services */,
@@ -341,6 +345,15 @@
 				F3FA2FF419058C3D0001841D /* milkTray.mov */,
 			);
 			name = Videos;
+			sourceTree = "<group>";
+		};
+		F3FA301B19066A650001841D /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				F3FA301C19066A6F0001841D /* KeychainItemWrapper.h */,
+				F3FA301D19066A6F0001841D /* KeychainItemWrapper.m */,
+			);
+			name = Security;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +494,7 @@
 				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
 				F3FA300D190654FD0001841D /* PersistManager.m in Sources */,
 				F3FA2FEC190577230001841D /* DmVideo.m in Sources */,
+				F3FA301E19066A6F0001841D /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

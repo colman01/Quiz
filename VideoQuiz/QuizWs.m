@@ -8,6 +8,8 @@
 
 #import "QuizWs.h"
 #import <Objection-iOS/Objection.h>
+//#import "LoginAlertDelegate.h"
+#import "LoginViewController.h"
 
 @implementation QuizWs
 
@@ -35,6 +37,7 @@ DmUser *lastInspection;
 }
 
 - (void) refreshListInternal {
+    KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
 	
     //	KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
     //	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

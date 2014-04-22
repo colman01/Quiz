@@ -7,6 +7,44 @@
 //
 
 #import "LoginViewController.h"
+#import "KeychainItemWrapper.h"
+
+
+NSString *const IWUsernameKey = @"username";
+//NSString *const IWPasswordIdentifier = @"SUBITO-01-Immo-Inspect";
+NSString *const IWPasswordIdentifier = @"VideoQuiz";
+
+
+
+//SEL _selector;
+//id _service;
+//
+//- (id) initWithSelector:(SEL)aSelector onService:(id) service {
+//	self = [super init];
+//    if (self) {
+//        // Initialization code
+//		_selector = aSelector;
+//		_service = service;
+//    }
+//    return self;
+//}
+//
+//#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+//- (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
+//	if (buttonIndex == 0) {
+//		return;
+//	}
+//	NSString *username = ((UITextField *)[alertView textFieldAtIndex:0]).text;
+//	NSString *password = ((UITextField *)[alertView textFieldAtIndex:1]).text;
+//	
+//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//	[defaults setObject:username forKey:IWUsernameKey];
+//	
+//	KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
+//	[keychain setObject:password forKey:(__bridge id)kSecValueData];
+//	
+//	[_service performSelector:_selector];
+//}
 
 @interface LoginViewController ()
 

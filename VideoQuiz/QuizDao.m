@@ -22,16 +22,16 @@ static QuizDao *instance = NULL;
 
 #pragma mark data methods
 
-- (void)remove:(DmUser *)inspection {
-	[[[PersistManager instance] managedObjectContext] deleteObject:inspection];
+- (void)remove:(DmUser *)user {
+	[[[PersistManager instance] managedObjectContext] deleteObject:user];
 }
 
-- (NSMutableArray *) getAllQuiz {
+- (NSMutableArray *) getQuiz {
 	// initializing NSFetchRequest
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	
 	//Setting Entity to be Queried
-	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Inspection"
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
 											  inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
 	[fetchRequest setEntity:entity];
 	NSError* error;
@@ -43,23 +43,7 @@ static QuizDao *instance = NULL;
 	return [[NSMutableArray alloc] initWithArray:fetchedRecords];
 }
 
-#pragma mark Pull data from google storted locally
--(NSArray *) getGoogleData {
-    // initializing NSFetchRequest
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"GoogleData"
-											  inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
-    
-    [fetchRequest setEntity:entity];
-    NSError* error;
-	
-    // Query on managedObjectContext With Generated fetchRequest
-    NSArray *fetchedRecords = [[[PersistManager instance] managedObjectContext] executeFetchRequest:fetchRequest error:&error];
-	
-    // Returning Fetched Records
-    return fetchedRecords;
-}
+
 
 - (DmUser *) loadById:(NSNumber *) identifier {
 	// initializing NSFetchRequest
@@ -68,7 +52,7 @@ static QuizDao *instance = NULL;
 	PersistManager *pc = [PersistManager instance];
 	
 	//Setting Entity to be Queried
-	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Inspection" inManagedObjectContext:[pc managedObjectContext]];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:[pc managedObjectContext]];
 	[fetchRequest setEntity:entity];
 	
 	NSPredicate *predicate = [NSPredicate predicateWithFormat: @"identifier = %@", identifier];

@@ -8,6 +8,7 @@
 
 #import "WsBase.h"
 #import "DmUser.h"
+#import "KeychainItemWrapper.h"
 
 @interface QuizWs : WsBase
 
