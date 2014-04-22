@@ -31,36 +31,36 @@ DmUser *lastInspection;
 }
 
 - (void) clearUserData {
-	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
     //	[defaults setObject:@"" forKey:IWUsernameKey];
 }
 
 - (void) refreshListInternal {
-    KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
-	
-    //	KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
-    //	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //
-    //	NSString *user = [defaults objectForKey:IWUsernameKey];
-    //	NSString *pass = [keychain objectForKey:(__bridge id)kSecValueData];
-    //
-    //
-    //	NSMutableArray *ids = (NSMutableArray *) [super doJsonRequest: @"/services/inspections/list"
-    //														  options:NSJSONReadingAllowFragments
-    //														 withUser:user
-    //													  andPassword:pass
-    //																 :@selector(loginAlertRefreshList)];
-    //
-    //	if (ids == nil) {
-    //		return;
-    //	}
-    //
-    //	for (NSNumber *i in ids) {
-    //		[self loadInspection:[i intValue] :user :pass :@selector(loginAlertRefreshList)];
-    //	}
-    //
-    //	[[NSNotificationCenter defaultCenter] postNotificationName:@"ListLoadedNotification" object:self];
+//    KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
+
+	KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+	NSString *user = [defaults objectForKey:IWUsernameKey];
+	NSString *pass = [keychain objectForKey:(__bridge id)kSecValueData];
+
+
+	NSMutableArray *ids = (NSMutableArray *) [super doJsonRequest: @"/services/inspections/list"
+														  options:NSJSONReadingAllowFragments
+														 withUser:user
+													  andPassword:pass
+																 :@selector(loginAlertRefreshList)];
+
+	if (ids == nil) {
+		return;
+	}
+
+	for (NSNumber *i in ids) {
+		[self loadInspection:[i intValue] :user :pass :@selector(loginAlertRefreshList)];
+	}
+
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"ListLoadedNotification" object:self];
 }
 
 - (void) loginAlertRefreshList {
@@ -68,25 +68,32 @@ DmUser *lastInspection;
 }
 
 - (void) loginAlert :(SEL) aSelector {
-    //	loginAlertDelegate = [[LoginAlertDelegate alloc] initWithSelector:aSelector onService:self];
-    //	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung erforderlich!"
-    //													 message:@"Bitte geben Sie ihren Benutzername und ihr Passwort ein."
-    //													delegate:loginAlertDelegate
-    //										   cancelButtonTitle:@"Abbrechen"
-    //										   otherButtonTitles:@"Anmelden",nil];
-    //
-    //	alert.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
-    //	UITextField *username = [alert textFieldAtIndex:0];
-    //	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //	NSString *user = [defaults objectForKey:IWUsernameKey];
-    //	if (user != nil) {
-    //		username.text = user;
-    //	}
-    //	username.placeholder = @"Benutzername";
-    //	UITextField *password = [alert textFieldAtIndex:1];
-    //	password.placeholder = @"Passwort";
-    //
-    //	[alert show];
+////   	loginAlertDelegate = [[LoginAlertDelegate alloc] initWithSelector:aSelector onService:self];
+//   	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung erforderlich!"
+//   													 message:@"Bitte geben Sie ihren Benutzername und ihr Passwort ein."
+//   													delegate:loginAlertDelegate
+//   										   cancelButtonTitle:@"Abbrechen"
+//   										   otherButtonTitles:@"Anmelden",nil];
+    
+    //   	loginAlertDelegate = [[LoginAlertDelegate alloc] initWithSelector:aSelector onService:self];
+   	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Anmeldung erforderlich!"
+   													 message:@"Bitte geben Sie ihren Benutzername und ihr Passwort ein."
+   													delegate:self
+   										   cancelButtonTitle:@"Abbrechen"
+   										   otherButtonTitles:@"Anmelden",nil];
+   
+   	alert.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+   	UITextField *username = [alert textFieldAtIndex:0];
+   	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+   	NSString *user = [defaults objectForKey:IWUsernameKey];
+   	if (user != nil) {
+   		username.text = user;
+   	}
+   	username.placeholder = @"Benutzername";
+   	UITextField *password = [alert textFieldAtIndex:1];
+   	password.placeholder = @"Passwort";
+   
+   	[alert show];
 }
 
 - (void) loadInspection:(int ) inspectionId :(NSString *) user :(NSString *) pass :(SEL)aSelector{
@@ -213,7 +220,7 @@ DmUser *lastInspection;
 	
 }
 
-//- (void) sendResponse:(DmInspection *) inspection {
+- (void) sendResponse:(DmUser *) quiz {
 //
 //	lastInspection = inspection;
 //
@@ -285,7 +292,7 @@ DmUser *lastInspection;
 //	if (response.statusCode != 200) {
 //		NSLog(@"HTTP-Request %@ returned : %ld",request.URL, (long)response.statusCode);
 //	}
-//}
+}
 
 
 
