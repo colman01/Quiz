@@ -70,16 +70,22 @@
     
     [super viewDidAppear:animated];
     int r = arc4random() % 4;
-//    NSString *name = [fileNames objectAtIndex:r];
-//    NSString *urlStr = [[NSBundle mainBundle] pathForResource:name ofType:nil];
-//    NSURL *url = [NSURL fileURLWithPath:urlStr];
-//    videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-//
-//    videoPlayer.view.frame = CGRectMake(0, -20,320, 568  );
-//    videoPlayer.controlStyle = MPMovieControlStyleNone;
-//    videoPlayer.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth  |    UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight);
-//    [videoPlayer play];
-//    [self.view addSubview:videoPlayer.view];
+    NSString *name = [fileNames objectAtIndex:r];
+    NSString *urlStr = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    NSURL *url = [NSURL fileURLWithPath:urlStr];
+    videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
+
+    if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+            videoPlayer.view.frame = CGRectMake(0, 0,320, 568  );
+    } else {
+        videoPlayer.view.frame = CGRectMake(0, 0,568, 320  );
+    }
+
+    
+    videoPlayer.controlStyle = MPMovieControlStyleNone;
+    videoPlayer.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth  |    UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight);
+    [videoPlayer play];
+    [self.view addSubview:videoPlayer.view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(moviePlayBackDidFinish:)
