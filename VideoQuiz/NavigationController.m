@@ -51,7 +51,8 @@
     UIViewController *vc = self.topViewController;
     if ([vc isKindOfClass:[PlayerViewController class]])
         return YES;
-    if ([vc isKindOfClass:[DownloadViewController class]]  || [vc isKindOfClass:[MultipleChoiceQuestionsViewController class]] ) {
+    
+    if ([vc isKindOfClass:[DownloadViewController class]]  || [vc isKindOfClass:[MultipleChoiceQuestionsViewController class]] || [vc isKindOfClass:[PrepareQuestionsViewController class]]) {
         
             if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
                 return YES;
@@ -72,10 +73,7 @@
             return YES;
         }
     
-    if ([vc isKindOfClass:[PrepareQuestionsViewController class]])
-        return YES;
-    
-    if ([vc isKindOfClass:[DownloadViewController class]] || [vc isKindOfClass:[MultipleChoiceQuestionsViewController class]]) {
+    if ([vc isKindOfClass:[DownloadViewController class]] || [vc isKindOfClass:[MultipleChoiceQuestionsViewController class]] || [vc isKindOfClass:[PrepareQuestionsViewController class]]) {
         if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
                 return NO;
         } else {
@@ -93,7 +91,7 @@
     if ([self.topViewController isMemberOfClass:[DownloadViewController class]] || [self.topViewController isMemberOfClass:[MultipleChoiceQuestionsViewController class]] ){
         return UIInterfaceOrientationMaskPortrait;
     }else if([self.topViewController isMemberOfClass:[PrepareQuestionsViewController class]]){
-        return UIInterfaceOrientationMaskPortrait;
+        return UIInterfaceOrientationMaskLandscapeLeft;
     }else if([self.topViewController isMemberOfClass:[PlayerViewController class]]) {
         return UIInterfaceOrientationMaskLandscapeLeft;
     }else{

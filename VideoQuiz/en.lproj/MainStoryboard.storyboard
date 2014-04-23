@@ -563,7 +563,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9B3-jk-0AN" kind="push" id="KTJ-1V-vX9"/>
+                                    <segue destination="9B3-jk-0AN" kind="push" identifier="Wait" id="KTJ-1V-vX9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -572,9 +572,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="fbG-1j-amg"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <segue destination="9B3-jk-0AN" kind="push" identifier="Wait" id="fDS-mT-FvY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMD-qS-xfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -605,7 +602,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AHE-PB-mCP" kind="custom" identifier="Questions" id="c7f-bx-ufS"/>
+                                    <segue destination="AHE-PB-mCP" kind="push" identifier="Questions" id="c7f-bx-ufS"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Countdown" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jOw-M5-WuQ">
@@ -862,6 +859,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="kxW-LL-0xy"/>
-        <segue reference="fDS-mT-FvY"/>
     </inferredMetricsTieBreakers>
 </document>
