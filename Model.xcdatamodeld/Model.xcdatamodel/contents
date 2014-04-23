@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Product" syncable="YES">
+        <attribute name="answer1" optional="YES" syncable="YES"/>
+        <attribute name="answer2" optional="YES" syncable="YES"/>
+        <attribute name="answer3" optional="YES" syncable="YES"/>
+        <attribute name="question" optional="YES" syncable="YES"/>
+    </entity>
     <entity name="Question" syncable="YES">
         <attribute name="answer1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answer2" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,6 +14,13 @@
         <attribute name="isCorrectlyAnsered" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="question" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Rating" syncable="YES">
+        <attribute name="value" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="Single" syncable="YES">
+        <attribute name="answerInput" optional="YES" syncable="YES"/>
+        <attribute name="question" optional="YES" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="DmUser" syncable="YES">
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,5 +38,8 @@
         <element name="Question" positionX="475" positionY="0" width="128" height="148"/>
         <element name="User" positionX="43" positionY="-117" width="128" height="118"/>
         <element name="Video" positionX="-72" positionY="243" width="128" height="88"/>
+        <element name="Single" positionX="160" positionY="288" width="128" height="73"/>
+        <element name="Rating" positionX="630" positionY="0" width="128" height="58"/>
+        <element name="Product" positionX="457" positionY="279" width="128" height="103"/>
     </elements>
 </model>

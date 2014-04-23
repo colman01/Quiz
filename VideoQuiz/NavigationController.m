@@ -46,12 +46,15 @@
 }
 */
 
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    [self shouldAutorotate];
+}
 
 - (BOOL) shouldAutorotate {
     UIViewController *vc = self.topViewController;
     if ([vc isKindOfClass:[PlayerViewController class]])
         return YES;
-    if ([vc isKindOfClass:[DownloadViewController class]]) {
+    if ([vc isKindOfClass:[DownloadViewController class]]  || [vc isKindOfClass:[MultipleChoiceQuestionsViewController class]] ) {
         
             if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
                 return YES;
@@ -69,8 +72,10 @@
     UIViewController *vc = self.topViewController;
     if ([vc isKindOfClass:[PlayerViewController class]])
         return YES;
+    if ([vc isKindOfClass:[PrepareQuestionsViewController class]])
+        return YES;
     
-    if ([vc isKindOfClass:[DownloadViewController class]]) {
+    if ([vc isKindOfClass:[DownloadViewController class]] || [vc isKindOfClass:[MultipleChoiceQuestionsViewController class]]) {
         if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
                 return NO;
         } else {
@@ -85,7 +90,9 @@
 }
 
 - (NSUInteger)supportedInterfaceOrientations {
-    if ([self.topViewController isMemberOfClass:[DownloadViewController class]]){
+    if ([self.topViewController isMemberOfClass:[DownloadViewController class]] || [self.topViewController isMemberOfClass:[MultipleChoiceQuestionsViewController class]] ){
+        return UIInterfaceOrientationMaskPortrait;
+    }else if([self.topViewController isMemberOfClass:[PrepareQuestionsViewController class]]){
         return UIInterfaceOrientationMaskPortrait;
     }else{
         return UIInterfaceOrientationMaskAllButUpsideDown;

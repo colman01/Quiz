@@ -54,6 +54,9 @@
 		F3FA3013190659B30001841D /* QuizDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA3012190659B30001841D /* QuizDao.m */; };
 		F3FA301A190669BC0001841D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA3008190652AD0001841D /* Security.framework */; };
 		F3FA301E19066A6F0001841D /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA301D19066A6F0001841D /* KeychainItemWrapper.m */; };
+		F3FA302119069B2F0001841D /* connection.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA302019069B2F0001841D /* connection.m */; };
+		F3FA30251907D5280001841D /* MultipleChoiceQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA30241907D5280001841D /* MultipleChoiceQuestionsViewController.m */; };
+		F3FA30281907D5630001841D /* PrepareQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA30271907D5630001841D /* PrepareQuestionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +140,12 @@
 		F3FA3012190659B30001841D /* QuizDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizDao.m; sourceTree = "<group>"; };
 		F3FA301C19066A6F0001841D /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		F3FA301D19066A6F0001841D /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		F3FA301F19069B2F0001841D /* connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = connection.h; sourceTree = "<group>"; };
+		F3FA302019069B2F0001841D /* connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = connection.m; sourceTree = "<group>"; };
+		F3FA30231907D5280001841D /* MultipleChoiceQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleChoiceQuestionsViewController.h; sourceTree = "<group>"; };
+		F3FA30241907D5280001841D /* MultipleChoiceQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleChoiceQuestionsViewController.m; sourceTree = "<group>"; };
+		F3FA30261907D5630001841D /* PrepareQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrepareQuestionsViewController.h; sourceTree = "<group>"; };
+		F3FA30271907D5630001841D /* PrepareQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareQuestionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +302,8 @@
 		F3FA2FE1190569790001841D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA301F19069B2F0001841D /* connection.h */,
+				F3FA302019069B2F0001841D /* connection.m */,
 				F3FA300C190654FD0001841D /* PersistManager.m */,
 				F3FA30071906524C0001841D /* PersistManager.h */,
 				F3FA2FFB190650A60001841D /* SessionData.h */,
@@ -312,6 +323,7 @@
 		F3FA2FE2190569A70001841D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA30221907D50B0001841D /* QuestionControllers */,
 				F37B10C319026C4900D03CE7 /* ViewController.h */,
 				F37B10C419026C4900D03CE7 /* ViewController.m */,
 				F334CACE19028EEA00CCF8CF /* DownloadViewController.h */,
@@ -354,6 +366,17 @@
 				F3FA301D19066A6F0001841D /* KeychainItemWrapper.m */,
 			);
 			name = Security;
+			sourceTree = "<group>";
+		};
+		F3FA30221907D50B0001841D /* QuestionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3FA30231907D5280001841D /* MultipleChoiceQuestionsViewController.h */,
+				F3FA30241907D5280001841D /* MultipleChoiceQuestionsViewController.m */,
+				F3FA30261907D5630001841D /* PrepareQuestionsViewController.h */,
+				F3FA30271907D5630001841D /* PrepareQuestionsViewController.m */,
+			);
+			name = QuestionControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +501,7 @@
 			files = (
 				F31C166919041CB4004E92DD /* LoginViewController.m in Sources */,
 				F3FA3013190659B30001841D /* QuizDao.m in Sources */,
+				F3FA30281907D5630001841D /* PrepareQuestionsViewController.m in Sources */,
 				F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */,
 				F3FA2FFA190650950001841D /* WsBase.m in Sources */,
 				F37B10B519026C4900D03CE7 /* main.m in Sources */,
@@ -485,12 +509,14 @@
 				F334CAD019028EEA00CCF8CF /* DownloadViewController.m in Sources */,
 				F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */,
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
+				F3FA30251907D5280001841D /* MultipleChoiceQuestionsViewController.m in Sources */,
 				F3FA2FE9190577230001841D /* DmUser.m in Sources */,
 				F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */,
 				F3FA2FE6190577220001841D /* Question.m in Sources */,
 				F3FA2FFD190650A60001841D /* SessionData.m in Sources */,
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
 				F3FA3010190657550001841D /* QuizWs.m in Sources */,
+				F3FA302119069B2F0001841D /* connection.m in Sources */,
 				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
 				F3FA300D190654FD0001841D /* PersistManager.m in Sources */,
 				F3FA2FEC190577230001841D /* DmVideo.m in Sources */,

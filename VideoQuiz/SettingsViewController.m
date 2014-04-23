@@ -15,6 +15,7 @@
 @implementation SettingsViewController
 @synthesize usernameBadge;
 @synthesize usernameBadgeText;
+@synthesize singleClip, allClips;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,5 +53,32 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)isSingleClip:(id)sender {
+    
+}
+
+
+- (IBAction)isAllClips:(id)sender {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

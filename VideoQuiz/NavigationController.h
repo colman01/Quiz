@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "PlayerViewController.h"
 #import "DownloadViewController.h"
+#import "MultipleChoiceQuestionsViewController.h"
+#import "PrepareQuestionsViewController.h"
 
 @interface NavigationController : UINavigationController
 

@@ -12,4 +12,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *usernameBadge;
 @property (strong, nonatomic) NSString *usernameBadgeText;
 
+@property (strong, nonatomic) IBOutlet UISwitch *singleClip;
+@property (strong, nonatomic) IBOutlet UISwitch *allClips;
+
 @end

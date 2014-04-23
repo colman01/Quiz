@@ -45,7 +45,7 @@
 }
 
 -(void) viewDidAppear:(BOOL)animated {
-    
+    [super viewDidAppear:animated];
     int r = arc4random() % 4;
     NSString *name = [fileNames objectAtIndex:r];
     NSString *urlStr = [[NSBundle mainBundle] pathForResource:name ofType:nil];
@@ -62,17 +62,35 @@
                                              selector:@selector(moviePlayBackDidFinish:)
                                                  name:MPMoviePlayerPlaybackDidFinishNotification
                                                object:videoPlayer];
-    self.navigationController.navigationBar.hidden = YES;
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight];
 }
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification {
-    
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    self.navigationController.navigationBar.hidden = NO;
-    [self.navigationController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0];
+//    Wait
+    [self performSegueWithIdentifier:@"Wait" sender:nil];
+//    [[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:")
+//                                   withObject:(__bridge id)((void*)UIInterfaceOrientationLandscapeRight)];
     
+}
+
+- (BOOL)shouldAutorotate  // iOS 6 autorotation fix
+{
+    return YES;
+}
+- (NSUInteger)supportedInterfaceOrientations // iOS 6 autorotation fix
+{
+    return UIInterfaceOrientationMaskLandscape;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
+{
+    return UIInterfaceOrientationLandscapeRight;
+}
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
 }
 
 
