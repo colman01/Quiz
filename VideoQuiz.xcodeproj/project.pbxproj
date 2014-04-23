@@ -57,6 +57,7 @@
 		F3FA302119069B2F0001841D /* connection.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA302019069B2F0001841D /* connection.m */; };
 		F3FA30251907D5280001841D /* MultipleChoiceQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA30241907D5280001841D /* MultipleChoiceQuestionsViewController.m */; };
 		F3FA30281907D5630001841D /* PrepareQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA30271907D5630001841D /* PrepareQuestionsViewController.m */; };
+		F3FA302B19080D810001841D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA302A19080D810001841D /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		F3FA30241907D5280001841D /* MultipleChoiceQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleChoiceQuestionsViewController.m; sourceTree = "<group>"; };
 		F3FA30261907D5630001841D /* PrepareQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrepareQuestionsViewController.h; sourceTree = "<group>"; };
 		F3FA30271907D5630001841D /* PrepareQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareQuestionsViewController.m; sourceTree = "<group>"; };
+		F3FA302919080D810001841D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		F3FA302A19080D810001841D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +298,8 @@
 			children = (
 				F31C166719041CB4004E92DD /* LoginViewController.h */,
 				F31C166819041CB4004E92DD /* LoginViewController.m */,
+				F3FA302919080D810001841D /* RegisterViewController.h */,
+				F3FA302A19080D810001841D /* RegisterViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				F334CAD31902907E00CCF8CF /* ClipDownloader.m in Sources */,
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
 				F3FA30251907D5280001841D /* MultipleChoiceQuestionsViewController.m in Sources */,
+				F3FA302B19080D810001841D /* RegisterViewController.m in Sources */,
 				F3FA2FE9190577230001841D /* DmUser.m in Sources */,
 				F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */,
 				F3FA2FE6190577220001841D /* Question.m in Sources */,

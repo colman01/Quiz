@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="-55" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="JcP-HG-Tra">
             <objects>
-                <viewController id="dOb-BT-FcI" sceneMemberID="viewController">
+                <viewController id="dOb-BT-FcI" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VoL-4E-2cW"/>
                         <viewControllerLayoutGuide type="bottom" id="fwJ-kf-jU9"/>
@@ -117,6 +117,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zpi-3B-UJS"/>
+                    <connections>
+                        <outlet property="email" destination="tYq-k7-e6O" id="qNc-J0-kw0"/>
+                        <outlet property="emailConfirm" destination="boR-rz-Pem" id="fj0-0B-m9V"/>
+                        <outlet property="password" destination="bF9-20-1Fu" id="t1N-aY-RqJ"/>
+                        <outlet property="passwordConfirm" destination="m9X-Sn-9zg" id="Pmv-1H-uED"/>
+                        <outlet property="userName" destination="iGT-J5-XMQ" id="m6s-b2-YDs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2U-e0-bsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,7 +154,7 @@
                                 <rect key="frame" x="118" y="336" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="UBj-GH-JiR" id="K6S-74-tIb"/>
                                 </connections>
