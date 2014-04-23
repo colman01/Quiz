@@ -114,15 +114,15 @@
 {
     return YES;
 }
-- (NSUInteger)supportedInterfaceOrientations // iOS 6 autorotation fix
-{
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
-{
-    return UIInterfaceOrientationPortrait;
-}
+//- (NSUInteger)supportedInterfaceOrientations // iOS 6 autorotation fix
+//{
+//    return UIInterfaceOrientationMaskPortrait;
+//}
+//
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
+//{
+//    return UIInterfaceOrientationPortrait;
+//}
 //- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 //{
 //    return YES;

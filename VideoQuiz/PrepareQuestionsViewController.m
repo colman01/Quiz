@@ -32,7 +32,7 @@
 - (void) viewDidAppear:(BOOL)animated   {
     [super viewDidAppear:animated];
     [[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:")
-                                   withObject:(__bridge id)((void*)UIInterfaceOrientationLandscapeRight)];
+                                   withObject:(__bridge id)((void*)UIInterfaceOrientationLandscapeLeft)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,19 +49,29 @@
 {
     return UIInterfaceOrientationMaskLandscape;
 }
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
-{
-    return UIInterfaceOrientationLandscapeRight;
-}
+//
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
+//{
+//    return UIInterfaceOrientationLandscapeRight;
+//}
+//- (NSUInteger)supportedInterfaceOrientations // iOS 6 autorotation fix
+//{
+//    return UIInterfaceOrientationMaskPortrait;
+//}
+//
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
+//{
+//    return UIInterfaceOrientationPortrait;
+//}
 //- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 //{
 //    return YES;
 //}
 
-- (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
-}
+//- (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation {
+////    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+//    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+//}
 
 #pragma mark - Navigation
 
