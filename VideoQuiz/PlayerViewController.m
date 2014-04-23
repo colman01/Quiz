@@ -99,9 +99,6 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 //    Wait
     [self performSegueWithIdentifier:@"Wait" sender:nil];
-//    [[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:")
-//                                   withObject:(__bridge id)((void*)UIInterfaceOrientationLandscapeRight)];
-    
 }
 
 
