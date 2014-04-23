@@ -7,6 +7,7 @@
 //
 
 #import "PlayerViewController.h"
+#import <objc/message.h>
 
 @interface PlayerViewController ()
 
@@ -44,19 +45,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void) viewWillAppear:(BOOL)animated {
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    //    self.navigationController.navigationBar.hidden = YES;
+    
+    [self shouldAutorotate];
+    
+    if(UIDeviceOrientationIsPortrait(self.interfaceOrientation)){
+        if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)])
+        {
+            objc_msgSend([UIDevice currentDevice], @selector(setOrientation:), UIInterfaceOrientationLandscapeLeft );
+            
+            
+        }
+    }
+}
+
 -(void) viewDidAppear:(BOOL)animated {
+    
+    [[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:")
+                                   withObject:(__bridge id)((void*)UIInterfaceOrientationLandscapeRight)];
+
+    
     [super viewDidAppear:animated];
     int r = arc4random() % 4;
-    NSString *name = [fileNames objectAtIndex:r];
-    NSString *urlStr = [[NSBundle mainBundle] pathForResource:name ofType:nil];
-    NSURL *url = [NSURL fileURLWithPath:urlStr];
-    videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-
-    videoPlayer.view.frame = CGRectMake(0, -20,320, 568  );
-    videoPlayer.controlStyle = MPMovieControlStyleNone;
-    videoPlayer.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth  |    UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight);
-    [videoPlayer play];
-    [self.view addSubview:videoPlayer.view];
+//    NSString *name = [fileNames objectAtIndex:r];
+//    NSString *urlStr = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+//    NSURL *url = [NSURL fileURLWithPath:urlStr];
+//    videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
+//
+//    videoPlayer.view.frame = CGRectMake(0, -20,320, 568  );
+//    videoPlayer.controlStyle = MPMovieControlStyleNone;
+//    videoPlayer.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth  |    UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight);
+//    [videoPlayer play];
+//    [self.view addSubview:videoPlayer.view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(moviePlayBackDidFinish:)
@@ -75,23 +98,6 @@
     
 }
 
-- (BOOL)shouldAutorotate  // iOS 6 autorotation fix
-{
-    return YES;
-}
-- (NSUInteger)supportedInterfaceOrientations // iOS 6 autorotation fix
-{
-    return UIInterfaceOrientationMaskLandscape;
-}
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
-{
-    return UIInterfaceOrientationLandscapeRight;
-}
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-    return YES;
-}
 
 
 /*

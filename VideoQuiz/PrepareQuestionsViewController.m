@@ -29,12 +29,6 @@
     // Do any additional setup after loading the view.
 }
 
-//- (void) viewWillAppear:(BOOL)animated  {
-//    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-//    self.navigationController.navigationBar.hidden = YES;
-//    [self.navigationController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0];
-//}
-
 - (void) viewDidAppear:(BOOL)animated   {
     [super viewDidAppear:animated];
     [[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:")
@@ -55,17 +49,9 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-//    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-////    self.navigationController.navigationBar.hidden = YES;
-//    [self.navigationController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0];
-    
     //    Wait
 //    [self performSegueWithIdentifier:@"Wait" sender:nil];
     
-//    id con = segue.destinationViewController;
-//    MultipleChoiceQuestionsViewController *multi = (MultipleChoiceQuestionsViewController *) con;
-//    [multi shouldAutorotate];
 }
 
 

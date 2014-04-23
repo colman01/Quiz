@@ -43,11 +43,7 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated{
-//    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-//    self.navigationController.navigationBar.hidden = YES;
-//    [self.navigationController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0.1];
-//    
-//    [self shouldAutorotate];
+
     
     [[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:")
                                    withObject:(__bridge id)((void*)UIInterfaceOrientationPortrait)];

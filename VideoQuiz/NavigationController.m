@@ -46,9 +46,6 @@
 }
 */
 
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    [self shouldAutorotate];
-}
 
 - (BOOL) shouldAutorotate {
     UIViewController *vc = self.topViewController;
@@ -71,7 +68,10 @@
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     UIViewController *vc = self.topViewController;
     if ([vc isKindOfClass:[PlayerViewController class]])
-        return YES;
+        if (toInterfaceOrientation != UIInterfaceOrientationPortrait) {
+            return YES;
+        }
+    
     if ([vc isKindOfClass:[PrepareQuestionsViewController class]])
         return YES;
     
@@ -94,6 +94,8 @@
         return UIInterfaceOrientationMaskPortrait;
     }else if([self.topViewController isMemberOfClass:[PrepareQuestionsViewController class]]){
         return UIInterfaceOrientationMaskPortrait;
+    }else if([self.topViewController isMemberOfClass:[PlayerViewController class]]) {
+        return UIInterfaceOrientationMaskLandscapeLeft;
     }else{
         return UIInterfaceOrientationMaskAllButUpsideDown;
     }
