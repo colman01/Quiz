@@ -21,7 +21,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -64,13 +63,8 @@
 
 
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 //    self.navigationController.navigationBar.hidden = YES;
     [self.navigationController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0];
@@ -78,8 +72,6 @@
     //    Wait
 //    [self performSegueWithIdentifier:@"Wait" sender:nil];
 }
-
-
 
 - (BOOL)shouldAutorotate
 {

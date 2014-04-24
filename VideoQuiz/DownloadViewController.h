@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ClipDownloader.h"
+#import "PlayerViewController.h"
 
 
 @interface DownloadViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableArray *downloadButtons;
 @property (strong, nonatomic) IBOutlet UIButton * clip1;
 @property (strong, nonatomic) IBOutlet UIButton * clip2;
 @property (strong, nonatomic) IBOutlet UIButton * clip3;
@@ -36,6 +38,9 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *usernameBadge;
 @property (strong, nonatomic) NSString *usernameBadgeText;
+
+@property (strong, nonatomic) NSMutableArray *fileNames;
+@property int fileIndex;
 
 
 

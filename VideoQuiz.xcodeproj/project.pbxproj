@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F31C166919041CB4004E92DD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166819041CB4004E92DD /* LoginViewController.m */; };
 		F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166B1904209C004E92DD /* CockPitViewController.m */; };
 		F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166E1904213A004E92DD /* SettingsViewController.m */; };
 		F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F334CACB1902792D00CCF8CF /* downloadArrow.png */; };
@@ -61,6 +60,7 @@
 		F3FA302E19090A120001841D /* FunFactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA302D19090A120001841D /* FunFactViewController.m */; };
 		F3FA303119090A5E0001841D /* AdFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA303019090A5E0001841D /* AdFeedbackViewController.m */; };
 		F3FA303419090A7B0001841D /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA303319090A7B0001841D /* RatingViewController.m */; };
+		F3FA303519091C6C0001841D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166819041CB4004E92DD /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -519,10 +519,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F31C166919041CB4004E92DD /* LoginViewController.m in Sources */,
 				F3FA3013190659B30001841D /* QuizDao.m in Sources */,
 				F3FA30281907D5630001841D /* PrepareQuestionsViewController.m in Sources */,
 				F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */,
+				F3FA303519091C6C0001841D /* LoginViewController.m in Sources */,
 				F3FA2FFA190650950001841D /* WsBase.m in Sources */,
 				F37B10B519026C4900D03CE7 /* main.m in Sources */,
 				F37B10B919026C4900D03CE7 /* AppDelegate.m in Sources */,

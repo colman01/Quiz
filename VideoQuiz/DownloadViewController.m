@@ -21,6 +21,9 @@
 @synthesize images;
 @synthesize usernameBadge;
 @synthesize usernameBadgeText;
+@synthesize fileIndex;
+@synthesize fileNames;
+@synthesize downloadButtons;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +39,33 @@
     [super viewDidLoad];
     [self createUrls];
     [self createImageArray];
-    // Do any additional setup after loading the view.
+    fileNames = [[NSMutableArray alloc] init];
+    [fileNames addObject:@"guinness.mov"];
+    [fileNames addObject:@"ad bud.mov"];
+    [fileNames addObject:@"flake.mov"];
+    [fileNames addObject:@"milkTray.mov"];
+    [fileNames addObject:@"milkTray.mov"];
+    
+    
+    [clip1 setTitle:@"guiness" forState:UIControlStateNormal];
+    
+    downloadButtons = [[NSMutableArray alloc] init];
+    [downloadButtons addObject:clip1];
+    [downloadButtons addObject:clip2];
+    [downloadButtons addObject:clip3];
+    [downloadButtons addObject:clip4];
+    [downloadButtons addObject:clip5];
+    
+    [self setDownloadButtonTitles];
+    
+    [clip1 setTitle:@"asdf asdf asdf asdf asdf as asdf" forState:UIControlStateNormal   ];
+    
+
+}
+
+- (void) setDownloadButtonTitles {
+    for (int i=0; i < self.downloadButtons.count; i++)
+        [[downloadButtons objectAtIndex:i] setTitle:[fileNames objectAtIndex:i] forState:UIControlStateNormal];
 }
 
 - (void) viewDidAppear:(BOOL)animated  {
@@ -50,16 +79,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    id con = segue.destinationViewController;
+    PlayerViewController *player = (PlayerViewController *) con;
+    player.fileIndex = self.fileIndex;
+    player.fileNames = [[NSMutableArray alloc] init];
+    player.fileNames = fileNames;
 }
-*/
+
 
 - (IBAction)downloadClip:(id)sender {
     [self someMethod:sender];
@@ -71,8 +101,11 @@
     //    [self createConnection:[requests objectAtIndex:btn.tag]];
     NSURLRequest *request = [requests objectAtIndex:btn.tag];
     UIButton *imgBtn = [images objectAtIndex:btn.tag];
+    
     //    UIImage *img = [UIImage imageNamed:@"clipready.png"];
     //    imgBtn.imageView.image = img;
+    
+    
     
     switch (btn.tag) {
         case 0:
@@ -107,9 +140,6 @@
             clipDownloader5.button = [[UIButton alloc] init];
             clipDownloader5.button = imgBtn;
             [clipDownloader5 start];
-            
-            break;
-            
             break;
             
         default:
@@ -146,6 +176,8 @@
 
 
 - (IBAction)showVideo:(id)sender {
+    UIButton *btn = (UIButton *) sender;
+    self.fileIndex = btn.tag;
     [self performSegueWithIdentifier:@"player" sender:nil];
 }
 

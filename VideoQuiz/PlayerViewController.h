@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 @property (strong, nonatomic) NSMutableArray *fileNames;
+@property int fileIndex;
+
 
 
 

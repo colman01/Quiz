@@ -16,6 +16,7 @@
 @implementation PlayerViewController
 @synthesize videoPlayer;
 @synthesize fileNames;
+@synthesize fileIndex;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,12 +31,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    fileNames = [[NSMutableArray alloc] init];
-    [fileNames addObject:@"guinness.mov"];
-    [fileNames addObject:@"ad bud.mov"];
-    [fileNames addObject:@"flake.mov"];
-    [fileNames addObject:@"milkTray.mov"];
-    [fileNames addObject:@"milkTray.mov"];
+    
     
 }
 
@@ -70,7 +66,7 @@
     
     [super viewDidAppear:animated];
     int r = arc4random() % 4;
-    NSString *name = [fileNames objectAtIndex:r];
+    NSString *name = [fileNames objectAtIndex:self.fileIndex];
     NSString *urlStr = [[NSBundle mainBundle] pathForResource:name ofType:nil];
     NSURL *url = [NSURL fileURLWithPath:urlStr];
     videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
