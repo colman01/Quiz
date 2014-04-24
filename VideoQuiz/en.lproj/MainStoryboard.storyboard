@@ -695,10 +695,10 @@
             </objects>
             <point key="canvasLocation" x="4836" y="-774"/>
         </scene>
-        <!--View Controller-->
+        <!--Ad Feedback View Controller-->
         <scene sceneID="alE-LB-mp8">
             <objects>
-                <viewController id="OK1-dc-DF3" sceneMemberID="viewController">
+                <viewController id="OK1-dc-DF3" customClass="AdFeedbackViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PV3-mv-voj"/>
                         <viewControllerLayoutGuide type="bottom" id="fyn-i8-8YU"/>
@@ -730,15 +730,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="tvk-We-cHB" id="bUv-is-MIX"/>
+                        <outlet property="textView" destination="3GK-5j-bjr" id="P6Z-gU-cqU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4c-cg-V2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4836" y="-62"/>
         </scene>
-        <!--View Controller-->
+        <!--Rating View Controller-->
         <scene sceneID="MzV-wJ-KoJ">
             <objects>
-                <viewController id="B0d-ha-lz2" sceneMemberID="viewController">
+                <viewController id="B0d-ha-lz2" customClass="RatingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PuR-3b-D82"/>
                         <viewControllerLayoutGuide type="bottom" id="33n-cz-FH5"/>
@@ -766,15 +770,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="7tI-km-M2t" id="SlD-fv-A1Z"/>
+                        <outlet property="textLabel" destination="iPU-sk-iJ8" id="FyV-rs-gMb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6av-NO-jN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4841" y="663"/>
+            <point key="canvasLocation" x="4841" y="667"/>
         </scene>
-        <!--View Controller-->
+        <!--Fun Fact View Controller-->
         <scene sceneID="hGF-6u-erc">
             <objects>
-                <viewController id="K1m-Tl-NRU" sceneMemberID="viewController">
+                <viewController id="K1m-Tl-NRU" customClass="FunFactViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aEe-vG-Nv4"/>
                         <viewControllerLayoutGuide type="bottom" id="Fjm-aU-ELs"/>
@@ -813,6 +821,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="answer1" destination="INt-Eo-8Vm" id="H9h-fF-TUj"/>
+                        <outlet property="answer2" destination="HWH-Rf-O2q" id="aIp-aJ-TvM"/>
+                        <outlet property="answer3" destination="Nxc-an-1qU" id="hez-pL-fIq"/>
+                        <outlet property="textLabel" destination="TbJ-fT-QF4" id="1C9-na-Htw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckg-HT-sbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -58,6 +58,9 @@
 		F3FA30251907D5280001841D /* MultipleChoiceQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA30241907D5280001841D /* MultipleChoiceQuestionsViewController.m */; };
 		F3FA30281907D5630001841D /* PrepareQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA30271907D5630001841D /* PrepareQuestionsViewController.m */; };
 		F3FA302B19080D810001841D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA302A19080D810001841D /* RegisterViewController.m */; };
+		F3FA302E19090A120001841D /* FunFactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA302D19090A120001841D /* FunFactViewController.m */; };
+		F3FA303119090A5E0001841D /* AdFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA303019090A5E0001841D /* AdFeedbackViewController.m */; };
+		F3FA303419090A7B0001841D /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA303319090A7B0001841D /* RatingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +152,12 @@
 		F3FA30271907D5630001841D /* PrepareQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrepareQuestionsViewController.m; sourceTree = "<group>"; };
 		F3FA302919080D810001841D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		F3FA302A19080D810001841D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		F3FA302C19090A120001841D /* FunFactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunFactViewController.h; sourceTree = "<group>"; };
+		F3FA302D19090A120001841D /* FunFactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunFactViewController.m; sourceTree = "<group>"; };
+		F3FA302F19090A5E0001841D /* AdFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdFeedbackViewController.h; sourceTree = "<group>"; };
+		F3FA303019090A5E0001841D /* AdFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdFeedbackViewController.m; sourceTree = "<group>"; };
+		F3FA303219090A7B0001841D /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingViewController.h; sourceTree = "<group>"; };
+		F3FA303319090A7B0001841D /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,7 +245,6 @@
 				F3FA2FE3190569DC0001841D /* Navigation */,
 				F3FA2FE2190569A70001841D /* ViewControllers */,
 				F3FA2FE1190569790001841D /* Services */,
-				F3FA2FE01905696B0001841D /* Login */,
 				F37B10B719026C4900D03CE7 /* AppDelegate.h */,
 				F37B10B819026C4900D03CE7 /* AppDelegate.m */,
 				F37B10C019026C4900D03CE7 /* MainStoryboard.storyboard */,
@@ -328,6 +336,7 @@
 		F3FA2FE2190569A70001841D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA2FE01905696B0001841D /* Login */,
 				F3FA30221907D50B0001841D /* QuestionControllers */,
 				F37B10C319026C4900D03CE7 /* ViewController.h */,
 				F37B10C419026C4900D03CE7 /* ViewController.m */,
@@ -380,6 +389,12 @@
 				F3FA30241907D5280001841D /* MultipleChoiceQuestionsViewController.m */,
 				F3FA30261907D5630001841D /* PrepareQuestionsViewController.h */,
 				F3FA30271907D5630001841D /* PrepareQuestionsViewController.m */,
+				F3FA302C19090A120001841D /* FunFactViewController.h */,
+				F3FA302D19090A120001841D /* FunFactViewController.m */,
+				F3FA302F19090A5E0001841D /* AdFeedbackViewController.h */,
+				F3FA303019090A5E0001841D /* AdFeedbackViewController.m */,
+				F3FA303219090A7B0001841D /* RatingViewController.h */,
+				F3FA303319090A7B0001841D /* RatingViewController.m */,
 			);
 			name = QuestionControllers;
 			sourceTree = "<group>";
@@ -516,13 +531,16 @@
 				F37B10C519026C4900D03CE7 /* ViewController.m in Sources */,
 				F3FA30251907D5280001841D /* MultipleChoiceQuestionsViewController.m in Sources */,
 				F3FA302B19080D810001841D /* RegisterViewController.m in Sources */,
+				F3FA303119090A5E0001841D /* AdFeedbackViewController.m in Sources */,
 				F3FA2FE9190577230001841D /* DmUser.m in Sources */,
 				F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */,
 				F3FA2FE6190577220001841D /* Question.m in Sources */,
 				F3FA2FFD190650A60001841D /* SessionData.m in Sources */,
+				F3FA302E19090A120001841D /* FunFactViewController.m in Sources */,
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
 				F3FA3010190657550001841D /* QuizWs.m in Sources */,
 				F3FA302119069B2F0001841D /* connection.m in Sources */,
+				F3FA303419090A7B0001841D /* RatingViewController.m in Sources */,
 				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
 				F3FA300D190654FD0001841D /* PersistManager.m in Sources */,
 				F3FA2FEC190577230001841D /* DmVideo.m in Sources */,
