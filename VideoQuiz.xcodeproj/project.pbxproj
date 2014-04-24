@@ -37,7 +37,6 @@
 		F37B10D719026C4900D03CE7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B10D519026C4900D03CE7 /* InfoPlist.strings */; };
 		F37B10DA19026C4900D03CE7 /* VideoQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B10D919026C4900D03CE7 /* VideoQuizTests.m */; };
 		F3C7943119056551001A1847 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = F3C7943019056551001A1847 /* Model.xcdatamodeld */; };
-		F3FA2FE6190577220001841D /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FE5190577220001841D /* Question.m */; };
 		F3FA2FE9190577230001841D /* DmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FE8190577230001841D /* DmUser.m */; };
 		F3FA2FEC190577230001841D /* DmVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA2FEB190577230001841D /* DmVideo.m */; };
 		F3FA2FEE190586840001841D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA2FED190586840001841D /* CoreData.framework */; };
@@ -65,6 +64,7 @@
 		F3FA3057190938EC0001841D /* KeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA3055190938EC0001841D /* KeyboardManager.framework */; };
 		F3FA305B190940450001841D /* PointSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA305A190940450001841D /* PointSummaryViewController.m */; };
 		F3FA305E190940590001841D /* CashInPointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA305D190940590001841D /* CashInPointsViewController.m */; };
+		F3FA306A190949500001841D /* DmQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA3069190949500001841D /* DmQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,8 +122,6 @@
 		F37B10D819026C4900D03CE7 /* VideoQuizTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoQuizTests.h; sourceTree = "<group>"; };
 		F37B10D919026C4900D03CE7 /* VideoQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoQuizTests.m; sourceTree = "<group>"; };
 		F3C7943019056551001A1847 /* Model.xcdatamodeld */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Model.xcdatamodeld; sourceTree = "<group>"; };
-		F3FA2FE4190577220001841D /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
-		F3FA2FE5190577220001841D /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		F3FA2FE7190577230001841D /* DmUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmUser.h; sourceTree = "<group>"; };
 		F3FA2FE8190577230001841D /* DmUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmUser.m; sourceTree = "<group>"; };
 		F3FA2FEA190577230001841D /* DmVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmVideo.h; sourceTree = "<group>"; };
@@ -168,6 +166,8 @@
 		F3FA305A190940450001841D /* PointSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointSummaryViewController.m; sourceTree = "<group>"; };
 		F3FA305C190940590001841D /* CashInPointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashInPointsViewController.h; sourceTree = "<group>"; };
 		F3FA305D190940590001841D /* CashInPointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashInPointsViewController.m; sourceTree = "<group>"; };
+		F3FA3068190949500001841D /* DmQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmQuestion.h; sourceTree = "<group>"; };
+		F3FA3069190949500001841D /* DmQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,12 +302,12 @@
 		F3C794381905682D001A1847 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA3068190949500001841D /* DmQuestion.h */,
+				F3FA3069190949500001841D /* DmQuestion.m */,
 				F3FA2FEA190577230001841D /* DmVideo.h */,
 				F3FA2FEB190577230001841D /* DmVideo.m */,
 				F3FA2FE7190577230001841D /* DmUser.h */,
 				F3FA2FE8190577230001841D /* DmUser.m */,
-				F3FA2FE4190577220001841D /* Question.h */,
-				F3FA2FE5190577220001841D /* Question.m */,
 				F3C7943019056551001A1847 /* Model.xcdatamodeld */,
 				F3FA3006190651DD0001841D /* Data.h */,
 			);
@@ -545,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3FA306A190949500001841D /* DmQuestion.m in Sources */,
 				F3FA3013190659B30001841D /* QuizDao.m in Sources */,
 				F3FA305E190940590001841D /* CashInPointsViewController.m in Sources */,
 				F3FA30281907D5630001841D /* PrepareQuestionsViewController.m in Sources */,
@@ -561,7 +562,6 @@
 				F3FA303119090A5E0001841D /* AdFeedbackViewController.m in Sources */,
 				F3FA2FE9190577230001841D /* DmUser.m in Sources */,
 				F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */,
-				F3FA2FE6190577220001841D /* Question.m in Sources */,
 				F3FA2FFD190650A60001841D /* SessionData.m in Sources */,
 				F3FA302E19090A120001841D /* FunFactViewController.m in Sources */,
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,

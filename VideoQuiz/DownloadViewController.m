@@ -58,7 +58,7 @@
     
     [self setDownloadButtonTitles];
     
-    [clip5 setTitle:@"asdf asdf asdf asdf asdf as asdf" forState:UIControlStateNormal   ];
+//    [clip5 setTitle:@"asdf asdf asdf asdf asdf as asdf" forState:UIControlStateNormal   ];
     
 
 }
