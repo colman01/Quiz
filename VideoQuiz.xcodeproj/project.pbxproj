@@ -61,6 +61,8 @@
 		F3FA303119090A5E0001841D /* AdFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA303019090A5E0001841D /* AdFeedbackViewController.m */; };
 		F3FA303419090A7B0001841D /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA303319090A7B0001841D /* RatingViewController.m */; };
 		F3FA303519091C6C0001841D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166819041CB4004E92DD /* LoginViewController.m */; };
+		F3FA3056190938EC0001841D /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3FA3054190938EC0001841D /* IQKeyboardManager.bundle */; };
+		F3FA3057190938EC0001841D /* KeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA3055190938EC0001841D /* KeyboardManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		F3FA303019090A5E0001841D /* AdFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdFeedbackViewController.m; sourceTree = "<group>"; };
 		F3FA303219090A7B0001841D /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingViewController.h; sourceTree = "<group>"; };
 		F3FA303319090A7B0001841D /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingViewController.m; sourceTree = "<group>"; };
+		F3FA3054190938EC0001841D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		F3FA3055190938EC0001841D /* KeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeyboardManager.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 				F37B10A919026C4900D03CE7 /* UIKit.framework in Frameworks */,
 				F37B10AB19026C4900D03CE7 /* Foundation.framework in Frameworks */,
 				F37B10AD19026C4900D03CE7 /* CoreGraphics.framework in Frameworks */,
+				F3FA3057190938EC0001841D /* KeyboardManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +208,7 @@
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
+				F3FA3054190938EC0001841D /* IQKeyboardManager.bundle */,
 				F3FA2FEF190589CA0001841D /* Videos */,
 				F3C794381905682D001A1847 /* DataModel */,
 				F334CACD19028EAF00CCF8CF /* images */,
@@ -225,6 +231,7 @@
 		F37B10A719026C4900D03CE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA3055190938EC0001841D /* KeyboardManager.framework */,
 				F3FA300A190652FB0001841D /* CoreText.framework */,
 				F3FA3008190652AD0001841D /* Security.framework */,
 				F3FA30011906513A0001841D /* Objection-iOS.framework */,
@@ -476,6 +483,7 @@
 				F3FA2FF519058C3D0001841D /* ad bud.mov in Resources */,
 				F37B10BD19026C4900D03CE7 /* Default@2x.png in Resources */,
 				F3FA2FF719058C3D0001841D /* milkTray.mov in Resources */,
+				F3FA3056190938EC0001841D /* IQKeyboardManager.bundle in Resources */,
 				F36163AB1902E7E70002D22E /* flake.mov in Resources */,
 				F37B10BF19026C4900D03CE7 /* Default-568h@2x.png in Resources */,
 				F36163A21902CCB30002D22E /* heart.png in Resources */,
@@ -621,6 +629,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -644,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -656,10 +665,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/colman/Desktop/workspace/ios-immo-inspect/Frameworks",
+					"$(PROJECT_DIR)",
+					"/Users/colman/Downloads/IQKeyboardManager-master/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoQuiz/VideoQuiz-Prefix.pch";
 				INFOPLIST_FILE = "VideoQuiz/VideoQuiz-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -671,10 +684,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/colman/Desktop/workspace/ios-immo-inspect/Frameworks",
+					"$(PROJECT_DIR)",
+					"/Users/colman/Downloads/IQKeyboardManager-master/IQKeyboardManager",
+					Framework,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VideoQuiz/VideoQuiz-Prefix.pch";
 				INFOPLIST_FILE = "VideoQuiz/VideoQuiz-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
