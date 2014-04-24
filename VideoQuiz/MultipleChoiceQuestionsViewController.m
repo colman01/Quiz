@@ -52,14 +52,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self.navigationController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0.1];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -78,55 +76,13 @@
     //    Wait
 //    [self performSegueWithIdentifier:@"Wait" sender:nil];
 }
-//
-//-(BOOL)shouldAutorotate
-//{
-//    return NO;
-//}
-
-//-(BOOL)shouldAutorotate {
-////    return [[self.navigationController.viewControllers lastObject] shouldAutorotate];
-//    return UIInterfaceOrientationMaskPortrait;
-//}
-//
-//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-////    return [[self.navigationController.viewControllers lastObject] preferredInterfaceOrientationForPresentation];
-//    return UIInterfaceOrientationPortrait;
-//}
-//
-//
-//-(NSUInteger)supportedInterfaceOrientations
-//{
-//    UIInterfaceOrientationMask orientationMask = UIInterfaceOrientationMaskPortrait;
-//    return orientationMask;
-//}
-//
-//-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-//{
-//    if (toInterfaceOrientation == (UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight)) {
-//        return YES;
-//    }
-//    return NO;
-//}
 
 
-- (BOOL)shouldAutorotate  // iOS 6 autorotation fix
+
+- (BOOL)shouldAutorotate
 {
     return YES;
 }
-//- (NSUInteger)supportedInterfaceOrientations // iOS 6 autorotation fix
-//{
-//    return UIInterfaceOrientationMaskPortrait;
-//}
-//
-//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
-//{
-//    return UIInterfaceOrientationPortrait;
-//}
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-//{
-//    return YES;
-//}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
