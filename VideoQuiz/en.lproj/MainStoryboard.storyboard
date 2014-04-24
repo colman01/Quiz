@@ -690,6 +690,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="R63-Q2-tNw"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="answer1" destination="sj9-BN-is0" id="G4C-5S-ouP"/>
+                        <outlet property="answer2" destination="Rfp-nc-lO6" id="ikJ-aN-Css"/>
+                        <outlet property="answer3" destination="GMd-yS-mzz" id="ME4-a0-iAZ"/>
+                        <outlet property="answer4" destination="kAA-iD-Q4r" id="sa1-t4-VYK"/>
+                        <outlet property="questionLabel" destination="v1q-t9-9db" id="pL2-GO-JUb"/>
+                        <segue destination="OK1-dc-DF3" kind="push" identifier="Feedback" id="GXL-3M-RsQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6XW-d2-BEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -730,14 +738,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1iL-bP-IEm"/>
                     <connections>
                         <outlet property="textLabel" destination="tvk-We-cHB" id="bUv-is-MIX"/>
                         <outlet property="textView" destination="3GK-5j-bjr" id="P6Z-gU-cqU"/>
+                        <segue destination="B0d-ha-lz2" kind="push" identifier="Rating" id="qqf-3r-Bma"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4c-cg-V2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4836" y="-62"/>
+            <point key="canvasLocation" x="5390" y="-774"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="MzV-wJ-KoJ">
@@ -770,14 +780,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KWL-c3-p7P"/>
                     <connections>
                         <outlet property="slider" destination="7tI-km-M2t" id="SlD-fv-A1Z"/>
                         <outlet property="textLabel" destination="iPU-sk-iJ8" id="FyV-rs-gMb"/>
+                        <segue destination="K1m-Tl-NRU" kind="push" identifier="Funfact" id="vjn-PK-0Co"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6av-NO-jN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4841" y="667"/>
+            <point key="canvasLocation" x="5907" y="-774"/>
         </scene>
         <!--Fun Fact View Controller-->
         <scene sceneID="hGF-6u-erc">
@@ -821,6 +833,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fnt-c8-nE8"/>
                     <connections>
                         <outlet property="answer1" destination="INt-Eo-8Vm" id="H9h-fF-TUj"/>
                         <outlet property="answer2" destination="HWH-Rf-O2q" id="aIp-aJ-TvM"/>
@@ -830,7 +843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckg-HT-sbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4841" y="-1509"/>
+            <point key="canvasLocation" x="6357" y="-774"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ed1-0N-Ho0">

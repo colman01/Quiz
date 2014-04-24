@@ -15,6 +15,8 @@
 
 @implementation MultipleChoiceQuestionsViewController
 
+@synthesize answer1, answer2, answer3, answer4, questionLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
