@@ -82,4 +82,17 @@
     return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
 }
 
+#pragma mark Setup Questions
+
+- (void) setTextForQuestion {
+    DmQuestion *question = [NSEntityDescription insertNewObjectForEntityForName:@"Question" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+    question.question = @"";
+    question.answer1 = @"";
+    question.answer2 = @"";
+    question.answer3 = @"";
+    question.answer4 = @"";
+    question.correctAnswer = [NSNumber numberWithInt:0];
+    question.isCorrectlyAnswered = [NSNumber numberWithInt:0];
+}
+
 @end

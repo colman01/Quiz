@@ -1,11 +1,3 @@
-//
-//  PersistManager.m
-//  ios-prototype-gui-01
-//
-//  Created by Gerrit Götsch on 22.10.13.
-//  Copyright (c) 2013 SUBITO AG. All rights reserved.
-//
-
 #import "PersistManager.h"
 
 @implementation PersistManager
@@ -63,7 +55,7 @@ static PersistManager *instance = NULL;
 		return persistentStoreCoordinator;
 	}
 	NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory]
-											   stringByAppendingPathComponent: @"Inspection.sqlite"]];
+											   stringByAppendingPathComponent: @"Quiz.sqlite"]];
 	NSError *error;
 	
 	persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc]
