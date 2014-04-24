@@ -63,6 +63,8 @@
 		F3FA303519091C6C0001841D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166819041CB4004E92DD /* LoginViewController.m */; };
 		F3FA3056190938EC0001841D /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3FA3054190938EC0001841D /* IQKeyboardManager.bundle */; };
 		F3FA3057190938EC0001841D /* KeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA3055190938EC0001841D /* KeyboardManager.framework */; };
+		F3FA305B190940450001841D /* PointSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA305A190940450001841D /* PointSummaryViewController.m */; };
+		F3FA305E190940590001841D /* CashInPointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FA305D190940590001841D /* CashInPointsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,10 @@
 		F3FA303319090A7B0001841D /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingViewController.m; sourceTree = "<group>"; };
 		F3FA3054190938EC0001841D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		F3FA3055190938EC0001841D /* KeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeyboardManager.framework; sourceTree = "<group>"; };
+		F3FA3059190940450001841D /* PointSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointSummaryViewController.h; sourceTree = "<group>"; };
+		F3FA305A190940450001841D /* PointSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointSummaryViewController.m; sourceTree = "<group>"; };
+		F3FA305C190940590001841D /* CashInPointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashInPointsViewController.h; sourceTree = "<group>"; };
+		F3FA305D190940590001841D /* CashInPointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashInPointsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +349,7 @@
 		F3FA2FE2190569A70001841D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA3058190940320001841D /* Points */,
 				F3FA2FE01905696B0001841D /* Login */,
 				F3FA30221907D50B0001841D /* QuestionControllers */,
 				F37B10C319026C4900D03CE7 /* ViewController.h */,
@@ -404,6 +411,17 @@
 				F3FA303319090A7B0001841D /* RatingViewController.m */,
 			);
 			name = QuestionControllers;
+			sourceTree = "<group>";
+		};
+		F3FA3058190940320001841D /* Points */ = {
+			isa = PBXGroup;
+			children = (
+				F3FA3059190940450001841D /* PointSummaryViewController.h */,
+				F3FA305A190940450001841D /* PointSummaryViewController.m */,
+				F3FA305C190940590001841D /* CashInPointsViewController.h */,
+				F3FA305D190940590001841D /* CashInPointsViewController.m */,
+			);
+			name = Points;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3FA3013190659B30001841D /* QuizDao.m in Sources */,
+				F3FA305E190940590001841D /* CashInPointsViewController.m in Sources */,
 				F3FA30281907D5630001841D /* PrepareQuestionsViewController.m in Sources */,
 				F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */,
 				F3FA303519091C6C0001841D /* LoginViewController.m in Sources */,
@@ -553,6 +572,7 @@
 				F3FA300D190654FD0001841D /* PersistManager.m in Sources */,
 				F3FA2FEC190577230001841D /* DmVideo.m in Sources */,
 				F3FA301E19066A6F0001841D /* KeychainItemWrapper.m in Sources */,
+				F3FA305B190940450001841D /* PointSummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

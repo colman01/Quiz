@@ -89,6 +89,11 @@
                                                object:videoPlayer];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                                    style:UIBarButtonItemStyleDone target:self action:@selector(moviePlayBackDidFinish:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
 }
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification {

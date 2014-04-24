@@ -235,9 +235,10 @@
                                     <segue destination="H8r-pi-tM0" kind="push" identifier="Settings" id="frn-hJ-Ioq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63D-LE-Im9">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63D-LE-Im9">
                                 <rect key="frame" x="89" y="297" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Minigames">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -296,10 +297,10 @@
             </objects>
             <point key="canvasLocation" x="1432" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Cash In Points View Controller-->
         <scene sceneID="9g0-Im-EHK">
             <objects>
-                <viewController id="3DX-os-44g" sceneMemberID="viewController">
+                <viewController id="3DX-os-44g" customClass="CashInPointsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vi3-qa-oIv"/>
                         <viewControllerLayoutGuide type="bottom" id="QGt-Kh-hoc"/>
@@ -342,15 +343,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="jDe-wS-Ui6"/>
+                    <connections>
+                        <outlet property="currentPoints" destination="hdD-0m-Zyp" id="Y8i-3g-fMU"/>
+                        <outlet property="totalPoints" destination="HRI-GW-Nfw" id="s6j-ny-ldL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0I-e6-s0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2380" y="1783"/>
         </scene>
-        <!--View Controller-->
+        <!--Point Summary View Controller-->
         <scene sceneID="0Jp-BY-5Jb">
             <objects>
-                <viewController id="fXg-5D-omd" sceneMemberID="viewController">
+                <viewController id="fXg-5D-omd" customClass="PointSummaryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BwA-7z-ain"/>
                         <viewControllerLayoutGuide type="bottom" id="BN0-ls-lXd"/>
@@ -375,6 +380,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="nX9-gL-pAy"/>
+                    <connections>
+                        <outlet property="totalPoints" destination="ImQ-K9-mX3" id="fgd-SI-NOc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Iz-pa-eRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,14 +491,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-C4-uAk">
-                                <rect key="frame" x="73" y="199" width="140" height="30"/>
+                                <rect key="frame" x="128" y="194" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Alle Clips download ">
+                                <state key="normal" title="Alle Clips">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zvi-od-2l8">
-                                <rect key="frame" x="96" y="86" width="94" height="89"/>
+                                <rect key="frame" x="113" y="81" width="94" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="D9k-dD-qz7"/>
@@ -689,12 +697,12 @@
                             <constraint firstItem="gsh-C4-uAk" firstAttribute="centerX" secondItem="Zvi-od-2l8" secondAttribute="centerX" id="1jD-9C-iiS"/>
                             <constraint firstItem="gsh-C4-uAk" firstAttribute="top" secondItem="Zvi-od-2l8" secondAttribute="bottom" constant="24" id="2Bz-V7-Mro"/>
                             <constraint firstAttribute="trailing" secondItem="qKY-1x-EZG" secondAttribute="trailing" constant="6" id="6rz-oz-e6I"/>
-                            <constraint firstItem="Zvi-od-2l8" firstAttribute="top" secondItem="lo7-1q-qTV" secondAttribute="bottom" constant="22" id="Bdo-SO-7z8"/>
+                            <constraint firstItem="Zvi-od-2l8" firstAttribute="top" secondItem="lo7-1q-qTV" secondAttribute="bottom" constant="17" id="Bdo-SO-7z8"/>
                             <constraint firstAttribute="bottom" secondItem="nBp-Pi-qAc" secondAttribute="bottom" id="F4S-oW-L5j"/>
                             <constraint firstItem="qKY-1x-EZG" firstAttribute="top" secondItem="lo7-1q-qTV" secondAttribute="bottom" constant="9" id="KLi-eo-Eo5"/>
                             <constraint firstItem="nBp-Pi-qAc" firstAttribute="leading" secondItem="1By-Zj-hji" secondAttribute="leading" id="QRA-Uf-vfV"/>
-                            <constraint firstItem="nBp-Pi-qAc" firstAttribute="top" secondItem="gsh-C4-uAk" secondAttribute="bottom" constant="13" id="gIc-tV-Oic"/>
-                            <constraint firstItem="gsh-C4-uAk" firstAttribute="leading" secondItem="1By-Zj-hji" secondAttribute="leading" constant="73" id="gZB-qd-zX0"/>
+                            <constraint firstItem="nBp-Pi-qAc" firstAttribute="top" secondItem="gsh-C4-uAk" secondAttribute="bottom" constant="18" id="gIc-tV-Oic"/>
+                            <constraint firstItem="gsh-C4-uAk" firstAttribute="leading" secondItem="1By-Zj-hji" secondAttribute="leading" constant="128" id="gZB-qd-zX0"/>
                             <constraint firstAttribute="trailing" secondItem="nBp-Pi-qAc" secondAttribute="trailing" id="hVc-HW-fJY"/>
                         </constraints>
                     </view>
