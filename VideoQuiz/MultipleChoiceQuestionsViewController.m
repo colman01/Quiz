@@ -16,6 +16,8 @@
 @implementation MultipleChoiceQuestionsViewController
 
 @synthesize answer1, answer2, answer3, answer4, questionLabel;
+@synthesize currentQuestion;
+@synthesize currentQuestionIndex, totalQuestions;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -81,6 +83,79 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationLandscapeRight);
 }
+
+- (IBAction)checkAnswer:(UIButton *)sender {
+    if (sender.tag == [currentQuestion.correctAnswer integerValue]) {
+        //
+        if (totalQuestions == currentQuestionIndex) {
+            [self performSegueWithIdentifier:@"Feedback" sender:nil];
+        }
+    }
+    
+}
+
+
+//- (IBAction) buttonWasPressed:(id) sender {
+//    UIButton *button = sender;
+//    int tag = button.tag;
+//    Question * q = [allQuestions objectAtIndex:counter];
+//    if (counter >= [allQuestions count]) {
+//        UIAlertView *alert = [[UIAlertView alloc]
+//                              initWithTitle: @"End game!"
+//                              message:button.titleLabel.text
+//                              delegate: nil
+//                              cancelButtonTitle:@"OK"
+//                              otherButtonTitles:nil];
+//        [alert show];
+//        return;
+//    }
+//    if (tag == q.correct  ) {
+//        
+//        if (level == 0) {
+//            level++;
+//        }
+//        score++;
+//        UIAlertView *alert = [[UIAlertView alloc]
+//                              initWithTitle: @"Correct"
+//                              message:button.titleLabel.text
+//                              delegate: nil
+//                              cancelButtonTitle:@"OK"
+//                              otherButtonTitles:nil];
+//        [alert show];
+//        if (score == 17) {
+//            level = 0;
+//            counter = 0;
+//            pause_ = NO;
+//            return;
+//        }
+//        
+//        counter++;
+//        if (counter >= [allQuestions count]) {
+//            counter = 0;
+//        }
+//        [self setTextForQuestion:counter];
+//        [self resetBox];
+//        pause_ = NO;
+//    }
+//    else {
+//        level = 0;
+//        counter = 0;
+//        [self resetBox];
+//        [self updateLevelText];
+//        
+//        UIAlertView *alert = [[UIAlertView alloc]
+//                              initWithTitle: @"Incorrect!"
+//                              message:button.titleLabel.text
+//                              delegate: nil
+//                              cancelButtonTitle:@"OK"
+//                              otherButtonTitles:nil];
+//        [alert show];
+//        [self showRestartCounterView];
+//        [self setTextForQuestion:counter];
+//        score = 0;
+//    }
+//}
+
 
 #pragma mark Setup Questions
 

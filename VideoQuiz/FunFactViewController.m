@@ -51,4 +51,8 @@
 }
 */
 
+- (IBAction)returnToCockpit:(id)sender {
+    [self performSegueWithIdentifier:@"Return" sender:nil];
+}
+
 @end

@@ -17,4 +17,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *answer3;
 @property (strong, nonatomic) IBOutlet UIButton *answer4;
 
+@property (strong, nonatomic) DmQuestion *currentQuestion;
+
+@property int totalQuestions;
+@property int currentQuestionIndex;
+
 @end
