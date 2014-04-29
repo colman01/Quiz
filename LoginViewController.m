@@ -68,6 +68,16 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"modelX" withExtension:@"momd"];
+    
+    
+    DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+    
+    
+     
+    [[PersistManager instance] save];
+    
+
 }
 
 - (void)didReceiveMemoryWarning

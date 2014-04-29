@@ -216,7 +216,6 @@
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
-				33223226190FE4D10072CB30 /* Model_.xcdatamodeld */,
 				F3FA3054190938EC0001841D /* IQKeyboardManager.bundle */,
 				F3FA2FEF190589CA0001841D /* Videos */,
 				F3C794381905682D001A1847 /* DataModel */,
@@ -311,6 +310,7 @@
 				F3FA2FEB190577230001841D /* DmVideo.m */,
 				F3FA2FE7190577230001841D /* DmUser.h */,
 				F3FA2FE8190577230001841D /* DmUser.m */,
+				33223226190FE4D10072CB30 /* Model_.xcdatamodeld */,
 				F3C7943019056551001A1847 /* Model.xcdatamodeld */,
 				F3FA3006190651DD0001841D /* Data.h */,
 			);

@@ -45,7 +45,9 @@ static PersistManager *instance = NULL;
 	if (managedObjectModel != nil) {
 		return managedObjectModel;
 	}
-	managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+//	managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model_" withExtension:@"momd"];
+    managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
 	
 	return managedObjectModel;
 }

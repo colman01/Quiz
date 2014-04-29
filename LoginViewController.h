@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CockPitViewController.h"
 #import <Foundation/Foundation.h>
+#import "PersistManager.h"
+#import "DmUser.h"
 
 FOUNDATION_EXPORT NSString *const IWUsernameKey;
 FOUNDATION_EXPORT NSString *const IWPasswordIdentifier;
