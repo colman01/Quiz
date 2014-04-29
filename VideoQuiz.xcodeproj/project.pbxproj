@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33223228190FE4D10072CB30 /* Model_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33223226190FE4D10072CB30 /* Model_.xcdatamodeld */; };
 		F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166B1904209C004E92DD /* CockPitViewController.m */; };
 		F31C166F1904213A004E92DD /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F31C166E1904213A004E92DD /* SettingsViewController.m */; };
 		F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = F334CACB1902792D00CCF8CF /* downloadArrow.png */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33223227190FE4D10072CB30 /* Model_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model_.xcdatamodel; sourceTree = "<group>"; };
 		F31C166719041CB4004E92DD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
 		F31C166819041CB4004E92DD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		F31C166A1904209C004E92DD /* CockPitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CockPitViewController.h; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		F37B109C19026C4900D03CE7 = {
 			isa = PBXGroup;
 			children = (
+				33223226190FE4D10072CB30 /* Model_.xcdatamodeld */,
 				F3FA3054190938EC0001841D /* IQKeyboardManager.bundle */,
 				F3FA2FEF190589CA0001841D /* Videos */,
 				F3C794381905682D001A1847 /* DataModel */,
@@ -567,6 +570,7 @@
 				F36163AE1902E8170002D22E /* PlayerViewController.m in Sources */,
 				F3FA3010190657550001841D /* QuizWs.m in Sources */,
 				F3FA302119069B2F0001841D /* connection.m in Sources */,
+				33223228190FE4D10072CB30 /* Model_.xcdatamodeld in Sources */,
 				F3FA303419090A7B0001841D /* RatingViewController.m in Sources */,
 				F36163B31903D9D90002D22E /* NavigationController.m in Sources */,
 				F3FA300D190654FD0001841D /* PersistManager.m in Sources */,
@@ -782,6 +786,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33223226190FE4D10072CB30 /* Model_.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33223227190FE4D10072CB30 /* Model_.xcdatamodel */,
+			);
+			currentVersion = 33223227190FE4D10072CB30 /* Model_.xcdatamodel */;
+			path = Model_.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F37B109D19026C4900D03CE7 /* Project object */;
 }
