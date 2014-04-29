@@ -3,10 +3,40 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[LoginViewController viewDidLoad]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user_.username">
+            </PersistentString>
+            <PersistentString
+               value = "user_">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[QuizDao loadById:]:QuizDao.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "result[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[LoginViewController prepareForSegue:sender:]:LoginViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "cockpit.usernameBadge">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController viewWillDisappear:]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "user_.username">
+            </PersistentString>
+            <PersistentString
+               value = "userName.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

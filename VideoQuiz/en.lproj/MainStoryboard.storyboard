@@ -191,6 +191,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Sbk-hd-Fle"/>
                     <connections>
+                        <outlet property="password" destination="Kk1-z7-WO4" id="VIR-QJ-7SJ"/>
+                        <outlet property="userName" destination="KZA-e3-FQt" id="0HO-DP-j3E"/>
                         <segue destination="xRx-KC-QHX" kind="push" identifier="Login" id="WZH-S4-mYh"/>
                     </connections>
                 </viewController>
@@ -1097,7 +1099,7 @@ Produkt.</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="TQe-0w-6a9"/>
+        <segue reference="WZH-S4-mYh"/>
         <segue reference="bDd-yr-PcX"/>
     </inferredMetricsTieBreakers>
 </document>

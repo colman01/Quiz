@@ -68,12 +68,26 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+//
+    DmUser *user_ = [[QuizDao instance] loadById:[NSNumber numberWithInt:0]];
+    if (!user_.username || user_.username.length > 0) {
+        [userName setText:user_.username];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    DmUser *user_ = [[QuizDao instance] loadById:[NSNumber numberWithInt:0]];
+    user_.username = userName.text;
+    user_.password = password.text;
+    [[PersistManager instance] save];
 }
 
 

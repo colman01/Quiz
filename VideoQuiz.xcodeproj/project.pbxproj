@@ -40,7 +40,6 @@
 		F37B10CF19026C4900D03CE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B10AA19026C4900D03CE7 /* Foundation.framework */; };
 		F37B10D719026C4900D03CE7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B10D519026C4900D03CE7 /* InfoPlist.strings */; };
 		F37B10DA19026C4900D03CE7 /* VideoQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B10D919026C4900D03CE7 /* VideoQuizTests.m */; };
-		F3C7943119056551001A1847 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = F3C7943019056551001A1847 /* Model.xcdatamodeld */; };
 		F3FA2FEE190586840001841D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA2FED190586840001841D /* CoreData.framework */; };
 		F3FA2FF519058C3D0001841D /* ad bud.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF219058C3D0001841D /* ad bud.mov */; };
 		F3FA2FF619058C3D0001841D /* guinness.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF319058C3D0001841D /* guinness.mov */; };
@@ -129,7 +128,6 @@
 		F37B10D619026C4900D03CE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F37B10D819026C4900D03CE7 /* VideoQuizTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoQuizTests.h; sourceTree = "<group>"; };
 		F37B10D919026C4900D03CE7 /* VideoQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoQuizTests.m; sourceTree = "<group>"; };
-		F3C7943019056551001A1847 /* Model.xcdatamodeld */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Model.xcdatamodeld; sourceTree = "<group>"; };
 		F3FA2FED190586840001841D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F3FA2FF219058C3D0001841D /* ad bud.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ad bud.mov"; sourceTree = "<group>"; };
 		F3FA2FF319058C3D0001841D /* guinness.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = guinness.mov; sourceTree = "<group>"; };
@@ -311,7 +309,6 @@
 				F37161D4190FF68800323344 /* DmUser.h */,
 				F37161D5190FF68800323344 /* DmUser.m */,
 				33223226190FE4D10072CB30 /* Model_.xcdatamodeld */,
-				F3C7943019056551001A1847 /* Model.xcdatamodeld */,
 				F3FA3006190651DD0001841D /* Data.h */,
 			);
 			name = DataModel;
@@ -513,7 +510,6 @@
 				F3FA2FF619058C3D0001841D /* guinness.mov in Resources */,
 				F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */,
 				F37B10C219026C4900D03CE7 /* MainStoryboard.storyboard in Resources */,
-				F3C7943119056551001A1847 /* Model.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
