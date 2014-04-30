@@ -70,19 +70,10 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
     // Do any additional setup after loading the view.
 //    DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
 //
-//    DmUser *user_ = [[QuizDao instance] loadById:[NSNumber numberWithInt:0]];
-//    if (!user_.username || user_.username.length > 0) {
-//        [userName setText:user_.username];
-//    }
-    
-    NSMutableArray *results = [[QuizDao instance] getQuiz];
-    for (DmUser *user in results) {
-        NSLog(@"data %@", user.username);
+    DmUser *user_ = [[QuizDao instance] loadById:[NSNumber numberWithInt:0]];
+    if (!user_.username || user_.username.length > 0) {
+        [userName setText:user_.username];
     }
-    
-    DmUser *thisUser = results[0];
-    userName.text = thisUser.username;
-    password.text = thisUser.password;
 
 }
 
@@ -93,17 +84,10 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    
-    NSMutableArray *results = [[QuizDao instance] getQuiz];
-    DmUser *thisUser = results[0];
-    
-    
-    if (![userName.text isEqualToString:userName.text]) {
-        thisUser.username = userName.text;
-        thisUser.password = password.text;
-        [[PersistManager instance] save];
-    }
-
+    DmUser *user_ = [[QuizDao instance] loadById:[NSNumber numberWithInt:0]];
+    user_.username = userName.text;
+    user_.password = password.text;
+    [[PersistManager instance] save];
 }
 
 
