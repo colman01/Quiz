@@ -131,10 +131,10 @@ id _service;
 		return;
 	}
 	NSString *username = ((UITextField *)[alertView textFieldAtIndex:0]).text;
-	NSString *password = ((UITextField *)[alertView textFieldAtIndex:1]).text;
+	NSString *password_ = ((UITextField *)[alertView textFieldAtIndex:1]).text;
     
     thisUser.username = username;
-    thisUser.password = password;
+    thisUser.password = password_;
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	[defaults setObject:username forKey:IWUsernameKey];

@@ -5,6 +5,8 @@
         <attribute name="answer2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answer3" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rating" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rating" inverseName="product" inverseEntity="Rating" syncable="YES"/>
+        <relationship name="video" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Video" inverseName="newRelationship" inverseEntity="Video" syncable="YES"/>
     </entity>
     <entity name="Question" representedClassName="DmQuestion" syncable="YES">
         <attribute name="answer1" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,32 +16,36 @@
         <attribute name="correctAnswer" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="isCorrectlyAnswered" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="single" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Single" inverseName="relatedQuestion" inverseEntity="Single" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="User" inverseName="question" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="Rating" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="rating" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Single" syncable="YES">
         <attribute name="answerInput" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relatedQuestion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="single" inverseEntity="Question" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="DmUser" syncable="YES">
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="question" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Question" inverseName="user" inverseEntity="Question" syncable="YES"/>
-        <relationship name="video" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Video" syncable="YES"/>
+        <relationship name="video" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Video" inverseName="product" inverseEntity="Video" syncable="YES"/>
     </entity>
     <entity name="Video" representedClassName="DmVideo" syncable="YES">
         <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="isViewed" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="User" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="video" inverseEntity="Product" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="User" inverseName="video" inverseEntity="User" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Video" positionX="-531" positionY="-63" width="128" height="90"/>
-        <element name="Question" positionX="-927" positionY="-63" width="128" height="163"/>
-        <element name="Rating" positionX="-27" positionY="-121" width="128" height="58"/>
-        <element name="Product" positionX="115" positionY="-126" width="128" height="103"/>
+        <element name="Product" positionX="-326" positionY="-52" width="128" height="133"/>
+        <element name="Single" positionX="-999" positionY="-252" width="128" height="88"/>
         <element name="User" positionX="-702" positionY="-261" width="128" height="103"/>
-        <element name="Single" positionX="268" positionY="-126" width="128" height="73"/>
+        <element name="Video" positionX="-531" positionY="-63" width="128" height="103"/>
+        <element name="Question" positionX="-945" positionY="-72" width="128" height="178"/>
+        <element name="Rating" positionX="-353" positionY="224" width="128" height="73"/>
     </elements>
 </model>
