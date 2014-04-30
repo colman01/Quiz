@@ -1,21 +1,18 @@
 //
-//  DmVideo.m
+//  DmRating.m
 //  VideoQuiz
 //
 //  Created by colman on 30.04.14.
 //  Copyright (c) 2014 vquiz. All rights reserved.
 //
 
-#import "DmVideo.h"
+#import "DmRating.h"
 #import "DmProduct.h"
-#import "DmUser.h"
 
 
-@implementation DmVideo
+@implementation DmRating
 
-@dynamic data;
-@dynamic isViewed;
+@dynamic value;
 @dynamic product;
-@dynamic user;
 
 @end

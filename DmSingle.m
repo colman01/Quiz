@@ -1,21 +1,19 @@
 //
-//  DmUser.m
+//  DmSingle.m
 //  VideoQuiz
 //
 //  Created by colman on 30.04.14.
 //  Copyright (c) 2014 vquiz. All rights reserved.
 //
 
-#import "DmUser.h"
+#import "DmSingle.h"
 #import "DmQuestion.h"
-#import "DmVideo.h"
 
 
-@implementation DmUser
+@implementation DmSingle
 
-@dynamic password;
-@dynamic username;
+@dynamic answerInput;
 @dynamic question;
-@dynamic video;
+@dynamic relatedQuestion;
 
 @end

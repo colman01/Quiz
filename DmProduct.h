@@ -1,5 +1,5 @@
 //
-//  DmQuestion.h
+//  DmProduct.h
 //  VideoQuiz
 //
 //  Created by colman on 30.04.14.
@@ -9,18 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class DmSingle, DmUser;
+@class DmRating, DmVideo;
 
-@interface DmQuestion : NSManagedObject
+@interface DmProduct : NSManagedObject
 
 @property (nonatomic, retain) NSString * answer1;
 @property (nonatomic, retain) NSString * answer2;
 @property (nonatomic, retain) NSString * answer3;
-@property (nonatomic, retain) NSString * answer4;
-@property (nonatomic, retain) NSNumber * correctAnswer;
-@property (nonatomic, retain) NSNumber * isCorrectlyAnswered;
 @property (nonatomic, retain) NSString * question;
-@property (nonatomic, retain) DmSingle *single;
-@property (nonatomic, retain) DmUser *user;
+@property (nonatomic, retain) DmRating *rating;
+@property (nonatomic, retain) DmVideo *video;
 
 @end

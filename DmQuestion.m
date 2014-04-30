@@ -2,11 +2,12 @@
 //  DmQuestion.m
 //  VideoQuiz
 //
-//  Created by colman on 29.04.14.
+//  Created by colman on 30.04.14.
 //  Copyright (c) 2014 vquiz. All rights reserved.
 //
 
 #import "DmQuestion.h"
+#import "DmSingle.h"
 #import "DmUser.h"
 
 
@@ -19,6 +20,7 @@
 @dynamic correctAnswer;
 @dynamic isCorrectlyAnswered;
 @dynamic question;
+@dynamic single;
 @dynamic user;
 
 @end

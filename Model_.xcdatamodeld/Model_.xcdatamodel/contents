@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Product" syncable="YES">
+    <entity name="Product" representedClassName="DmProduct" syncable="YES">
         <attribute name="answer1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answer2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answer3" optional="YES" attributeType="String" syncable="YES"/>
@@ -19,11 +19,11 @@
         <relationship name="single" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Single" inverseName="relatedQuestion" inverseEntity="Single" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="User" inverseName="question" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Rating" syncable="YES">
+    <entity name="Rating" representedClassName="DmRating" syncable="YES">
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="rating" inverseEntity="Product" syncable="YES"/>
     </entity>
-    <entity name="Single" syncable="YES">
+    <entity name="Single" representedClassName="DmSingle" syncable="YES">
         <attribute name="answerInput" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="relatedQuestion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="single" inverseEntity="Question" syncable="YES"/>
@@ -42,10 +42,10 @@
     </entity>
     <elements>
         <element name="Product" positionX="-326" positionY="360" width="128" height="133"/>
+        <element name="Question" positionX="-855" positionY="117" width="128" height="178"/>
+        <element name="Rating" positionX="-81" positionY="602" width="128" height="73"/>
         <element name="Single" positionX="-1125" positionY="416" width="128" height="88"/>
         <element name="User" positionX="-695" positionY="-40" width="128" height="103"/>
         <element name="Video" positionX="-506" positionY="153" width="128" height="103"/>
-        <element name="Question" positionX="-855" positionY="117" width="128" height="178"/>
-        <element name="Rating" positionX="-81" positionY="602" width="128" height="73"/>
     </elements>
 </model>
