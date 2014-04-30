@@ -15,6 +15,7 @@
 @implementation CockPitViewController
 @synthesize usernameBadge;
 @synthesize usernameBadgeText;
+@synthesize thisUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,7 +39,7 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated  {
-    [usernameBadge setText:usernameBadgeText];
+    [usernameBadge setText:thisUser.username];
     [usernameBadge sizeToFit];
 }
 
@@ -63,14 +64,17 @@
     if ([[segue identifier] isEqualToString:@"Download"]) {
         DownloadViewController *downloadVC = (DownloadViewController *) dest;
         [downloadVC.usernameBadge setText:usernameBadge.text];
+        [downloadVC setThisUser:thisUser];
         
 //        [cockpit.usernameBadge setText:user];
         downloadVC.usernameBadgeText = self.usernameBadgeText;
     }
     
     if ([[segue identifier] isEqualToString:@"Settings"]) {
+        
         SettingsViewController *settingsVC = (SettingsViewController *) dest;
         settingsVC.usernameBadgeText = self.usernameBadgeText;
+        [settingsVC setThisUser:thisUser];
     }
     
 

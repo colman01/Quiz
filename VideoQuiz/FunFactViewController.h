@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Data.h"
 
 @interface FunFactViewController : UIViewController
 
@@ -14,5 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *answer1;
 @property (strong, nonatomic) IBOutlet UIButton *answer2;
 @property (strong, nonatomic) IBOutlet UIButton *answer3;
+
+@property (strong, nonatomic) DmUser *thisUser;
 
 @end

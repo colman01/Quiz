@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Data.h"
 
 @interface PointSummaryViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *totalPoints;
+@property (strong, nonatomic) DmUser *thisUser;
 
 @end

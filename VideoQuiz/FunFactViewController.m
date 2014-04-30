@@ -19,6 +19,7 @@
 @synthesize answer2;
 @synthesize answer3;
 
+@synthesize thisUser;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

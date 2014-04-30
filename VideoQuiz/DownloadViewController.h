@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ClipDownloader.h"
 #import "PlayerViewController.h"
+#import "Data.h"
 
 
 @interface DownloadViewController : UIViewController
@@ -42,6 +43,7 @@
 @property (strong, nonatomic) NSMutableArray *fileNames;
 @property int fileIndex;
 
+@property (strong, nonatomic) DmUser *thisUser;
 
 
 @end

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MultipleChoiceQuestionsViewController.h"
+#import "Data.h"
 
 @interface PrepareQuestionsViewController : UIViewController
+@property (strong, nonatomic) DmUser *thisUser;
 
 @end

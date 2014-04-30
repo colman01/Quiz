@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MPMoviePlayerController.h>
+#import "Data.h"
 
 @interface PlayerViewController : UIViewController 
 
@@ -15,6 +16,7 @@
 @property (strong, nonatomic) NSMutableArray *fileNames;
 @property int fileIndex;
 
+@property (strong, nonatomic) DmUser *thisUser;
 
 
 

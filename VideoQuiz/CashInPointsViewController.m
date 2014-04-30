@@ -16,6 +16,7 @@
 
 @synthesize currentPoints;
 @synthesize totalPoints;
+@synthesize thisUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

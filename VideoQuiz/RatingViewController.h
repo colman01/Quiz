@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Data.h"
 
 @interface RatingViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
 @property (strong, nonatomic) IBOutlet UISlider *slider;
+@property (strong, nonatomic) DmUser *thisUser;
 
 @end

@@ -17,6 +17,7 @@
 @synthesize videoPlayer;
 @synthesize fileNames;
 @synthesize fileIndex;
+@synthesize thisUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

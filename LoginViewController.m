@@ -89,7 +89,10 @@ id _service;
     if (!cockpit.usernameBadge) {
         cockpit.usernameBadge = [[UILabel alloc] init] ;
     }
-    [cockpit.usernameBadge setText:thisUser.username];
+//    [cockpit.usernameBadge setText:thisUser.username];
+//    cockpit.usernameBadgeText = thisUser.username;
+    
+    cockpit.thisUser = thisUser;
 }
 
 -(void) textFieldDidBeginEditing:(UITextField *)textField {
@@ -104,6 +107,7 @@ id _service;
     if (textField.tag == 1) {
         thisUser.password= textField.text;
     }
+    [[PersistManager instance] save];
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{

@@ -24,6 +24,7 @@
 @synthesize fileIndex;
 @synthesize fileNames;
 @synthesize downloadButtons;
+@synthesize thisUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,7 +70,7 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated  {
-    [usernameBadge setText:usernameBadgeText];
+    [usernameBadge setText:thisUser.username];
     [usernameBadge sizeToFit];
 }
 

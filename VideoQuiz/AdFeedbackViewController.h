@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Data.h"
 
 @interface AdFeedbackViewController : UIViewController
 
+@property (strong, nonatomic) DmUser *thisUser;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
 

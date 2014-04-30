@@ -16,6 +16,7 @@
 
 @synthesize textLabel;
 @synthesize slider;
+@synthesize thisUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

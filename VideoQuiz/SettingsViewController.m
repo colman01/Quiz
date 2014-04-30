@@ -16,6 +16,7 @@
 @synthesize usernameBadge;
 @synthesize usernameBadgeText;
 @synthesize singleClip, allClips;
+@synthesize thisUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +32,7 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated  {
-    [usernameBadge setText:usernameBadgeText];
+    [usernameBadge setText:thisUser.username];
     [usernameBadge sizeToFit];
 }
 

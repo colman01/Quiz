@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Data.h"
 
 @interface CashInPointsViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *totalPoints;
 @property (strong, nonatomic) IBOutlet UILabel *currentPoints;
+@property (strong, nonatomic) DmUser *thisUser;
 
 @end

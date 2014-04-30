@@ -16,6 +16,7 @@
 
 @synthesize textLabel;
 @synthesize textView;
+@synthesize thisUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

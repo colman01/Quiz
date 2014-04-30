@@ -25,7 +25,13 @@
          contextName = "-[LoginViewController prepareForSegue:sender:]:LoginViewController.m">
          <PersistentStrings>
             <PersistentString
+               value = "cockpit.usernameBadge.text">
+            </PersistentString>
+            <PersistentString
                value = "cockpit.usernameBadge">
+            </PersistentString>
+            <PersistentString
+               value = "thisUser.username">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

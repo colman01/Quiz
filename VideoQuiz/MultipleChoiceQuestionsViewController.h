@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Data.h"    
+#import "Data.h"  
+#import "Data.h"
 
 @interface MultipleChoiceQuestionsViewController : UIViewController
+
+@property (strong, nonatomic) DmUser *thisUser;
 
 @property (strong, nonatomic) IBOutlet UILabel *questionLabel;
 @property (strong, nonatomic) IBOutlet UIButton *answer1;

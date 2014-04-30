@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "DownloadViewController.h"
 #import "SettingsViewController.h"
+#import "Data.h"
 
 @interface CockPitViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *usernameBadge;
 @property (strong, nonatomic) NSString *usernameBadgeText;
+@property (strong, nonatomic) DmUser *thisUser;
 
 @end
