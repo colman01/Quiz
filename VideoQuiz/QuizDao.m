@@ -45,6 +45,23 @@ static QuizDao *instance = NULL;
 
 
 
+- (NSMutableArray *) getAllUserData {
+	// initializing NSFetchRequest
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	
+	//Setting Entity to be Queried
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+											  inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+	[fetchRequest setEntity:entity];
+	NSError* error;
+	
+	// Query on managedObjectContext With Generated fetchRequest
+	NSArray *fetchedRecords = [[[PersistManager instance] managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+	
+	// Returning Fetched Records
+	return [[NSMutableArray alloc] initWithArray:fetchedRecords];
+}
+
 - (DmUser *) loadById:(NSNumber *) identifier {
     @try {
     	// initializing NSFetchRequest
