@@ -20,8 +20,8 @@ FOUNDATION_EXPORT NSString *const IWPasswordIdentifier;
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UITextField *password;
 
-@property (strong, nonatomic) NSString *user;
-@property (strong, nonatomic) NSString *pass;
+@property (strong, nonatomic) DmUser *thisUser;
+
 
 
 @end

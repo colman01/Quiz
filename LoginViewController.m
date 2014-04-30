@@ -25,8 +25,8 @@ id _service;
 
 @implementation LoginViewController
 
-@synthesize userName, password;
-@synthesize user, pass;
+
+@synthesize userName, password, thisUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,19 +40,11 @@ id _service;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
-//
-//    DmUser *user_ = [[QuizDao instance] loadById:[NSNumber numberWithInt:0]];
-//    if (!user_.username || user_.username.length > 0) {
-//        [userName setText:user_.username];
-//    }
-    
     NSMutableArray *results = [[QuizDao instance] getQuiz];
     for (DmUser *user in results)
         NSLog(@"data %@", user.username);
     
-    DmUser *thisUser = results[0];
+    thisUser = results[0];
     userName.text = thisUser.username;
     password.text = thisUser.password;
 
@@ -65,7 +57,7 @@ id _service;
 
 - (void) viewWillDisappear:(BOOL)animated {
     NSMutableArray *results = [[QuizDao instance] getQuiz];
-    DmUser *thisUser = results[0];
+    thisUser = results[0];
     if (![userName.text isEqualToString:userName.text]) {
         thisUser.username = userName.text;
         thisUser.password = password.text;
@@ -82,8 +74,8 @@ id _service;
     if (!cockpit.usernameBadge) {
         cockpit.usernameBadge = [[UILabel alloc] init] ;
     }
-    [cockpit.usernameBadge setText:user];
-    cockpit.usernameBadgeText = user;
+    [cockpit.usernameBadge setText:thisUser.username];
+//    cockpit.usernameBadgeText = thisUser.username;
 }
 
 -(void) textFieldDidBeginEditing:(UITextField *)textField {
@@ -92,11 +84,11 @@ id _service;
 
 - (void) textFieldDidEndEditing:(UITextField *)textField {
     if (textField.tag == 0) {
-        user = textField.text;
+        thisUser.username = textField.text;
         
     }
     if (textField.tag == 1) {
-        pass = textField.text;
+        thisUser.password= textField.text;
     }
 }
 
@@ -111,7 +103,7 @@ id _service;
 }
 
 - (IBAction)loginActivate:(id)sender{
-    [self doLogin:user andPassword:pass];
+    [self doLogin:thisUser.username andPassword:thisUser.password];
     [self performSegueWithIdentifier:@"Login" sender:nil];
 }
 
@@ -122,12 +114,15 @@ id _service;
 	}
 	NSString *username = ((UITextField *)[alertView textFieldAtIndex:0]).text;
 	NSString *password = ((UITextField *)[alertView textFieldAtIndex:1]).text;
+    
+    thisUser.username = username;
+    thisUser.password = password;
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	[defaults setObject:username forKey:IWUsernameKey];
 	
 	KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
-	[keychain setObject:password forKey:(__bridge id)kSecValueData];
+	[keychain setObject:thisUser.password forKey:(__bridge id)kSecValueData];
 
 	[_service performSelector:_selector];
 }
