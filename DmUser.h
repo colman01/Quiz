@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * username;
+@property (nonatomic, retain) NSNumber * points;
 @property (nonatomic, retain) NSSet *question;
 @property (nonatomic, retain) NSSet *video;
 @end

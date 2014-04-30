@@ -15,6 +15,7 @@
 
 @dynamic password;
 @dynamic username;
+@dynamic points;
 @dynamic question;
 @dynamic video;
 

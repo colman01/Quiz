@@ -61,6 +61,20 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     
+    NSMutableArray * results = [[QuizDao instance] getQuiz];
+    thisUser = results[0];
+    
+    if (!thisUser.points) {
+        thisUser.points = [NSNumber numberWithInt:1];
+    } else {
+        int points = [thisUser.points intValue];
+        points++;
+        thisUser.points = [NSNumber numberWithInt:points];
+    }
+    [[PersistManager instance] save];
+    
+    
+    
     [[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrientation:")
                                    withObject:(__bridge id)((void*)UIInterfaceOrientationLandscapeRight)];
 

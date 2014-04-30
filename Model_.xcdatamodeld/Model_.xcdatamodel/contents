@@ -30,6 +30,7 @@
     </entity>
     <entity name="User" representedClassName="DmUser" syncable="YES">
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="points" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="question" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Question" inverseName="user" inverseEntity="Question" syncable="YES"/>
         <relationship name="video" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Video" inverseName="user" inverseEntity="Video" syncable="YES"/>
@@ -45,7 +46,7 @@
         <element name="Question" positionX="-855" positionY="117" width="128" height="178"/>
         <element name="Rating" positionX="-81" positionY="602" width="128" height="73"/>
         <element name="Single" positionX="-1125" positionY="416" width="128" height="88"/>
-        <element name="User" positionX="-695" positionY="-40" width="128" height="103"/>
+        <element name="User" positionX="-695" positionY="-40" width="128" height="118"/>
         <element name="Video" positionX="-506" positionY="153" width="128" height="103"/>
     </elements>
 </model>

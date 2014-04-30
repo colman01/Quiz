@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MPMoviePlayerController.h>
 #import "Data.h"
+#import "QuizDao.h"
 
 @interface PlayerViewController : UIViewController 
 

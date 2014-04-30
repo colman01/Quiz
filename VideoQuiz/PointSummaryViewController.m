@@ -30,6 +30,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSMutableArray * result = [[QuizDao instance ] getQuiz]  ;
+    thisUser = result[0];
+    totalPoints.text = [thisUser.points stringValue];
+//    totalPoints.text =
 }
 
 - (void)didReceiveMemoryWarning
