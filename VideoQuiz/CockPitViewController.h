@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "DownloadViewController.h"
 #import "SettingsViewController.h"
+#import "PointSummaryViewController.h"
+#import "CashInPointsViewController.h"
 #import "Data.h"
 
 @interface CockPitViewController : UIViewController

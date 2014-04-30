@@ -43,17 +43,7 @@
     [usernameBadge sizeToFit];
 }
 
-
-/*
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -63,21 +53,21 @@
     id dest = [segue destinationViewController];
     if ([[segue identifier] isEqualToString:@"Download"]) {
         DownloadViewController *downloadVC = (DownloadViewController *) dest;
-        [downloadVC.usernameBadge setText:usernameBadge.text];
         [downloadVC setThisUser:thisUser];
-        
-//        [cockpit.usernameBadge setText:user];
         downloadVC.usernameBadgeText = self.usernameBadgeText;
     }
-    
     if ([[segue identifier] isEqualToString:@"Settings"]) {
-        
         SettingsViewController *settingsVC = (SettingsViewController *) dest;
-        settingsVC.usernameBadgeText = self.usernameBadgeText;
         [settingsVC setThisUser:thisUser];
     }
-    
-
+    if ([[segue identifier] isEqualToString:@"Points"]) {
+        PointSummaryViewController *pointSummaryController = (PointSummaryViewController *) dest;
+        [pointSummaryController setThisUser:thisUser];
+    }
+    if ([[segue identifier] isEqualToString:@"CashIn"]) {
+        CashInPointsViewController *cashIn = (CashInPointsViewController *) dest;
+        [cashIn setThisUser:thisUser];
+    }
 }
 
 @end

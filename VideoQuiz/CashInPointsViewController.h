@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Data.h"
+#import "QuizDao.h"
 
 @interface CashInPointsViewController : UIViewController
 

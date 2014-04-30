@@ -262,7 +262,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3DX-os-44g" kind="push" id="BBe-Kg-Frw"/>
+                                    <segue destination="3DX-os-44g" kind="push" identifier="CashIn" id="BBe-Kg-Frw"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="VKZ-gh-3mQ">

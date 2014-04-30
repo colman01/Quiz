@@ -53,14 +53,11 @@ id _service;
 //    for (DmUser *user in results) {
 //        NSLog(@"data %@", user.username);
 //    }
-    
 //    [[QuizDao instance] remove:results[0] ];
 //    [[QuizDao instance] remove:results[1] ];
 //    [[QuizDao instance] remove:results[2] ];
 //    [[PersistManager instance] save];
 //    exit(0);
-
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +68,6 @@ id _service;
 - (void) viewWillDisappear:(BOOL)animated {
 
     if (![userName.text isEqualToString:userName.text]) {
-//        DmUser *user = [[QuizDao instance] loadById:[NSNumber numberWithInt:10]];
         DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
         user.username = userName.text;
         user.password = password.text;
@@ -89,9 +85,6 @@ id _service;
     if (!cockpit.usernameBadge) {
         cockpit.usernameBadge = [[UILabel alloc] init] ;
     }
-//    [cockpit.usernameBadge setText:thisUser.username];
-//    cockpit.usernameBadgeText = thisUser.username;
-    
     cockpit.thisUser = thisUser;
 }
 
@@ -102,7 +95,6 @@ id _service;
 - (void) textFieldDidEndEditing:(UITextField *)textField {
     if (textField.tag == 0) {
         thisUser.username = textField.text;
-        
     }
     if (textField.tag == 1) {
         thisUser.password= textField.text;
