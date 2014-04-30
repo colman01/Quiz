@@ -30,7 +30,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -59,8 +58,6 @@
     
     [self setDownloadButtonTitles];
     
-//    [clip5 setTitle:@"asdf asdf asdf asdf asdf as asdf" forState:UIControlStateNormal   ];
-    
 
 }
 
@@ -77,7 +74,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -99,15 +95,8 @@
 
 - (void) someMethod:(id)sender {
     UIButton *btn = (UIButton *) sender;
-    //    [self createConnection:[requests objectAtIndex:btn.tag]];
     NSURLRequest *request = [requests objectAtIndex:btn.tag];
     UIButton *imgBtn = [images objectAtIndex:btn.tag];
-    
-    //    UIImage *img = [UIImage imageNamed:@"clipready.png"];
-    //    imgBtn.imageView.image = img;
-    
-    
-    
     switch (btn.tag) {
         case 0:
             clipDownloader1 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader1];
@@ -175,14 +164,11 @@
     [images addObject:clip5Image];
 }
 
-
 - (IBAction)showVideo:(id)sender {
     UIButton *btn = (UIButton *) sender;
     self.fileIndex = btn.tag;
     [self performSegueWithIdentifier:@"player" sender:nil];
 }
-
-
 
 -(BOOL)shouldAutorotate
 {
