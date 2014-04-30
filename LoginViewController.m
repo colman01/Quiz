@@ -69,21 +69,6 @@ id _service;
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    
-    
-//    NSMutableArray *results = [[QuizDao instance] getQuiz];
-//    DmUser *thisUser = results[0];
-//    
-//    
-//    if (![userName.text isEqualToString:userName.text]) {
-//        thisUser.username = userName.text;
-//        thisUser.password = password.text;
-//        [[PersistManager instance] save];
-//    }
-//    DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
-//    user.username = userName.text;
-//    user.password = password.text;
-//    [[PersistManager instance] save];
 
     if (![userName.text isEqualToString:userName.text]) {
 //        DmUser *user = [[QuizDao instance] loadById:[NSNumber numberWithInt:10]];
@@ -92,10 +77,7 @@ id _service;
         user.password = password.text;
         [[PersistManager instance] save];
     }
-    
-//    thisUser.username = userName.text;
-//    thisUser.password = password.text;
-//    [[PersistManager instance] save];
+
 }
 
 #pragma mark - Navigation
