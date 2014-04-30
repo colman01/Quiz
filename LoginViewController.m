@@ -16,35 +16,8 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
 
 
 
-//SEL _selector;
-//id _service;
-//
-//- (id) initWithSelector:(SEL)aSelector onService:(id) service {
-//	self = [super init];
-//    if (self) {
-//        // Initialization code
-//		_selector = aSelector;
-//		_service = service;
-//    }
-//    return self;
-//}
-//
-//#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-//- (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
-//	if (buttonIndex == 0) {
-//		return;
-//	}
-//	NSString *username = ((UITextField *)[alertView textFieldAtIndex:0]).text;
-//	NSString *password = ((UITextField *)[alertView textFieldAtIndex:1]).text;
-//	
-//	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//	[defaults setObject:username forKey:IWUsernameKey];
-//	
-//	KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
-//	[keychain setObject:password forKey:(__bridge id)kSecValueData];
-//	
-//	[_service performSelector:_selector];
-//}
+SEL _selector;
+id _service;
 
 @interface LoginViewController ()
 
@@ -76,9 +49,8 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
 //    }
     
     NSMutableArray *results = [[QuizDao instance] getQuiz];
-    for (DmUser *user in results) {
+    for (DmUser *user in results)
         NSLog(@"data %@", user.username);
-    }
     
     DmUser *thisUser = results[0];
     userName.text = thisUser.username;
@@ -89,31 +61,22 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    
     NSMutableArray *results = [[QuizDao instance] getQuiz];
     DmUser *thisUser = results[0];
-    
-    
     if (![userName.text isEqualToString:userName.text]) {
         thisUser.username = userName.text;
         thisUser.password = password.text;
         [[PersistManager instance] save];
     }
-
 }
-
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
     id dest = [segue destinationViewController];
     CockPitViewController *cockpit = (CockPitViewController *) dest;
     if (!cockpit.usernameBadge) {
@@ -122,8 +85,6 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
     [cockpit.usernameBadge setText:user];
     cockpit.usernameBadgeText = user;
 }
-
-
 
 -(void) textFieldDidBeginEditing:(UITextField *)textField {
     
@@ -137,7 +98,6 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
     if (textField.tag == 1) {
         pass = textField.text;
     }
-    
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
@@ -150,12 +110,27 @@ NSString *const IWPasswordIdentifier = @"VideoQuiz";
     
 }
 
-
 - (IBAction)loginActivate:(id)sender{
     [self doLogin:user andPassword:pass];
     [self performSegueWithIdentifier:@"Login" sender:nil];
 }
 
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+- (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
+	if (buttonIndex == 0) {
+		return;
+	}
+	NSString *username = ((UITextField *)[alertView textFieldAtIndex:0]).text;
+	NSString *password = ((UITextField *)[alertView textFieldAtIndex:1]).text;
+	
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	[defaults setObject:username forKey:IWUsernameKey];
+	
+	KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:IWPasswordIdentifier accessGroup:nil];
+	[keychain setObject:password forKey:(__bridge id)kSecValueData];
+
+	[_service performSelector:_selector];
+}
 
 
 @end

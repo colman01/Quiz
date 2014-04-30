@@ -15,7 +15,7 @@
 FOUNDATION_EXPORT NSString *const IWUsernameKey;
 FOUNDATION_EXPORT NSString *const IWPasswordIdentifier;
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate>
+@interface LoginViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UITextField *password;
