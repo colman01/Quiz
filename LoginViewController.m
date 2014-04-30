@@ -41,12 +41,25 @@ id _service;
 {
     [super viewDidLoad];
     NSMutableArray *results = [[QuizDao instance] getQuiz];
-    for (DmUser *user in results)
-        NSLog(@"data %@", user.username);
-    
-    thisUser = results[0];
+    @try {
+        thisUser = results[0];
+    }
+    @catch (NSException *exception) {
+        thisUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+    }
     userName.text = thisUser.username;
     password.text = thisUser.password;
+    
+//    for (DmUser *user in results) {
+//        NSLog(@"data %@", user.username);
+//    }
+    
+//    [[QuizDao instance] remove:results[0] ];
+//    [[QuizDao instance] remove:results[1] ];
+//    [[QuizDao instance] remove:results[2] ];
+//    [[PersistManager instance] save];
+//    exit(0);
+
 
 }
 
@@ -56,13 +69,33 @@ id _service;
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-    NSMutableArray *results = [[QuizDao instance] getQuiz];
-    thisUser = results[0];
+    
+    
+//    NSMutableArray *results = [[QuizDao instance] getQuiz];
+//    DmUser *thisUser = results[0];
+//    
+//    
+//    if (![userName.text isEqualToString:userName.text]) {
+//        thisUser.username = userName.text;
+//        thisUser.password = password.text;
+//        [[PersistManager instance] save];
+//    }
+//    DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+//    user.username = userName.text;
+//    user.password = password.text;
+//    [[PersistManager instance] save];
+
     if (![userName.text isEqualToString:userName.text]) {
-        thisUser.username = userName.text;
-        thisUser.password = password.text;
+//        DmUser *user = [[QuizDao instance] loadById:[NSNumber numberWithInt:10]];
+        DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+        user.username = userName.text;
+        user.password = password.text;
         [[PersistManager instance] save];
     }
+    
+//    thisUser.username = userName.text;
+//    thisUser.password = password.text;
+//    [[PersistManager instance] save];
 }
 
 #pragma mark - Navigation
@@ -75,7 +108,6 @@ id _service;
         cockpit.usernameBadge = [[UILabel alloc] init] ;
     }
     [cockpit.usernameBadge setText:thisUser.username];
-//    cockpit.usernameBadgeText = thisUser.username;
 }
 
 -(void) textFieldDidBeginEditing:(UITextField *)textField {

@@ -18,5 +18,6 @@
 + (QuizDao *) instance;
 - (NSMutableArray*) getQuiz;
 - (DmUser *) loadById:(NSNumber *) id;
+- (void)remove:(DmUser *)user;
 
 @end
