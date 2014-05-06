@@ -9,12 +9,8 @@
 #import "LoginViewController.h"
 #import "KeychainItemWrapper.h"
 
-
 NSString *const IWUsernameKey = @"username";
-//NSString *const IWPasswordIdentifier = @"SUBITO-01-Immo-Inspect";
 NSString *const IWPasswordIdentifier = @"VideoQuiz";
-
-
 
 SEL _selector;
 id _service;
@@ -128,25 +124,10 @@ id _service;
     NSLog(@"got data %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 }
 
-//-(void) getData {
-//    ASIFormDataRequest * r = [ASIFormDataRequest requestWithURL:url];
-//    [r addPostValue:@"" forKey:@""];
-//    [r addPostValue:@"1234" forKey:@"password"];
-//    [r setCompletionBlock:^{
-//        NSLog(@"%@", r.responseString);
-//    }];
-//    [r setFailedBlock:^{
-//        NSLog(@"%@", r.error);
-//    }];
-//    [r startAsynchronous];
-//}
-
 - (IBAction)loginActivate:(id)sender{
     [self doLogin:thisUser.username andPassword:thisUser.password];
     [self performSegueWithIdentifier:@"Login" sender:nil];
 }
-
-
 
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 - (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
@@ -170,3 +151,17 @@ id _service;
 
 
 @end
+
+
+//-(void) getData {
+//    ASIFormDataRequest * r = [ASIFormDataRequest requestWithURL:url];
+//    [r addPostValue:@"" forKey:@""];
+//    [r addPostValue:@"1234" forKey:@"password"];
+//    [r setCompletionBlock:^{
+//        NSLog(@"%@", r.responseString);
+//    }];
+//    [r setFailedBlock:^{
+//        NSLog(@"%@", r.error);
+//    }];
+//    [r startAsynchronous];
+//}
