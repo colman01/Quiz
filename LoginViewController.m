@@ -103,19 +103,50 @@ id _service;
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
-    
     [textField resignFirstResponder];
     return YES;
 }
 
+#pragma mark Login send request
+
 - (void) doLogin:(NSString *)username andPassword:(NSString *)passWord {
-    
+    NSString *str = @"http://192.168.0.105/videoQuiz/account_login_action.php";
+    NSURL *url = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[[NSString stringWithFormat:@"email=%@&password=%@", username, passWord] dataUsingEncoding:NSUTF8StringEncoding]];
+    NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [conn start];
 }
+
+
+#pragma mark Connection finished
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    NSLog(@"got data %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+}
+
+//-(void) getData {
+//    ASIFormDataRequest * r = [ASIFormDataRequest requestWithURL:url];
+//    [r addPostValue:@"" forKey:@""];
+//    [r addPostValue:@"1234" forKey:@"password"];
+//    [r setCompletionBlock:^{
+//        NSLog(@"%@", r.responseString);
+//    }];
+//    [r setFailedBlock:^{
+//        NSLog(@"%@", r.error);
+//    }];
+//    [r startAsynchronous];
+//}
 
 - (IBAction)loginActivate:(id)sender{
     [self doLogin:thisUser.username andPassword:thisUser.password];
     [self performSegueWithIdentifier:@"Login" sender:nil];
 }
+
+
 
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 - (void) alertView:(UIAlertView *) alertView clickedButtonAtIndex:(NSInteger) buttonIndex {
