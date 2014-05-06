@@ -10,6 +10,8 @@
 
 @implementation QuizDao
 
+@synthesize currentUser;
+
 static QuizDao *instance = NULL;
 
 +(QuizDao *)instance {

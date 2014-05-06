@@ -28,7 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    totalPoints.text = [thisUser.points stringValue];
+}
+
+
+
+- (void) viewWillAppear:(BOOL)animated {
+    totalPoints.text = [[[QuizDao instance] currentUser].points stringValue];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    totalPoints.text = [[[QuizDao instance] currentUser].points stringValue];
 }
 
 - (void)didReceiveMemoryWarning

@@ -12,7 +12,7 @@
 
 @interface QuizDao : NSObject
 
-
+@property (strong, nonatomic) DmUser *currentUser;
 
 
 + (QuizDao *) instance;

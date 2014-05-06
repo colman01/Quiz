@@ -85,6 +85,11 @@
     player.fileIndex = self.fileIndex;
     player.fileNames = [[NSMutableArray alloc] init];
     player.fileNames = fileNames;
+    
+    if ([[segue identifier] isEqualToString:@"player"]) {
+        PlayerViewController *playerVC = (PlayerViewController *) con;
+        [playerVC setThisUser:thisUser];
+    }
 }
 
 

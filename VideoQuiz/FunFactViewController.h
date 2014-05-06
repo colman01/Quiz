@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Data.h"
+#import "CockPitViewController.h"
 
 @interface FunFactViewController : UIViewController
 

@@ -25,13 +25,13 @@
          contextName = "-[LoginViewController prepareForSegue:sender:]:LoginViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "cockpit.usernameBadge.text">
+               value = "thisUser.username">
             </PersistentString>
             <PersistentString
                value = "cockpit.usernameBadge">
             </PersistentString>
             <PersistentString
-               value = "thisUser.username">
+               value = "cockpit.usernameBadge.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -43,6 +43,23 @@
             </PersistentString>
             <PersistentString
                value = "userName.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginViewController loginActivate:]:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "thisUser.username">
+            </PersistentString>
+            <PersistentString
+               value = "userName.text">
+            </PersistentString>
+            <PersistentString
+               value = "user.username">
+            </PersistentString>
+            <PersistentString
+               value = "results.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

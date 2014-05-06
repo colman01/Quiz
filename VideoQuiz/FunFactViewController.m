@@ -43,11 +43,38 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([[segue identifier] isEqualToString:@"Return"]) {
+        
+//        NSMutableArray *controllers = self.navigationController.viewControllers;
+//        [controllers removeObjectAtIndex:[controllers count] - 1]; //or whatever
+//        [self.navigationController setViewControllers:controllers animated:YES];
+        
+//        NSArray *viewControllers = [[self navigationController] viewControllers];
+//        for (int i = 0; i < [viewControllers count]; i++){
+//            id obj = [viewControllers objectAtIndex:i];
+//            if ([obj isKindOfClass:[CockPitViewController class]]){
+//                [[self navigationController] popToViewController:obj animated:YES];
+//                return;
+//            }
+//        }
+
+    }
 }
 
 
 - (IBAction)returnToCockpit:(id)sender {
-    [self performSegueWithIdentifier:@"Return" sender:nil];
+
+    NSArray *viewControllers = [[self navigationController] viewControllers];
+    for (int i = 0; i < [viewControllers count]; i++){
+        id obj = [viewControllers objectAtIndex:i];
+        if ([obj isKindOfClass:[CockPitViewController class]]){
+            [[self navigationController] popToViewController:obj animated:YES];
+            return;
+        }
+    }
+
+    
+//    [self performSegueWithIdentifier:@"Return" sender:nil];
 }
 
 @end

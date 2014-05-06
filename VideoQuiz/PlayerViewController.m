@@ -60,8 +60,8 @@
 }
 
 -(void) viewDidAppear:(BOOL)animated {
-    NSMutableArray * results = [[QuizDao instance] getQuiz];
-    thisUser = results[0];
+//    NSMutableArray * results = [[QuizDao instance] getQuiz];
+//    thisUser = results[0];
     if (!thisUser.points) {
         thisUser.points = [NSNumber numberWithInt:1];
     } else {

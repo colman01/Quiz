@@ -37,11 +37,24 @@ id _service;
 {
     [super viewDidLoad];
     NSMutableArray *results = [[QuizDao instance] getQuiz];
+    
+//    results = nil;
+//    [[PersistManager instance] save ];
+//    exit(0);
+    
+//    for (int i=0; i< results.count; i++) {
+//        DmUser *user = results[i];
+//        [[QuizDao instance] remove:user];
+//    }
+//    
+//    [[PersistManager instance] save];
+//    exit(0);
+    
     @try {
         thisUser = results[0];
     }
     @catch (NSException *exception) {
-        thisUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+//        thisUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
     }
     userName.text = thisUser.username;
     password.text = thisUser.password;
@@ -62,14 +75,12 @@ id _service;
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-
-    if (![userName.text isEqualToString:userName.text]) {
-        DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
-        user.username = userName.text;
-        user.password = password.text;
-        [[PersistManager instance] save];
-    }
-
+//    if (![userName.text isEqualToString:userName.text]) {
+//        DmUser * user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+//        user.username = userName.text;
+//        user.password = password.text;
+//        [[PersistManager instance] save];
+//    }
 }
 
 #pragma mark - Navigation
@@ -85,17 +96,16 @@ id _service;
 }
 
 -(void) textFieldDidBeginEditing:(UITextField *)textField {
-    
 }
 
 - (void) textFieldDidEndEditing:(UITextField *)textField {
-    if (textField.tag == 0) {
-        thisUser.username = textField.text;
-    }
-    if (textField.tag == 1) {
-        thisUser.password= textField.text;
-    }
-    [[PersistManager instance] save];
+//    if (textField.tag == 0) {
+//        thisUser.username = textField.text;
+//    }
+//    if (textField.tag == 1) {
+//        thisUser.password= textField.text;
+//    }
+//    [[PersistManager instance] save];
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
@@ -121,11 +131,30 @@ id _service;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    NSLog(@"got data %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+//    NSLog(@"got data %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 }
 
 - (IBAction)loginActivate:(id)sender{
     [self doLogin:thisUser.username andPassword:thisUser.password];
+    NSMutableArray *results = [[QuizDao instance] getQuiz];
+    bool found = NO;
+    for (int i=0; i<results.count; i++) {
+        DmUser *user = results[i];
+        if ([userName.text isEqualToString:user.username]) {
+            found = YES;
+            thisUser = results[i];
+            break;
+        }
+    }
+    if (!found) {
+        DmUser *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+        user.username = userName.text;
+        thisUser = user;
+        [[PersistManager instance] save];
+    }
+    
+    [[QuizDao instance ] setCurrentUser:thisUser]   ;
+    
     [self performSegueWithIdentifier:@"Login" sender:nil];
 }
 
