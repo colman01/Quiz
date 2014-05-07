@@ -194,17 +194,3 @@ id _service;
 
 
 @end
-
-
-//-(void) getData {
-//    ASIFormDataRequest * r = [ASIFormDataRequest requestWithURL:url];
-//    [r addPostValue:@"" forKey:@""];
-//    [r addPostValue:@"1234" forKey:@"password"];
-//    [r setCompletionBlock:^{
-//        NSLog(@"%@", r.responseString);
-//    }];
-//    [r setFailedBlock:^{
-//        NSLog(@"%@", r.error);
-//    }];
-//    [r startAsynchronous];
-//}

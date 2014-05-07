@@ -56,26 +56,7 @@
     [fileNames addObject:@"milkTray.mov"];
     [fileNames addObject:@"milkTray.mov"];
     
-    
-    NSArray *videos_ = [thisUser.video allObjects];
-    NSMutableArray *videos = [[NSMutableArray alloc] initWithArray:videos_];
-    
-//    for (int i=0; i<fileNames.count; i++) {
-//        NSData *videoData = [NSData dataWithContentsOfURL:fileNames[i]];
-//        [videos addObject:videoData];
-//    }
-////    thisUser.video = [[NSSet alloc] initWithArray:[[NSArray alloc] initWithArray:videos]];
-//    [[PersistManager instance] save];
-    
-    
-//    NSData *videoData = [NSData dataWithContentsOfURL:fileNames[0]];
-//    NSMutableArray *videos = [thisUser.video allObjects];
-//    [videos addObject:videoData];
-//    thisUser.video = [[NSSet alloc] initWithArray:[[NSArray alloc] initWithArray:videos]];
-    
-    
-    
-    [clip1 setTitle:@"guiness" forState:UIControlStateNormal];
+    [clip1 setTitle:@"guinness" forState:UIControlStateNormal];
     
     downloadButtons = [[NSMutableArray alloc] init];
     [downloadButtons addObject:clip1];
@@ -192,8 +173,7 @@
     if (!requests) {
         requests = [[NSMutableArray alloc] init];
         
-//        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]]];
-        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://109.90.191.143/videoQuiz/video/milkTray.mov"]]];
+        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://109.90.191.143/videoQuiz/video/milkTray.mov"]]]; // http://192.168.0.105/videoQuiz/video/
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.rte.ie"]]];
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnn.com"]]];
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.wikipedia.com"]]];
