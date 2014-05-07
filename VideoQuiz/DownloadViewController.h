@@ -12,7 +12,7 @@
 #import "Data.h"
 
 
-@interface DownloadViewController : UIViewController
+@interface DownloadViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSMutableArray *downloadButtons;
 @property (strong, nonatomic) IBOutlet UIButton * clip1;
@@ -33,6 +33,7 @@
 @property (strong, nonatomic) ClipDownloader *clipDownloader4;
 @property (strong, nonatomic) ClipDownloader *clipDownloader5;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSMutableArray *requests;
 @property (strong, nonatomic) NSMutableArray *images;

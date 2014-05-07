@@ -25,13 +25,13 @@
          contextName = "-[LoginViewController prepareForSegue:sender:]:LoginViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "thisUser.username">
+               value = "cockpit.usernameBadge.text">
             </PersistentString>
             <PersistentString
                value = "cockpit.usernameBadge">
             </PersistentString>
             <PersistentString
-               value = "cockpit.usernameBadge.text">
+               value = "thisUser.username">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -60,6 +60,14 @@
             </PersistentString>
             <PersistentString
                value = "results.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PlayerViewController viewDidAppear:]:PlayerViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "video.data">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

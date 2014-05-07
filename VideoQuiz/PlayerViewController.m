@@ -22,24 +22,18 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    if (self) {    }
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -60,8 +54,6 @@
 }
 
 -(void) viewDidAppear:(BOOL)animated {
-//    NSMutableArray * results = [[QuizDao instance] getQuiz];
-//    thisUser = results[0];
     if (!thisUser.points) {
         thisUser.points = [NSNumber numberWithInt:1];
     } else {
@@ -76,12 +68,20 @@
 
     
     [super viewDidAppear:animated];
-    int r = arc4random() % 4;
-    NSString *name = [fileNames objectAtIndex:self.fileIndex];
-    NSString *urlStr = [[NSBundle mainBundle] pathForResource:name ofType:nil];
-    NSURL *url = [NSURL fileURLWithPath:urlStr];
-    videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-
+    
+    NSArray * videos = [thisUser.video allObjects];
+    DmVideo *video = [videos objectAtIndex:self.fileIndex];
+    NSString *dataString = [[NSString alloc] initWithData:video.data encoding:NSUTF16StringEncoding];
+    NSURL *movieURL = [NSURL URLWithString:dataString];
+    videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+    
+    NSString* completeFileName = [NSString stringWithFormat:@"%@",@"movie.mp4"];
+    NSString* filename = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:completeFileName];
+    [[NSFileManager defaultManager] createFileAtPath:filename contents:video.data attributes:nil];
+    
+    NSURL *baseURL = [NSURL fileURLWithPath:filename isDirectory:NO];
+    videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:baseURL];
+    
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
             videoPlayer.view.frame = CGRectMake(0, 0,320, 568  );
     } else {
@@ -93,11 +93,7 @@
     videoPlayer.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth  |    UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight);
     [videoPlayer play];
     [self.view addSubview:videoPlayer.view];
-    
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(moviePlayBackDidFinish:)
-//                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-//                                               object:videoPlayer];
+
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight];
     

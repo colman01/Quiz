@@ -45,6 +45,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     id dest = [segue destinationViewController];
+
+    if ([[segue identifier] isEqualToString:@"DownloadWithTable"]) {
+        DownloadViewController *downloadVC = (DownloadViewController *) dest;
+        [downloadVC setThisUser:thisUser];
+        downloadVC.usernameBadgeText = self.usernameBadgeText;
+    }
     if ([[segue identifier] isEqualToString:@"Download"]) {
         DownloadViewController *downloadVC = (DownloadViewController *) dest;
         [downloadVC setThisUser:thisUser];

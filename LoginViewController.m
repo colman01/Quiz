@@ -59,14 +59,6 @@ id _service;
     userName.text = thisUser.username;
     password.text = thisUser.password;
     
-//    for (DmUser *user in results) {
-//        NSLog(@"data %@", user.username);
-//    }
-//    [[QuizDao instance] remove:results[0] ];
-//    [[QuizDao instance] remove:results[1] ];
-//    [[QuizDao instance] remove:results[2] ];
-//    [[PersistManager instance] save];
-//    exit(0);
 }
 
 - (void)didReceiveMemoryWarning
@@ -151,11 +143,61 @@ id _service;
         user.username = userName.text;
         thisUser = user;
         [[PersistManager instance] save];
+        
+        [self addVideoFilesForThisUser];
     }
     
     [[QuizDao instance ] setCurrentUser:thisUser]   ;
     
     [self performSegueWithIdentifier:@"Login" sender:nil];
+}
+
+
+-(void) addVideoFilesForThisUser {
+    NSMutableArray *fileNames = [[NSMutableArray alloc] init];
+    [fileNames addObject:@"guinness.mov"];
+    [fileNames addObject:@"ad bud.mov"];
+    [fileNames addObject:@"flake.mov"];
+    [fileNames addObject:@"milkTray.mov"];
+    [fileNames addObject:@"milkTray.mov"];
+    
+    
+//    NSArray *videos_ = [thisUser.video allObjects];
+//    NSMutableArray *videos = [[NSMutableArray alloc] initWithArray:videos_];
+    
+    for (int i=0; i<fileNames.count; i++) {
+
+        
+//        [tempMailCompose addAttachmentData:[NSData dataWithContentsOfURL:videoURL] mimeType:@"video/quicktime" fileName:@"defectVideo.MOV"];
+        
+        
+        
+        NSURL *videoURL = [[NSURL alloc] initFileURLWithPath:fileNames[i]];
+//        NSData *videoData = [NSData dataWithContentsOfURL:videoURL];
+        
+        
+//        NSString *name = [fileNames objectAtIndex:self.fileIndex];
+        NSString *urlStr = [[NSBundle mainBundle] pathForResource:fileNames[i] ofType:nil];
+        NSURL *url = [NSURL fileURLWithPath:urlStr];
+        NSData *videoData = [[NSData alloc] initWithContentsOfURL:url];
+        
+        
+        DmVideo *video = [NSEntityDescription insertNewObjectForEntityForName:@"Video" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+        
+        video.data = videoData;
+        
+        [thisUser addVideoObject:video];
+        
+        
+    }
+    
+    
+    
+    
+
+    
+//    thisUser.video = [[NSSet alloc] initWithArray:[[NSArray alloc] initWithArray:videos]];
+    [[PersistManager instance] save];
 }
 
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"

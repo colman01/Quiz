@@ -25,6 +25,7 @@
 @synthesize fileNames;
 @synthesize downloadButtons;
 @synthesize thisUser;
+@synthesize tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +38,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if (self.view.tag == 1) {
+        if(!tableView) {
+            tableView = [[UITableView alloc] init];
+            
+        }
+        tableView.delegate = self;
+    }
+
     [self createUrls];
     [self createImageArray];
     fileNames = [[NSMutableArray alloc] init];
@@ -45,6 +55,24 @@
     [fileNames addObject:@"flake.mov"];
     [fileNames addObject:@"milkTray.mov"];
     [fileNames addObject:@"milkTray.mov"];
+    
+    
+    NSArray *videos_ = [thisUser.video allObjects];
+    NSMutableArray *videos = [[NSMutableArray alloc] initWithArray:videos_];
+    
+//    for (int i=0; i<fileNames.count; i++) {
+//        NSData *videoData = [NSData dataWithContentsOfURL:fileNames[i]];
+//        [videos addObject:videoData];
+//    }
+////    thisUser.video = [[NSSet alloc] initWithArray:[[NSArray alloc] initWithArray:videos]];
+//    [[PersistManager instance] save];
+    
+    
+//    NSData *videoData = [NSData dataWithContentsOfURL:fileNames[0]];
+//    NSMutableArray *videos = [thisUser.video allObjects];
+//    [videos addObject:videoData];
+//    thisUser.video = [[NSSet alloc] initWithArray:[[NSArray alloc] initWithArray:videos]];
+    
     
     
     [clip1 setTitle:@"guiness" forState:UIControlStateNormal];
@@ -192,6 +220,30 @@
         return NO;
     }
     return YES;
+}
+
+
+#pragma mark Table View
+
+- (NSInteger)numberOfSections {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
+    UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:@"cell"];
+    
+    //if there isn't one, create it
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
+                                      reuseIdentifier: @"cell"];
+        
+    }
+    [cell.textLabel setText:@"text"];
+    return cell;
 }
 
 

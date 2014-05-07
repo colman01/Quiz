@@ -19,4 +19,23 @@
 @dynamic question;
 @dynamic video;
 
+
+- (void)addVideoObject:(DmVideo *)value {
+    NSSet *tempSet = [NSSet setWithObjects:self.video, nil];
+    
+    NSArray *vids = [self.video allObjects];
+    NSMutableArray *vids_ = [[NSMutableArray alloc] initWithArray:vids];
+    [vids_ addObject:value];
+    self.video = [[NSSet alloc] initWithArray:[[NSArray alloc] initWithArray:vids_]];
+    
+//    
+//    NSMutableOrderedSet* tempSet_ = [NSMutableOrderedSet orderedSetWithOrderedSet:self.video];
+//    [tempSet_ addObject:value];
+//    self.video = [NSSet set
+    
+    
+//	NSMutableOrderedSet* tempSet = [NSMutableOrderedSet orderedSetWithOrderedSet:self.images];
+//	[tempSet addObject:value];
+//	self.images = tempSet;
+}
 @end
