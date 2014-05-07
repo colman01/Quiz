@@ -463,7 +463,7 @@
                                 <rect key="frame" x="256" y="330" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEf-mh-4LH">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEf-mh-4LH">
                                 <rect key="frame" x="305" y="73" width="9" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -660,6 +660,19 @@
                                             <action selector="showVideo:" destination="M7D-KV-k9e" eventType="touchUpInside" id="52X-Gq-QaM"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UE5-5s-oGO">
+                                        <rect key="frame" x="181" y="227" width="22" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="Iw3-RL-JnE"/>
+                                        </constraints>
+                                        <state key="normal" image="downloadArrow.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showVideo:" destination="M7D-KV-k9e" eventType="touchUpInside" id="vbs-SM-K9l"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="jnp-Fh-nzL" firstAttribute="leading" secondItem="0Wv-4P-s4O" secondAttribute="leading" id="21O-Yf-q27"/>
@@ -670,12 +683,14 @@
                                     <constraint firstItem="0wO-tO-oJw" firstAttribute="top" secondItem="nBp-Pi-qAc" secondAttribute="top" constant="181" id="Dr1-Z0-8Oo"/>
                                     <constraint firstItem="a1D-0A-lcY" firstAttribute="leading" secondItem="nBp-Pi-qAc" secondAttribute="leading" constant="83" id="FKn-MT-1p2"/>
                                     <constraint firstItem="0wO-tO-oJw" firstAttribute="centerY" secondItem="ySA-MV-lzH" secondAttribute="centerY" id="GEO-58-UE6"/>
+                                    <constraint firstItem="UE5-5s-oGO" firstAttribute="top" secondItem="0wO-tO-oJw" secondAttribute="bottom" constant="22" id="GeO-kJ-TyK"/>
                                     <constraint firstItem="0wO-tO-oJw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ySA-MV-lzH" secondAttribute="trailing" constant="53" id="IMY-Pe-J9H"/>
                                     <constraint firstItem="jnp-Fh-nzL" firstAttribute="leading" secondItem="a1D-0A-lcY" secondAttribute="leading" id="J7l-C5-d4r"/>
                                     <constraint firstItem="3t3-LO-R5i" firstAttribute="centerY" secondItem="jnp-Fh-nzL" secondAttribute="centerY" id="OyD-GA-nxu"/>
                                     <constraint firstItem="3t3-LO-R5i" firstAttribute="top" secondItem="nBp-Pi-qAc" secondAttribute="top" constant="67" id="Qln-zv-ylr"/>
                                     <constraint firstAttribute="bottom" secondItem="3t3-LO-R5i" secondAttribute="bottom" constant="235" id="Qqy-xZ-y3a"/>
                                     <constraint firstAttribute="trailing" secondItem="3t3-LO-R5i" secondAttribute="trailing" constant="117" id="RLr-Sq-QOr"/>
+                                    <constraint firstAttribute="bottom" secondItem="UE5-5s-oGO" secondAttribute="bottom" constant="75" id="SF6-tz-Amz"/>
                                     <constraint firstItem="0wO-tO-oJw" firstAttribute="leading" secondItem="ySA-MV-lzH" secondAttribute="trailing" constant="53" id="TtS-nx-koq"/>
                                     <constraint firstItem="0wO-tO-oJw" firstAttribute="leading" secondItem="Vu6-e8-KEn" secondAttribute="leading" id="U4Z-GT-f2k"/>
                                     <constraint firstItem="Ixx-Ez-ef2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9LU-dI-g1p" secondAttribute="trailing" constant="53" id="VXk-2c-y9A"/>
@@ -693,6 +708,7 @@
                                     <constraint firstItem="9LU-dI-g1p" firstAttribute="leading" secondItem="nBp-Pi-qAc" secondAttribute="leading" constant="83" id="hUz-Jl-mtY"/>
                                     <constraint firstItem="Ixx-Ez-ef2" firstAttribute="trailing" secondItem="3t3-LO-R5i" secondAttribute="trailing" id="hlJ-Tf-TWb"/>
                                     <constraint firstItem="Vu6-e8-KEn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Wv-4P-s4O" secondAttribute="trailing" constant="53" id="iF7-q2-mE0"/>
+                                    <constraint firstItem="UE5-5s-oGO" firstAttribute="leading" secondItem="nBp-Pi-qAc" secondAttribute="leading" constant="181" id="jHs-68-pyV"/>
                                     <constraint firstItem="jnp-Fh-nzL" firstAttribute="leading" secondItem="nBp-Pi-qAc" secondAttribute="leading" constant="83" id="jMu-cQ-ufJ"/>
                                     <constraint firstItem="Vu6-e8-KEn" firstAttribute="trailing" secondItem="Ixx-Ez-ef2" secondAttribute="trailing" id="kbE-69-Qez"/>
                                     <constraint firstItem="3t3-LO-R5i" firstAttribute="leading" secondItem="Ixx-Ez-ef2" secondAttribute="leading" id="lLt-Di-ATx"/>
@@ -1111,14 +1127,14 @@ Produkt.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G1-AX-yrP">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9G1-AX-yrP">
                                 <rect key="frame" x="128" y="194" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Alle Clips">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="20h-WP-m2P">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="video.png" translatesAutoresizingMaskIntoConstraints="NO" id="20h-WP-m2P">
                                 <rect key="frame" x="113" y="81" width="94" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1126,14 +1142,14 @@ Produkt.</string>
                                     <constraint firstAttribute="height" constant="89" id="mbH-IA-dE1"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29o-N2-ptH">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="_" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29o-N2-ptH">
                                 <rect key="frame" x="305" y="73" width="9" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-17-vUY">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-17-vUY">
                                 <rect key="frame" x="0.0" y="223" width="320" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>

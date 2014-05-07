@@ -161,42 +161,14 @@ id _service;
     [fileNames addObject:@"milkTray.mov"];
     [fileNames addObject:@"milkTray.mov"];
     
-    
-//    NSArray *videos_ = [thisUser.video allObjects];
-//    NSMutableArray *videos = [[NSMutableArray alloc] initWithArray:videos_];
-    
     for (int i=0; i<fileNames.count; i++) {
-
-        
-//        [tempMailCompose addAttachmentData:[NSData dataWithContentsOfURL:videoURL] mimeType:@"video/quicktime" fileName:@"defectVideo.MOV"];
-        
-        
-        
-        NSURL *videoURL = [[NSURL alloc] initFileURLWithPath:fileNames[i]];
-//        NSData *videoData = [NSData dataWithContentsOfURL:videoURL];
-        
-        
-//        NSString *name = [fileNames objectAtIndex:self.fileIndex];
         NSString *urlStr = [[NSBundle mainBundle] pathForResource:fileNames[i] ofType:nil];
         NSURL *url = [NSURL fileURLWithPath:urlStr];
         NSData *videoData = [[NSData alloc] initWithContentsOfURL:url];
-        
-        
         DmVideo *video = [NSEntityDescription insertNewObjectForEntityForName:@"Video" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
-        
         video.data = videoData;
-        
         [thisUser addVideoObject:video];
-        
-        
     }
-    
-    
-    
-    
-
-    
-//    thisUser.video = [[NSSet alloc] initWithArray:[[NSArray alloc] initWithArray:videos]];
     [[PersistManager instance] save];
 }
 

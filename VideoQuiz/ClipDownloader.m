@@ -47,7 +47,7 @@
     button.imageView.image = img;
     
     NSLog(@"%@" , [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding]);
-    
+    self.handler(_responseData);
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -57,6 +57,12 @@
     
     // The request has failed for some reason!
     // Check the error var
+}
+
+#pragma mark
+
+- (void) onComplete:(SelectCompletionHandler) handler {
+	self.handler = handler;
 }
 
 @end

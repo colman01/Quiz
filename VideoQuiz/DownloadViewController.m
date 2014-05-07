@@ -131,13 +131,24 @@
     NSURLRequest *request = [requests objectAtIndex:btn.tag];
     UIButton *imgBtn = [images objectAtIndex:btn.tag];
     switch (btn.tag) {
-        case 0:
+        case 0:{
             clipDownloader1 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader1];
             clipDownloader1.button = [[UIButton alloc] init];
             clipDownloader1.button = imgBtn;
+            
+            [clipDownloader1 onComplete:^(NSMutableData *value) {
+                
+                NSData *videoData = [[NSData alloc] initWithData:value];
+                DmVideo *video = [NSEntityDescription insertNewObjectForEntityForName:@"Video" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+                [thisUser addVideoObject:video];
+                [[PersistManager instance] save];
+                
+            }];
+            
             [clipDownloader1 start];
             
             break;
+    }
         case 1:
             clipDownloader2 = [[ClipDownloader alloc] initWithRequest:request delegate:clipDownloader2];
             clipDownloader2.button = [[UIButton alloc] init];
@@ -180,7 +191,9 @@
 - (void) createUrls {
     if (!requests) {
         requests = [[NSMutableArray alloc] init];
-        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]]];
+        
+//        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]]];
+        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://109.90.191.143/videoQuiz/video/milkTray.mov"]]];
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.rte.ie"]]];
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnn.com"]]];
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.wikipedia.com"]]];
@@ -235,8 +248,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
     UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:@"cell"];
-    
-    //if there isn't one, create it
     if(!cell){
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault
                                       reuseIdentifier: @"cell"];
