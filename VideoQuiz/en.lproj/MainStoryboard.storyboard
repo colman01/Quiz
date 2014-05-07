@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UBj-GH-JiR" kind="push" identifier="" id="bDd-yr-PcX"/>
+                                    <segue destination="UBj-GH-JiR" kind="push" identifier="Login" id="bDd-yr-PcX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NQ-jM-beq">
@@ -103,7 +103,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UBj-GH-JiR" kind="push" id="kxW-LL-0xy"/>
+                                    <action selector="registerButton:" destination="dOb-BT-FcI" eventType="touchUpInside" id="kOB-Kr-4dM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Konto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hu-pK-KkZ">
@@ -1394,7 +1394,6 @@ Produkt.</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kxW-LL-0xy"/>
         <segue reference="TQe-0w-6a9"/>
         <segue reference="QLN-gA-vNx"/>
     </inferredMetricsTieBreakers>
