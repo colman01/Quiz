@@ -108,7 +108,12 @@ id _service;
 #pragma mark Login send request
 
 - (void) doLogin:(NSString *)username andPassword:(NSString *)passWord {
-    NSString *str = @"http://192.168.0.105/videoQuiz/account_login_action.php";
+    
+    AppDelegate *appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    NSString *data = [appDelegate getUrl];
+    NSString *str = @"account_login_action.php";
+    str = [NSString stringWithFormat:@"%@%@", data, str];
+    
     NSURL *url = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
@@ -123,7 +128,7 @@ id _service;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-//    NSLog(@"got data %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+//    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 }
 
 - (IBAction)loginActivate:(id)sender{

@@ -1157,184 +1157,6 @@ Produkt.</string>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ce-17-vUY">
-                                <rect key="frame" x="0.0" y="223" width="320" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjK-D0-OkV">
-                                        <rect key="frame" x="83" y="28" width="45" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="nZz-PW-qXw"/>
-                                        </constraints>
-                                        <state key="normal" title="1. Clip">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="downloadClip:" destination="yBU-1V-HHs" eventType="touchUpInside" id="H7T-7P-3Ny"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFg-6l-Ggx">
-                                        <rect key="frame" x="83" y="64" width="45" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="YXw-vs-MBC"/>
-                                        </constraints>
-                                        <state key="normal" title="2. Clip">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="downloadClip:" destination="yBU-1V-HHs" eventType="touchUpInside" id="r89-gA-3fS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5p-Dx-WUc">
-                                        <rect key="frame" x="89" y="91" width="45" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="NCa-KY-9cX"/>
-                                        </constraints>
-                                        <state key="normal" title="3. Clip">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="downloadClip:" destination="yBU-1V-HHs" eventType="touchUpInside" id="n3r-nr-PzT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D62-KU-mhF">
-                                        <rect key="frame" x="83" y="140" width="45" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Fea-9T-T5E"/>
-                                        </constraints>
-                                        <state key="normal" title="4. Clip">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="downloadClip:" destination="yBU-1V-HHs" eventType="touchUpInside" id="3jz-Qg-31D"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQw-Zk-kqe">
-                                        <rect key="frame" x="83" y="178" width="45" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="n4C-7G-ASC"/>
-                                        </constraints>
-                                        <state key="normal" title="5. Clip">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="downloadClip:" destination="yBU-1V-HHs" eventType="touchUpInside" id="aKA-PU-3IG"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbN-8w-hxH">
-                                        <rect key="frame" x="181" y="28" width="22" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="22" id="7Gj-FW-N1r"/>
-                                            <constraint firstAttribute="height" constant="24" id="c7S-k9-sWM"/>
-                                        </constraints>
-                                        <state key="normal" image="downloadArrow.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showVideo:" destination="yBU-1V-HHs" eventType="touchUpInside" id="Cle-A9-8NE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-fL-h81">
-                                        <rect key="frame" x="181" y="67" width="22" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="LGs-hX-2U4"/>
-                                        </constraints>
-                                        <state key="normal" image="downloadArrow.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showVideo:" destination="yBU-1V-HHs" eventType="touchUpInside" id="DO0-Pv-3zg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYu-m1-b51">
-                                        <rect key="frame" x="181" y="105" width="22" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="orj-ag-kka"/>
-                                        </constraints>
-                                        <state key="normal" image="downloadArrow.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showVideo:" destination="yBU-1V-HHs" eventType="touchUpInside" id="pIr-JI-tXj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0e-rs-nhm">
-                                        <rect key="frame" x="181" y="143" width="22" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="bef-Pk-9qG"/>
-                                        </constraints>
-                                        <state key="normal" image="downloadArrow.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showVideo:" destination="yBU-1V-HHs" eventType="touchUpInside" id="RQf-Qt-p8J"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dro-Ag-Cx1">
-                                        <rect key="frame" x="181" y="181" width="22" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="4Ln-f8-pFz"/>
-                                        </constraints>
-                                        <state key="normal" image="downloadArrow.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="showVideo:" destination="yBU-1V-HHs" eventType="touchUpInside" id="Vk7-OQ-TWw"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="BjK-D0-OkV" firstAttribute="leading" secondItem="2Ce-17-vUY" secondAttribute="leading" constant="83" id="4oh-Xf-Hma"/>
-                                    <constraint firstItem="dro-Ag-Cx1" firstAttribute="top" secondItem="x0e-rs-nhm" secondAttribute="bottom" constant="14" id="4q8-od-wpU"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nbN-8w-hxH" secondAttribute="trailing" constant="-25" id="5uB-87-CMM"/>
-                                    <constraint firstItem="dro-Ag-Cx1" firstAttribute="trailing" secondItem="x0e-rs-nhm" secondAttribute="trailing" id="63O-ad-fLO"/>
-                                    <constraint firstItem="cYu-m1-b51" firstAttribute="top" secondItem="bKh-fL-h81" secondAttribute="bottom" constant="14" id="6ZQ-Vm-GLo"/>
-                                    <constraint firstItem="bKh-fL-h81" firstAttribute="top" secondItem="2Ce-17-vUY" secondAttribute="top" constant="67" id="84x-pO-X0m"/>
-                                    <constraint firstItem="cYu-m1-b51" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u5p-Dx-WUc" secondAttribute="trailing" constant="53" id="BJi-q6-vFf"/>
-                                    <constraint firstItem="bKh-fL-h81" firstAttribute="centerY" secondItem="nFg-6l-Ggx" secondAttribute="centerY" id="CcC-bI-YEa"/>
-                                    <constraint firstAttribute="trailing" secondItem="nbN-8w-hxH" secondAttribute="trailing" constant="117" id="DzJ-Vv-Sau"/>
-                                    <constraint firstItem="bKh-fL-h81" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nFg-6l-Ggx" secondAttribute="trailing" constant="53" id="Egr-6u-Bnz"/>
-                                    <constraint firstAttribute="trailing" secondItem="cYu-m1-b51" secondAttribute="trailing" constant="117" id="J8i-mf-ogq"/>
-                                    <constraint firstItem="nFg-6l-Ggx" firstAttribute="leading" secondItem="BjK-D0-OkV" secondAttribute="leading" id="LBf-XX-x0M"/>
-                                    <constraint firstItem="bKh-fL-h81" firstAttribute="trailing" secondItem="nbN-8w-hxH" secondAttribute="trailing" id="LsC-4s-dBH"/>
-                                    <constraint firstItem="dro-Ag-Cx1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KQw-Zk-kqe" secondAttribute="trailing" constant="53" id="MyQ-7s-L6V"/>
-                                    <constraint firstAttribute="trailing" secondItem="dro-Ag-Cx1" secondAttribute="trailing" constant="117" id="N7o-jt-K67"/>
-                                    <constraint firstItem="nFg-6l-Ggx" firstAttribute="leading" secondItem="KQw-Zk-kqe" secondAttribute="leading" id="NKr-XM-Qu3"/>
-                                    <constraint firstAttribute="trailing" secondItem="bKh-fL-h81" secondAttribute="trailing" constant="117" id="QGR-lw-lGP"/>
-                                    <constraint firstItem="BjK-D0-OkV" firstAttribute="top" secondItem="2Ce-17-vUY" secondAttribute="top" constant="28" id="VUE-kl-QDN"/>
-                                    <constraint firstItem="cYu-m1-b51" firstAttribute="trailing" secondItem="bKh-fL-h81" secondAttribute="trailing" id="YBg-OQ-H0a"/>
-                                    <constraint firstItem="dro-Ag-Cx1" firstAttribute="leading" secondItem="KQw-Zk-kqe" secondAttribute="trailing" constant="53" id="Yfh-R4-sIZ"/>
-                                    <constraint firstItem="cYu-m1-b51" firstAttribute="leading" secondItem="x0e-rs-nhm" secondAttribute="leading" id="Zg3-jc-hhk"/>
-                                    <constraint firstItem="nbN-8w-hxH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BjK-D0-OkV" secondAttribute="trailing" constant="53" id="aOT-Cl-UfU"/>
-                                    <constraint firstItem="D62-KU-mhF" firstAttribute="top" secondItem="u5p-Dx-WUc" secondAttribute="bottom" constant="8" symbolic="YES" id="cJS-w5-DEc"/>
-                                    <constraint firstItem="dro-Ag-Cx1" firstAttribute="top" secondItem="2Ce-17-vUY" secondAttribute="top" constant="181" id="dO0-dW-cCR"/>
-                                    <constraint firstItem="x0e-rs-nhm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D62-KU-mhF" secondAttribute="trailing" constant="53" id="e28-mk-4JX"/>
-                                    <constraint firstItem="dro-Ag-Cx1" firstAttribute="centerY" secondItem="KQw-Zk-kqe" secondAttribute="centerY" id="g2D-rW-kdy"/>
-                                    <constraint firstItem="KQw-Zk-kqe" firstAttribute="leading" secondItem="2Ce-17-vUY" secondAttribute="leading" constant="83" id="ht0-3g-z9a"/>
-                                    <constraint firstItem="nbN-8w-hxH" firstAttribute="leading" secondItem="bKh-fL-h81" secondAttribute="leading" id="i4p-Tt-WQn"/>
-                                    <constraint firstAttribute="bottom" secondItem="bKh-fL-h81" secondAttribute="bottom" constant="-39" id="iGU-OT-14O"/>
-                                    <constraint firstItem="x0e-rs-nhm" firstAttribute="trailing" secondItem="cYu-m1-b51" secondAttribute="trailing" id="j2F-tf-rxx"/>
-                                    <constraint firstItem="nFg-6l-Ggx" firstAttribute="leading" secondItem="D62-KU-mhF" secondAttribute="leading" id="jyt-Gl-NJh"/>
-                                    <constraint firstItem="bKh-fL-h81" firstAttribute="top" secondItem="nbN-8w-hxH" secondAttribute="bottom" constant="15" id="kpx-TI-gBi"/>
-                                    <constraint firstItem="u5p-Dx-WUc" firstAttribute="top" secondItem="nFg-6l-Ggx" secondAttribute="bottom" constant="8" symbolic="YES" id="onW-ba-8Ly"/>
-                                    <constraint firstAttribute="trailing" secondItem="x0e-rs-nhm" secondAttribute="trailing" constant="117" id="sCg-BO-X51"/>
-                                    <constraint firstItem="nFg-6l-Ggx" firstAttribute="leading" secondItem="u5p-Dx-WUc" secondAttribute="leading" id="scp-MQ-KXp"/>
-                                    <constraint firstItem="nFg-6l-Ggx" firstAttribute="leading" secondItem="2Ce-17-vUY" secondAttribute="leading" constant="83" id="t7l-yI-V0B"/>
-                                    <constraint firstItem="dro-Ag-Cx1" firstAttribute="leading" secondItem="x0e-rs-nhm" secondAttribute="leading" id="tLN-bw-b4K"/>
-                                    <constraint firstItem="D62-KU-mhF" firstAttribute="leading" secondItem="2Ce-17-vUY" secondAttribute="leading" constant="83" id="vXZ-0q-bCb"/>
-                                    <constraint firstItem="bKh-fL-h81" firstAttribute="leading" secondItem="cYu-m1-b51" secondAttribute="leading" id="xnN-U1-3tE"/>
-                                </constraints>
-                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="K0U-Hg-gyk">
                                 <rect key="frame" x="0.0" y="278" width="320" height="290"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1346,6 +1168,22 @@ Produkt.</string>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Hv-wO-8k7" id="TB3-Vq-hWb">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="openEye.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uyl-Uz-Get">
+                                                    <rect key="frame" x="195" y="0.0" width="48" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3so-vt-KVe">
+                                                    <rect key="frame" x="251" y="0.0" width="69" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="yGk-FG-urS" kind="push" id="F6Y-ok-YKi"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -1357,11 +1195,7 @@ Produkt.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2Ce-17-vUY" secondAttribute="trailing" id="4LB-0P-Puv"/>
-                            <constraint firstAttribute="bottom" secondItem="2Ce-17-vUY" secondAttribute="bottom" constant="293" id="69G-uM-EhD"/>
                             <constraint firstItem="9G1-AX-yrP" firstAttribute="top" secondItem="20h-WP-m2P" secondAttribute="bottom" constant="24" id="RC4-wR-D1j"/>
-                            <constraint firstItem="2Ce-17-vUY" firstAttribute="leading" secondItem="Iew-rh-NiK" secondAttribute="leading" id="S3c-da-JJk"/>
-                            <constraint firstItem="2Ce-17-vUY" firstAttribute="top" secondItem="9G1-AX-yrP" secondAttribute="bottom" constant="-1" id="Wrd-Vd-Zsl"/>
                             <constraint firstItem="9G1-AX-yrP" firstAttribute="centerX" secondItem="20h-WP-m2P" secondAttribute="centerX" id="bE0-Wg-e7W"/>
                             <constraint firstAttribute="trailing" secondItem="29o-N2-ptH" secondAttribute="trailing" constant="6" id="gW1-gN-zl7"/>
                             <constraint firstItem="29o-N2-ptH" firstAttribute="top" secondItem="exr-am-YY1" secondAttribute="bottom" constant="53" id="hrc-ye-JGr"/>
@@ -1373,16 +1207,6 @@ Produkt.</string>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="clip1" destination="BjK-D0-OkV" id="X8A-fK-YlS"/>
-                        <outlet property="clip1Image" destination="nbN-8w-hxH" id="x5V-n3-JIR"/>
-                        <outlet property="clip2" destination="nFg-6l-Ggx" id="S79-Be-FhG"/>
-                        <outlet property="clip2Image" destination="bKh-fL-h81" id="EHi-pu-jrg"/>
-                        <outlet property="clip3" destination="u5p-Dx-WUc" id="TSX-I4-gPI"/>
-                        <outlet property="clip3Image" destination="cYu-m1-b51" id="RKJ-ue-F61"/>
-                        <outlet property="clip4" destination="D62-KU-mhF" id="egc-AS-piV"/>
-                        <outlet property="clip4Image" destination="x0e-rs-nhm" id="KSS-9u-HWs"/>
-                        <outlet property="clip5" destination="KQw-Zk-kqe" id="AbS-p4-1q4"/>
-                        <outlet property="clip5Image" destination="dro-Ag-Cx1" id="jYj-ki-mtN"/>
                         <outlet property="tableView" destination="K0U-Hg-gyk" id="H2f-U4-o19"/>
                         <outlet property="usernameBadge" destination="29o-N2-ptH" id="tg8-XB-ctd"/>
                     </connections>
@@ -1394,6 +1218,7 @@ Produkt.</string>
     </scenes>
     <resources>
         <image name="downloadArrow.png" width="69" height="78"/>
+        <image name="openEye.png" width="438" height="268"/>
         <image name="video.png" width="256" height="256"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1404,5 +1229,6 @@ Produkt.</string>
     <inferredMetricsTieBreakers>
         <segue reference="WZH-S4-mYh"/>
         <segue reference="QLN-gA-vNx"/>
+        <segue reference="F6Y-ok-YKi"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -44,6 +44,10 @@
 		F38215941911351D00E77C6B /* DmSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = F38215931911351D00E77C6B /* DmSingle.m */; };
 		F38215971911351D00E77C6B /* DmQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = F38215961911351D00E77C6B /* DmQuestion.m */; };
 		F382159D19113DE700E77C6B /* DmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F382159C19113DE700E77C6B /* DmUser.m */; };
+		F3D97F03191A9EBB00059076 /* eye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3D97F02191A9EBB00059076 /* eye.jpg */; };
+		F3D97F06191A9F4F00059076 /* openEye.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D97F04191A9F4F00059076 /* openEye.png */; };
+		F3D97F07191A9F4F00059076 /* closedEye.png in Resources */ = {isa = PBXBuildFile; fileRef = F3D97F05191A9F4F00059076 /* closedEye.png */; };
+		F3D97F0A191D206600059076 /* RegisterConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D97F09191D206600059076 /* RegisterConnection.m */; };
 		F3FA2FEE190586840001841D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FA2FED190586840001841D /* CoreData.framework */; };
 		F3FA2FF519058C3D0001841D /* ad bud.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF219058C3D0001841D /* ad bud.mov */; };
 		F3FA2FF619058C3D0001841D /* guinness.mov in Resources */ = {isa = PBXBuildFile; fileRef = F3FA2FF319058C3D0001841D /* guinness.mov */; };
@@ -139,6 +143,11 @@
 		F38215961911351D00E77C6B /* DmQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmQuestion.m; sourceTree = "<group>"; };
 		F382159B19113DE700E77C6B /* DmUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmUser.h; sourceTree = "<group>"; };
 		F382159C19113DE700E77C6B /* DmUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmUser.m; sourceTree = "<group>"; };
+		F3D97F02191A9EBB00059076 /* eye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eye.jpg; sourceTree = "<group>"; };
+		F3D97F04191A9F4F00059076 /* openEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openEye.png; sourceTree = "<group>"; };
+		F3D97F05191A9F4F00059076 /* closedEye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closedEye.png; sourceTree = "<group>"; };
+		F3D97F08191D206600059076 /* RegisterConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterConnection.h; sourceTree = "<group>"; };
+		F3D97F09191D206600059076 /* RegisterConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterConnection.m; sourceTree = "<group>"; };
 		F3FA2FED190586840001841D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F3FA2FF219058C3D0001841D /* ad bud.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "ad bud.mov"; sourceTree = "<group>"; };
 		F3FA2FF319058C3D0001841D /* guinness.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = guinness.mov; sourceTree = "<group>"; };
@@ -215,6 +224,9 @@
 		F334CACD19028EAF00CCF8CF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F3D97F04191A9F4F00059076 /* openEye.png */,
+				F3D97F05191A9F4F00059076 /* closedEye.png */,
+				F3D97F02191A9EBB00059076 /* eye.jpg */,
 				F36163AF1902F2AB0002D22E /* video.png */,
 				F36163A11902CCB30002D22E /* heart.png */,
 				F361639F1902CB120002D22E /* clipready.png */,
@@ -361,6 +373,8 @@
 				F3FA300F190657550001841D /* QuizWs.m */,
 				F3FA3011190659B30001841D /* QuizDao.h */,
 				F3FA3012190659B30001841D /* QuizDao.m */,
+				F3D97F08191D206600059076 /* RegisterConnection.h */,
+				F3D97F09191D206600059076 /* RegisterConnection.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -517,18 +531,21 @@
 				F36163A41902E4720002D22E /* videoQuiz.mov in Resources */,
 				F37B10B319026C4900D03CE7 /* InfoPlist.strings in Resources */,
 				F37B10BB19026C4900D03CE7 /* Default.png in Resources */,
+				F3D97F07191A9F4F00059076 /* closedEye.png in Resources */,
 				F3FA2FF519058C3D0001841D /* ad bud.mov in Resources */,
 				F37B10BD19026C4900D03CE7 /* Default@2x.png in Resources */,
 				F3FA2FF719058C3D0001841D /* milkTray.mov in Resources */,
 				F3FA3056190938EC0001841D /* IQKeyboardManager.bundle in Resources */,
 				F36163AB1902E7E70002D22E /* flake.mov in Resources */,
 				F37B10BF19026C4900D03CE7 /* Default-568h@2x.png in Resources */,
+				F3D97F03191A9EBB00059076 /* eye.jpg in Resources */,
 				F36163A21902CCB30002D22E /* heart.png in Resources */,
 				F36163B01902F2AB0002D22E /* video.png in Resources */,
 				F36163A01902CB120002D22E /* clipready.png in Resources */,
 				F3FA2FF619058C3D0001841D /* guinness.mov in Resources */,
 				F334CACC1902792D00CCF8CF /* downloadArrow.png in Resources */,
 				F37B10C219026C4900D03CE7 /* MainStoryboard.storyboard in Resources */,
+				F3D97F06191A9F4F00059076 /* openEye.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +582,7 @@
 			files = (
 				F382158E1911351D00E77C6B /* DmProduct.m in Sources */,
 				F3FA3013190659B30001841D /* QuizDao.m in Sources */,
+				F3D97F0A191D206600059076 /* RegisterConnection.m in Sources */,
 				F3FA305E190940590001841D /* CashInPointsViewController.m in Sources */,
 				F3FA30281907D5630001841D /* PrepareQuestionsViewController.m in Sources */,
 				F31C166C1904209C004E92DD /* CockPitViewController.m in Sources */,

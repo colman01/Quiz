@@ -46,15 +46,19 @@
         }
         tableView.delegate = self;
     }
-
-    [self createUrls];
-    [self createImageArray];
+    
     fileNames = [[NSMutableArray alloc] init];
     [fileNames addObject:@"guinness.mov"];
     [fileNames addObject:@"ad bud.mov"];
     [fileNames addObject:@"flake.mov"];
     [fileNames addObject:@"milkTray.mov"];
     [fileNames addObject:@"milkTray.mov"];
+    [fileNames addObject:@"milkTray.mov"];
+
+    if (self.view.tag == 0) {
+    [self createUrls];
+    [self createImageArray];
+
     
     [clip1 setTitle:@"guinness" forState:UIControlStateNormal];
     
@@ -66,6 +70,8 @@
     [downloadButtons addObject:clip5];
     
     [self setDownloadButtonTitles];
+
+    }
     
 
 }
@@ -223,7 +229,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return thisUser.video.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)view cellForRowAtIndexPath:(NSIndexPath *)indexPath  {
@@ -233,8 +239,23 @@
                                       reuseIdentifier: @"cell"];
         
     }
-    [cell.textLabel setText:@"text"];
+    [cell.textLabel setText:fileNames[indexPath.row]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)view didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:@"cell"];
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
+    imageView.image = [UIImage imageNamed:@"closedEye.png"];
+    [imageView setNeedsDisplay];
+}
+
+
+- (void)tableView:(UITableView *)view didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [view dequeueReusableCellWithIdentifier:@"cell"];
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:1];
+    imageView.image = [UIImage imageNamed:@"openEyeEye.png"];
+    [imageView setNeedsDisplay];
 }
 
 

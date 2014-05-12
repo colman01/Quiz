@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "DmUser.h"
 #import "QuizDao.h"
+#import "AppDelegate.h"
 
 FOUNDATION_EXPORT NSString *const IWUsernameKey;
 FOUNDATION_EXPORT NSString *const IWPasswordIdentifier;

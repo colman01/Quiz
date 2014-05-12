@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "RegisterConnection.h"
+#import "DmUser.h"
+#import "PersistManager.h"
+#import "QuizDao.h"
+#import "AppDelegate.h"
+
 
 @interface RegisterViewController : UIViewController
 
@@ -16,6 +22,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordConfirm;
 @property (strong, nonatomic) IBOutlet UITextField *email;
 @property (strong, nonatomic) IBOutlet UITextField *emailConfirm;
+
+@property (strong, nonatomic) RegisterConnection *conn;
+
+
 
 
 @end

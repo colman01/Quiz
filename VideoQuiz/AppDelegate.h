@@ -12,4 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) NSString* kAppBaseURL;
+
+
+- (NSString *) getUrl ;
+
 @end

@@ -9,10 +9,12 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize kAppBaseURL;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    kAppBaseURL = @"http://192.168.0.105/videoQuiz/";
     return YES;
 }
 							
@@ -41,6 +43,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (NSString *) getUrl {
+    return kAppBaseURL;
 }
 
 @end

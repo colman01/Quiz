@@ -64,10 +64,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[PlayerViewController viewDidAppear:]:PlayerViewController.m">
+         contextName = "-[DownloadViewController tableView:didDeselectRowAtIndexPath:]:DownloadViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "video.data">
+               value = "cell.">
+            </PersistentString>
+            <PersistentString
+               value = "imageView.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
