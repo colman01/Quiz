@@ -44,6 +44,27 @@
         }
     }
     
+    DmUser *user = [[QuizDao instance] currentUser];
+    DmQuestion *question = user.questionObject;
+    [questionLabel setText:question.question];
+//    [answer1.titleLabel setNumberOfLines:0];
+    [answer1.titleLabel setText:question.answer1];
+//    [answer1.titleLabel sizeToFit];
+    
+    CGSize stringsize = [question.question sizeWithFont:[UIFont systemFontOfSize:14]];
+    //or whatever font you're using
+    [answer1.titleLabel setFrame:CGRectMake(10,0,stringsize.width, stringsize.height)];
+
+                            
+    [answer2.titleLabel setText:question.answer2];
+    [answer3.titleLabel setText:question.answer3];
+    [answer4.titleLabel setText:question.answer4];
+
+    [answer2.titleLabel sizeToFit];
+    [answer3.titleLabel sizeToFit];
+    [answer4.titleLabel sizeToFit];
+    
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated{

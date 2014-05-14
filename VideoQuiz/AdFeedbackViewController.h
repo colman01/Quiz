@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Data.h"
+#import "QuizDao.h"
+#import "PersistManager.h"
 
 @interface AdFeedbackViewController : UIViewController
 

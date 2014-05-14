@@ -18,6 +18,9 @@
 @dynamic points;
 @dynamic question;
 @dynamic video;
+@synthesize questionObject;
+@synthesize feedbackQuestion;
+@synthesize productQuestion;
 
 
 - (void)addVideoObject:(DmVideo *)value {
@@ -37,5 +40,20 @@
 //	NSMutableOrderedSet* tempSet = [NSMutableOrderedSet orderedSetWithOrderedSet:self.images];
 //	[tempSet addObject:value];
 //	self.images = tempSet;
+}
+
+
+- (void)addQuestionObject:(DmQuestion *)value{
+    NSSet *tempSet = [NSSet setWithObjects:self.question, nil];
+    
+    NSArray *question = [self.question allObjects];
+    NSMutableArray *question_ = [[NSMutableArray alloc] initWithArray:question];
+    [question_ addObject:value];
+    self.question = [[NSSet alloc] initWithArray:[[NSArray alloc] initWithArray:question_]];
+    if (!self.questionObject) {
+        questionObject = [NSEntityDescription insertNewObjectForEntityForName:@"Question" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+    }
+    self.questionObject = value;
+
 }
 @end

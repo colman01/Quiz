@@ -31,6 +31,13 @@
     [super viewDidLoad];
 }
 
+- (void) viewDidAppear:(BOOL)animated  {
+    thisUser = [[QuizDao instance] currentUser];
+//    thisUser.feedbackQuestion
+    [textLabel setText:thisUser.feedbackQuestion.question];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

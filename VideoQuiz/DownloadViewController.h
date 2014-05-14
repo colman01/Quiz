@@ -10,6 +10,7 @@
 #import "ClipDownloader.h"
 #import "PlayerViewController.h"
 #import "Data.h"
+#import "AppDelegate.h"
 
 
 @interface DownloadViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>

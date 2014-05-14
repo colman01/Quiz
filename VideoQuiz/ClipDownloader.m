@@ -42,12 +42,77 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // The request is complete and data has been received
     // You can parse the stuff in your instance variable now
-    NSLog(@"finished loading");
+    
+//    answer1 = brown;
+//    answer2 = "not brown";
+//    answer3 = white;
+//    answer4 = black;
+//    correctAnswer = 1;
+//    feedbackInputAnswer = "";
+//    feedbackQuestion = "do you like chocolate";
+//    optionAnswer1 = tasty;
+//    optionAnswer2 = "not tasty";
+//    optionAnswer3 = sweet;
+//    optionAnswer4 = sour;
+//    optionQuestion = "What is chocolate";
+//    optionSelected = 0;
+//    question = "what color is chocolate";
+//    "quiz_id" = 1;
+//    rating = 0;
+    
     UIImage *img = [UIImage imageNamed:@"clipready.png"];
     button.imageView.image = img;
     
     NSLog(@"%@" , [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding]);
-    self.handler(_responseData);
+    NSData *data = [[NSData alloc] initWithData:_responseData];
+    NSError *error;
+    NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    NSMutableArray *dataArray = [[NSMutableArray alloc] init];
+    for (id element in dict) {
+        [dataArray addObject:element];
+    }
+//    NSLog(@"%@", [dataArray objectAtIndex:0]);
+    
+    DmUser *thisUser = [[QuizDao instance] currentUser];
+    
+    NSMutableDictionary *dictValues = [dataArray objectAtIndex:0];
+//    NSLog(@"%@", [dictValues objectForKey:@"question"]);
+    
+    int num = (int)[dictValues objectForKey:@"correctAnswer"] ;
+    DmProduct *product = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+    
+    
+    product.question = [dictValues objectForKey:@"optionQuestion"];
+    product.answer1 = [dictValues objectForKey:@"optionAnswer1"];
+    product.answer2 = [dictValues objectForKey:@"optionAnswer2"];
+    product.answer3 = [dictValues objectForKey:@"optionAnswer3"];
+    thisUser.productQuestion = product;
+    
+    
+    DmQuestion *question = [NSEntityDescription insertNewObjectForEntityForName:@"Question" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+    
+    question.question = [dictValues objectForKey:@"optionQuestion"];
+    question.answer1 = [dictValues objectForKey:@"answer1"];
+    question.answer2 = [dictValues objectForKey:@"answer2"];
+    question.answer3 = [dictValues objectForKey:@"answer3"];
+    question.answer4 = [dictValues objectForKey:@"answer4"];
+    question.correctAnswer = [NSNumber numberWithInt:num] ;
+    question.isCorrectlyAnswered = NO;
+    [thisUser addQuestionObject:question];
+    
+    DmSingle *feedbackQuestion = [NSEntityDescription insertNewObjectForEntityForName:@"Single" inManagedObjectContext:[[PersistManager instance] managedObjectContext]];
+    
+    feedbackQuestion.question = [dictValues objectForKey:@"feedbackQuestion"];
+    thisUser.feedbackQuestion = feedbackQuestion;
+    
+    
+    
+    
+    
+
+    
+    [[PersistManager instance] save];
+//    self.handler(@"some response data");
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {

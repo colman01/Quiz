@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "PersistManager.h"
 
-@class DmQuestion, DmVideo;
+@class DmQuestion, DmVideo, DmSingle, DmProduct;
 
 @interface DmUser : NSManagedObject
 
@@ -18,6 +19,10 @@
 @property (nonatomic, retain) NSNumber * points;
 @property (nonatomic, retain) NSSet *question;
 @property (nonatomic, retain) NSSet *video;
+@property (nonatomic, retain) DmQuestion *questionObject;
+@property (nonatomic, retain) DmSingle *feedbackQuestion;
+@property (nonatomic, retain) DmProduct *productQuestion;
+
 @end
 
 @interface DmUser (CoreDataGeneratedAccessors)

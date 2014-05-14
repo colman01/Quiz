@@ -60,8 +60,6 @@
 }
 
 
-
-
 - (IBAction)registerButton:(id)sender {
     AppDelegate *appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
     NSString *data = [appDelegate getUrl];

@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Data.h"
+#import "QuizDao.h"
+#import "PersistManager.h"
 
 
 @interface ClipDownloader : NSURLConnection
 
 @property (strong, nonatomic) NSMutableData *_responseData;
+@property (strong, nonatomic) NSMutableData *quizData;
 
 @property (strong, nonatomic) UIButton *button;
 

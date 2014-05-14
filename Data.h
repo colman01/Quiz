@@ -1,4 +1,6 @@
 #import "DmVideo.h"
 #import "DmUser.h"
 #import "DmQuestion.h"
+#import "DmProduct.h"
 #import "PersistManager.h"
+#import "DmSingle.h"

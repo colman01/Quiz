@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Data.h"  
-#import "Data.h"
+#import "QuizDao.h"
+#import "PersistManager.h"
 
 @interface MultipleChoiceQuestionsViewController : UIViewController
 

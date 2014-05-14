@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Data.h"
 #import "CockPitViewController.h"
+#import "QuizDao.h"
+#import "PersistManager.h"
 
 @interface FunFactViewController : UIViewController
 

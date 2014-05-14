@@ -179,13 +179,48 @@
     if (!requests) {
         requests = [[NSMutableArray alloc] init];
         
+
+        
+        
+        AppDelegate *appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+        NSString *data = [appDelegate getUrl];
+        NSString *str = @"getQuiz_action.php";
+        str = [NSString stringWithFormat:@"%@%@", data, str];
+        
+        NSURL *url = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        NSMutableURLRequest *requestTemp = [[NSMutableURLRequest alloc] initWithURL:url];
+        [requestTemp setHTTPMethod:@"POST"];
+        [requestTemp setHTTPBody:[[NSString stringWithFormat:@"quiz_id=%@", @"1"] dataUsingEncoding:NSUTF8StringEncoding]];
+        
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://109.90.191.143/videoQuiz/video/milkTray.mov"]]]; // http://192.168.0.105/videoQuiz/video/
-        [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.rte.ie"]]];
+        
+        [requests addObject:requestTemp];
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cnn.com"]]];
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.wikipedia.com"]]];
         [requests addObject:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.ie"]]];
     }
 }
+
+////http://192.168.0.105/videoQuiz/getQuiz_form.php username=%@&
+//
+//- (IBAction)registerButton:(id)sender {
+//    AppDelegate *appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+//    NSString *data = [appDelegate getUrl];
+//    NSString *str = @"getQuiz_form.php";
+//    str = [NSString stringWithFormat:@"%@%@", data, str];
+//    
+//    NSURL *url = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+//    [request setHTTPMethod:@"POST"];
+//    [request setHTTPBody:[[NSString stringWithFormat:@"username=%@&password=%@&email=%@", userName.text, password.text, email.text] dataUsingEncoding:NSUTF8StringEncoding]];
+//    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error){
+//        if (data){
+//            [self performSelectorOnMainThread:@selector(connectionHasFinished:) withObject:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] waitUntilDone:NO];
+//        }
+//        else if (error)
+//            NSLog(@"%@",error);
+//    }];
+//}
 
 - (void) createImageArray {
     images = [[NSMutableArray alloc] init];

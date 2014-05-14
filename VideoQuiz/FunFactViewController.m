@@ -33,6 +33,17 @@
     [super viewDidLoad];
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+
+    thisUser = [[QuizDao instance] currentUser];
+    //    thisUser.feedbackQuestion
+    [textLabel setText:thisUser.productQuestion.question];
+    [answer1.titleLabel setText:thisUser.productQuestion.answer1];
+    [answer2.titleLabel setText:thisUser.productQuestion.answer2];
+    [answer3.titleLabel setText:thisUser.productQuestion.answer3];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
